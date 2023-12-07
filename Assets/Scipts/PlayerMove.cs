@@ -6,16 +6,13 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rb;
-
     [SerializeField] private Joystick _moveJoystick;
-    [SerializeField] private Joystick _cameraMoveJoy;
 
-    [SerializeField] private GameObject _playerCamera;
-
-    [SerializeField] private GameValues _gameValues;
+    [SerializeField] private float _speedPlayer;
+    [SerializeField] private float _powerJumpPlayer;
+    [SerializeField] private float _maxSpeedPlayer, _maxJumpPlayer;
 
     private float _dirX, _dirZ;
-    private float _camDirX, _camDirY;
     private bool isJump;
 
     private void OnValidate()
@@ -24,28 +21,24 @@ public class PlayerMove : MonoBehaviour
 
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
+
+        _speedPlayer = TestValues.CheckNewValue(_speedPlayer, _maxSpeedPlayer);
+        _powerJumpPlayer = TestValues.CheckNewValue(_powerJumpPlayer, _maxJumpPlayer);
     }
     
     private void FixedUpdate()
     {
-        Debug.Log(isJump);
         _dirX = _moveJoystick.Horizontal;
         _dirZ = _moveJoystick.Vertical;
 
-        transform.localPosition += transform.forward * _dirZ * _gameValues.GetSpeedPlayer();
-        transform.localPosition += transform.right * _dirX * _gameValues.GetSpeedPlayer();
-
-        _camDirX = _cameraMoveJoy.Horizontal;
-        _camDirY = _cameraMoveJoy.Vertical;
-
-        transform.Rotate(new Vector3(0, -_camDirX, 0) * _gameValues.GetSensitivCam());
-        _playerCamera.transform.Rotate(new Vector3(_camDirY, 0, 0) * _gameValues.GetSensitivCam());
+        transform.localPosition += transform.forward * _dirZ * _speedPlayer;
+        transform.localPosition += transform.right * _dirX * _speedPlayer;
     }
 
     public void OnJump()
     {
         if (isJump)
-            _rb.AddForce(new Vector3(0, 1, 0) * _gameValues.GetPowerJumpPlayer());
+            _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -58,5 +51,4 @@ public class PlayerMove : MonoBehaviour
         if (collision.transform.position.y < gameObject.transform.position.y)
             isJump = false;
     }
-    
 }

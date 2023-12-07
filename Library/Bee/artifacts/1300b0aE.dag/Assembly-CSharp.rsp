@@ -336,6 +336,8 @@
 -r:"Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Analytics.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Purchasing.Common.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.2D.Tilemap.Editor.ref.dll"
@@ -395,8 +397,9 @@
 "Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
+"Assets/Scipts/CameraMove.cs"
 "Assets/Scipts/PlayerMove.cs"
-"Assets/Scipts/ScriptbleObjects/GameValues.cs"
+"Assets/Scipts/TestValues.cs"
 -langversion:9.0
 
 /deterministic

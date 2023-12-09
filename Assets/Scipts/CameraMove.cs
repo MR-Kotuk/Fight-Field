@@ -28,9 +28,9 @@ public class CameraMove : MonoBehaviour
 
         var angleX = transform.localEulerAngles.x;
 
-        if (angleX < _minCamAngle)
+        if (angleX > _minCamAngle && angleX < 180)
             angleX = _minCamAngle;
-        if (angleX > _maxCamAngle)
+        if (angleX < _maxCamAngle && angleX > 180)
             angleX = _maxCamAngle;
 
         transform.localEulerAngles = new Vector3(angleX, 0, 0);

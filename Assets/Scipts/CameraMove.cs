@@ -34,5 +34,8 @@ public class CameraMove : MonoBehaviour
             angleX = _maxCamAngle;
 
         transform.localEulerAngles = new Vector3(angleX, 0, 0);
+
+        Vector3 camAngles = transform.eulerAngles;
+        transform.eulerAngles = new Vector3(camAngles.x, camAngles.y, 0);
     }
 }

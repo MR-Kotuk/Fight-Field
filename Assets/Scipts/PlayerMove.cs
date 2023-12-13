@@ -16,6 +16,11 @@ public class PlayerMove : MonoBehaviour
     private float _dirX, _dirY;
     private bool isJump;
 
+    //private List<string> _animNames = new List<string> { "isMove", "isCrouch" };
+    private string _moveX = "MoveX", _moveY = "MoveY";
+    private bool isCrouch;
+    private float _currentSpeed;
+
 
     private void OnValidate()
     {
@@ -28,24 +33,49 @@ public class PlayerMove : MonoBehaviour
         _speedPlayer = TestValues.CheckNewValue(_speedPlayer, _maxSpeedPlayer);
         _powerJumpPlayer = TestValues.CheckNewValue(_powerJumpPlayer, _maxJumpPlayer);
     }
-    
+    private void Start()
+    {
+        isCrouch = false;
+        _currentSpeed = _speedPlayer;
+    }
     private void FixedUpdate()
     {
         _dirX = _moveJoystick.Horizontal;
         _dirY = _moveJoystick.Vertical;
 
-        //transform.localPosition += transform.forward * _dirY * _speedPlayer;
-        //transform.localPosition += transform.right * _dirX * _speedPlayer;
+        transform.localPosition += transform.forward * _dirY * _currentSpeed;
+        transform.localPosition += transform.right * _dirX * _currentSpeed;
 
-        _anim.SetFloat("MoveX", _dirX);
-        _anim.SetFloat("MoveY", _dirY);
+        _anim.SetFloat(_moveX, _dirX);
+        _anim.SetFloat(_moveY, _dirY);
+
+        _anim.SetBool("isMove", !isCrouch);
+        _anim.SetBool("isCrouch", isCrouch);
+    }
+    public void OnCrouch()
+    {
+        isCrouch = !isCrouch;
+
+        if (isCrouch)
+            _currentSpeed = _speedPlayer / 2;
+        else
+            _currentSpeed = _speedPlayer;
     }
     public void OnJump()
     {
-        if (isJump)
+        if (isJump && !isCrouch)
+        {
+            _anim.SetBool("isJump", true);
             _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);
+            Invoke("EndJumpAnim", 0.5f);
+        }
     }
-    
+
+    private void EndJumpAnim()
+    {
+        _anim.SetBool("isJump", false);
+    }
+
     private void OnCollisionStay(Collision collision) => isJump = true;
     private void OnCollisionExit(Collision collision) => isJump = false;
 }

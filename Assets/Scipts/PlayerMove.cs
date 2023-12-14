@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerMove : MonoBehaviour
 {
+    public bool isCrouch { get; private set; }
+
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
     [SerializeField] private Animator _anim;
@@ -16,11 +18,8 @@ public class PlayerMove : MonoBehaviour
     private float _dirX, _dirY;
     private bool isJump;
 
-    //private List<string> _animNames = new List<string> { "isMove", "isCrouch" };
     private string _moveX = "MoveX", _moveY = "MoveY";
-    private bool isCrouch;
     private float _currentSpeed;
-
 
     private void OnValidate()
     {
@@ -65,14 +64,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (isJump && !isCrouch)
         {
-            _anim.SetBool("isJump", true);
+            StartCoroutine(JumpAnim());
             _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);
-            Invoke("EndJumpAnim", 0.5f);
         }
     }
-
-    private void EndJumpAnim()
+    private IEnumerator JumpAnim()
     {
+        _anim.SetBool("isJump", true);
+        yield return new WaitForSeconds(0.5f);
         _anim.SetBool("isJump", false);
     }
 

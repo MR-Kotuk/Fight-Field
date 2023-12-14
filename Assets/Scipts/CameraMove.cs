@@ -5,18 +5,24 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private float _sensitivity;
+
     [SerializeField] private float _minCamAngle, _maxCamAngle;
+    [SerializeField] private float _crouchMinAngle;
     [SerializeField] private float _maxSensitivity;
 
     [SerializeField] private GameObject _player;
     [SerializeField] private Joystick _cameraMoveJoy;
+    [SerializeField] private PlayerMove _playerMove;
 
     private float _camDirX, _camDirY;
+    private float _currentMinAngle;
 
     private void OnValidate()
     {
         _sensitivity = TestValues.CheckNewValue(_sensitivity, _maxSensitivity);
     }
+
+    private void Start() => _currentMinAngle = _minCamAngle;
 
     private void FixedUpdate()
     {
@@ -28,8 +34,8 @@ public class CameraMove : MonoBehaviour
 
         var angleX = transform.localEulerAngles.x;
 
-        if (angleX > _minCamAngle && angleX < 180)
-            angleX = _minCamAngle;
+        if (angleX > _currentMinAngle && angleX < 180)
+            angleX = _currentMinAngle;
         if (angleX < _maxCamAngle && angleX > 180)
             angleX = _maxCamAngle;
 
@@ -37,5 +43,13 @@ public class CameraMove : MonoBehaviour
 
         Vector3 camAngles = transform.eulerAngles;
         transform.eulerAngles = new Vector3(camAngles.x, camAngles.y, 0);
+    }
+
+    private void Update()
+    {
+        if (_playerMove.isCrouch)
+            _currentMinAngle = _crouchMinAngle;
+        else
+            _currentMinAngle = _minCamAngle;
     }
 }

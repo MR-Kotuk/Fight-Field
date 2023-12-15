@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerMove : MonoBehaviour
@@ -10,8 +11,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
     [SerializeField] private Animator _anim;
-
     [SerializeField] private Transform _originHead;
+    [SerializeField] private Button _crouchButton;
+
+    [SerializeField] private SpriteManager _spriteManager;
 
     [SerializeField] private float _speedPlayer;
     [SerializeField] private float _powerJumpPlayer;
@@ -41,8 +44,6 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
-        Debug.DrawRay(_originHead.position, _originHead.up);
-        Debug.Log(TryRay(_originHead.position, _originHead.up, _distAboveHead));
     }
 
     private void MovePlayer()
@@ -58,6 +59,11 @@ public class PlayerMove : MonoBehaviour
 
         _anim.SetBool("isMove", !isCrouch);
         _anim.SetBool("isCrouch", isCrouch);
+
+        if (isCrouch)
+            _crouchButton.GetComponent<Image>().sprite = _spriteManager.WakeUpUI;
+        else
+            _crouchButton.GetComponent<Image>().sprite = _spriteManager.CrouchUI;
     }
     public void OnCrouch()
     {

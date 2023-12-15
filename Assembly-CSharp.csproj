@@ -74,6 +74,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\PressButton.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\BaseExpression.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\CharacterInventory.cs" />
+    <Compile Include="Assets\Scipts\SpriteManager.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\AIUtil.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Extra\BaseBuff.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\Count.cs" />
@@ -166,7 +167,6 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Weapons\Weapon.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AIFollow.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AISight.cs" />
-    <Compile Include="Assets\SimpleCameraController.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Animations\CoverOffsetAnimation.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\If.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Animations\WeaponUseAnimation.cs" />

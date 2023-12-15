@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - DynamicJoystick
     - FixedJoystick
     - PlayerMove
+    - SpriteManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridBrushEditor
@@ -59,6 +60,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PlayerMove
     methodName: OnJump
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerMove
+    methodName: OnCrouch
   sceneClasses:
     Assets/Scenes/GameScene.unity:
     - Class: 1
@@ -104,25 +108,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16668}
+      Script: {instanceID: 16672}
     - Class: 114
-      Script: {instanceID: 17428}
+      Script: {instanceID: 17518}
     - Class: 114
-      Script: {instanceID: 18182}
+      Script: {instanceID: 18360}
     - Class: 114
-      Script: {instanceID: 18456}
+      Script: {instanceID: 18658}
     - Class: 114
-      Script: {instanceID: 18882}
+      Script: {instanceID: 19138}
     - Class: 114
-      Script: {instanceID: 21390}
+      Script: {instanceID: 21866}
     - Class: 114
-      Script: {instanceID: 21888}
+      Script: {instanceID: 22442}
     - Class: 114
-      Script: {instanceID: 22606}
+      Script: {instanceID: 23220}
     - Class: 114
-      Script: {instanceID: 23334}
+      Script: {instanceID: 24028}
     - Class: 114
-      Script: {instanceID: 25964}
+      Script: {instanceID: 26874}
+    - Class: 114
+      Script: {instanceID: 30972}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -176,10 +182,46 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
+      Hash: fca6a84bb55a9acc6488710eab71ef9f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Projectile
+  - hash:
+      serializedVersion: 2
+      Hash: d12b517eb21c5a548018bfa61fd0b8b7
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: VisionBuff
+  - hash:
+      serializedVersion: 2
       Hash: 01bf6cc4f89c612b67e4917c31a0d32e
     assemblyName: UnityEngine.XR.LegacyInputHelpers
     namespaceName: UnityEngine.XR.LegacyInputHelpers
     className: ArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: 93fdd27c188610e032f8407b54105f16
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CameraObjectFader
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DangerZone
+  - hash:
+      serializedVersion: 2
+      Hash: 17aaaa029e8a752d2466d1ed3696d2d1
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TriggerCountWave
+  - hash:
+      serializedVersion: 2
+      Hash: aa94f837aee662c293fa25ef493c352f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterSwitcher
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -194,10 +236,22 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: a45f8070e6b8a131d11cac2b67185cd0
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GunEffects
+  - hash:
+      serializedVersion: 2
       Hash: 973b45f6da831c2794adf9d17af77d72
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineExternalCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 471eb79847a4cb675ab74e074e85a515
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Crosshair
   - hash:
       serializedVersion: 2
       Hash: 94f8303fca6ba25383fc62595e324b7b
@@ -212,10 +266,22 @@ ScriptsOnlyBuild:
     className: Grain
   - hash:
       serializedVersion: 2
+      Hash: c04e0463d21366176156eb626d7be83c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MeleeAlerts
+  - hash:
+      serializedVersion: 2
       Hash: 1ed2c6278a809fcb97c4b0e845bbecc5
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 2fa721148ca0e992be005723a0b55953
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Cover
   - hash:
       serializedVersion: 2
       Hash: 92c338a19da8c1d2d1ac886be571df4c
@@ -230,10 +296,34 @@ ScriptsOnlyBuild:
     className: CinemachineTriggerAction
   - hash:
       serializedVersion: 2
+      Hash: e492d2e626ed573b1134087a90dcca8d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFollow
+  - hash:
+      serializedVersion: 2
+      Hash: f14c267a83fd36050dc9feb81c33d188
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseTab
+  - hash:
+      serializedVersion: 2
+      Hash: 7a62337a4b377306930c3adbf960374c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIForget
+  - hash:
+      serializedVersion: 2
       Hash: ea1569413d805748b7cef2dcb4622c85
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: d8d3b21020fc7959485179f717d656d0
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIController
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -242,16 +332,64 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionStayMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e772b96a2ff6f8142032f59d95630fbc
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MassDamageBuffAction
+  - hash:
+      serializedVersion: 2
+      Hash: b62c401cce8b082cd83aeb02bbf4c23e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GrassZone
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 689a99b8f8b852c8d75c55c7d2e06abf
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterMotor
+  - hash:
+      serializedVersion: 2
+      Hash: 6fe4faeea15b205526621f9c5c114704
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HealAction
+  - hash:
+      serializedVersion: 2
       Hash: d1dd4a74a82d0cec8cfdd6a90169a18b
     assemblyName: Cinemachine
     namespaceName: 
     className: CinemachineCameraOffset
+  - hash:
+      serializedVersion: 2
+      Hash: 1c909b51bd503d3ebdc36dd63cf1e08c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFear
+  - hash:
+      serializedVersion: 2
+      Hash: 7d3cd8381b551c826297ea50986681b1
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIListener
+  - hash:
+      serializedVersion: 2
+      Hash: 9c20ab1eeef4d34e4d81ec25b7cbb88c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: EnemyDisplayManager
+  - hash:
+      serializedVersion: 2
+      Hash: 50365e6e376be7f5d5ab0693aaa07cb7
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ThirdPersonController
   - hash:
       serializedVersion: 2
       Hash: 7076552313cc5405cce27134bb16ec41
@@ -264,6 +402,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FixedJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CoverOffsetAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 0e679a4b5ed91a2a5ff2f931ad343704
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: PlayerArmTrigger
   - hash:
       serializedVersion: 2
       Hash: 967cb4d006527026be03739b2f5cb2e8
@@ -284,6 +434,12 @@ ScriptsOnlyBuild:
     className: VariableJoystick
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AISearchState
+  - hash:
+      serializedVersion: 2
       Hash: 63815508dfd6cf329d5c593ac8e76888
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -302,6 +458,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 976478afd9499078c053ce9c8dbe1d93
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TempOutline
+  - hash:
+      serializedVersion: 2
       Hash: 49031f0904f24a521ccdec39bbd92cba
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -314,10 +476,34 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
+      Hash: facdd6a8db80d92e271e9cfe87b33422
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFire
+  - hash:
+      serializedVersion: 2
       Hash: 6f67dd406ddfc18c9b3f8a90725c6266
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 31dcefe5bc96530620911efdaea45381
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GunAlerts
+  - hash:
+      serializedVersion: 2
+      Hash: 3929d27bbc15cad30518801b84755635
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIActions
+  - hash:
+      serializedVersion: 2
+      Hash: 6aee803b7909d1138cd0ae65b8c81eb6
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MeleeTouch
   - hash:
       serializedVersion: 2
       Hash: fc4b10d676d5a5aae087dfc9c7748857
@@ -326,16 +512,52 @@ ScriptsOnlyBuild:
     className: PostProcessLayer
   - hash:
       serializedVersion: 2
+      Hash: 63b0caa079cb0733ac468bfa741139ec
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SpawnPoint
+  - hash:
+      serializedVersion: 2
+      Hash: f22a6801f19c22ef1d328f2bb267e725
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SmokeGrenade
+  - hash:
+      serializedVersion: 2
+      Hash: 62e4fc7d45a6adc05234397072cffd25
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DelayedDisable
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ClimbAnimation
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 67cd39d457fc58a046a1afe1109b4e2c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: PressButton
+  - hash:
+      serializedVersion: 2
       Hash: 3aa97eda92c00ff0f6ff58a0db58368f
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineVirtualCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 8fcd950e663a44ab678aa3a7b5943dec
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GunSounds
   - hash:
       serializedVersion: 2
       Hash: bcdedb1b3a567eb05111be4716618ce1
@@ -392,6 +614,12 @@ ScriptsOnlyBuild:
     className: Placeholder
   - hash:
       serializedVersion: 2
+      Hash: 7ec1cd070a3e8e60679bb7343709cbd5
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DamageTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -414,6 +642,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: fb47c037cf8afff1aaeb2b018110b4bb
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CrouchTouch
+  - hash:
+      serializedVersion: 2
+      Hash: befdaebedfaa054fd2b1d6ec72695bf8
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ToxicGrenade
+  - hash:
+      serializedVersion: 2
+      Hash: cac17bc34a730f434ad235683c86ad95
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HitEffect
   - hash:
       serializedVersion: 2
       Hash: 34fa63a30926bcf55d7323dae76be890
@@ -440,10 +686,22 @@ ScriptsOnlyBuild:
     className: UnityOnButtonClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 29ef47b22a79135baf2ff87190736aa3
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIBackupCall
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnInputFieldEndEditMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c5a7ea02bf0041f5ad148be6cddf7057
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseDialog
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -482,6 +740,36 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GrenadeAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: b8d376f85d8d72cef51d541fed0fdd4c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Waypoints
+  - hash:
+      serializedVersion: 2
+      Hash: 971321f5315c6f5c48206b9061a2a587
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRegrouperRetreat
+  - hash:
+      serializedVersion: 2
+      Hash: ab2d9b19bd485481417be0ba1ff193b2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SpawnPicker
+  - hash:
+      serializedVersion: 2
+      Hash: 0904ef4db6cbdc903339701f1b235f93
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HoldPositionMarker
+  - hash:
+      serializedVersion: 2
       Hash: a4d905db69ca7f45f45458ae380fb66f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -500,6 +788,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 7e4d874c609977ea94c305bb3e790c07
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: JumpAnimation
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -510,6 +804,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7e4d874c609977ea94c305bb3e790c07
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: RollAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: df754d71a9957ebf373417eaffc1c44f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterFace
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -554,16 +860,28 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
+      Hash: f6831ac80ec81c5d5b370c0ed0fee997
+    assemblyName: Unity.VisualScripting.Flow
+    namespaceName: Unity.VisualScripting
+    className: ScriptMachine
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: f6831ac80ec81c5d5b370c0ed0fee997
-    assemblyName: Unity.VisualScripting.Flow
-    namespaceName: Unity.VisualScripting
-    className: ScriptMachine
+      Hash: d12b517eb21c5a548018bfa61fd0b8b7
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DamageBuff
+  - hash:
+      serializedVersion: 2
+      Hash: d12b517eb21c5a548018bfa61fd0b8b7
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ArmorBuff
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -572,16 +890,46 @@ ScriptsOnlyBuild:
     className: UnityOnSelectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6d58a78500bf53fde9b5756206ce5c34
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HitSounds
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BulletShield
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: a86f17e168e604a5991b59441ecb3571
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIInvestigation
+  - hash:
+      serializedVersion: 2
+      Hash: ed6d25ea8cde1549c8117dd0a5442e6e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRegrouperProximity
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 0ad69c2d86791e527adc9ccdd94bce3d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: WeaponUseAnimation
   - hash:
       serializedVersion: 2
       Hash: 14893b441cdcbc4baae90224efab5208
@@ -632,6 +980,30 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a35dac381cc8e883310c0c7afb7e9e98
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AICommunication
+  - hash:
+      serializedVersion: 2
+      Hash: 48ba19634ad71c7bfd7ca77213651163
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SpawnGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 2fbeab752a7ad1ebe194afd8b7fc37a6
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: EnemySight
+  - hash:
+      serializedVersion: 2
+      Hash: 53c23a32b16a04924f331f737c3d6174
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: StrategyCamera
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -650,16 +1022,34 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
+      Hash: 336320d8d921b99bf896703d66ec733a
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BodyPartHealth
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bacf89b8c9b998d766e5fdc7c138b8ce
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CivilianBrain
+  - hash:
+      serializedVersion: 2
       Hash: b18151310f999106767addd7177d1a99
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 16e81d0f625050d884c6013229b3e681
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIMelee
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -674,10 +1064,34 @@ ScriptsOnlyBuild:
     className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: PlayerDisarmTrigger
+  - hash:
+      serializedVersion: 2
       Hash: ecdf59ccb9fea48446a1001b16317c55
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineGroupComposer
+  - hash:
+      serializedVersion: 2
+      Hash: 547ab96e502684d7b26fa360a0180dd2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ShieldAction
+  - hash:
+      serializedVersion: 2
+      Hash: 606d00aa26ee90156d57e5aa8f8f9f10
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterOutline
+  - hash:
+      serializedVersion: 2
+      Hash: c21b736651c5da17ae38698e4b00fe5e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: StrategyInput
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -696,6 +1110,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 971321f5315c6f5c48206b9061a2a587
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRegrouperButton
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -722,6 +1142,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 70f166cf1bb2f91f1b58223edcbe1f96
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: FleeZone
+  - hash:
+      serializedVersion: 2
       Hash: d29f928cecd19b22fdd2e3a756e131c0
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -732,6 +1158,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MouseLock
   - hash:
       serializedVersion: 2
       Hash: dd7365d011fb5975838f523fc9b1668a
@@ -776,6 +1208,12 @@ ScriptsOnlyBuild:
     className: GroupWeightManipulator
   - hash:
       serializedVersion: 2
+      Hash: be15ca41440aa78c60d98ac50191ea51
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIAim
+  - hash:
+      serializedVersion: 2
       Hash: b9d7c32e565787aa3931f49307c60103
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -788,16 +1226,46 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 9bf4730bbcdd42593f48cf37f684484a
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter.AI
+    className: Brain
+  - hash:
+      serializedVersion: 2
+      Hash: ad9de944c702fe7a95ae5f38a96b094d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRegrouperCompany
+  - hash:
+      serializedVersion: 2
+      Hash: 4ad9ba71b84179925b16c3040bc9cb08
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterName
+  - hash:
+      serializedVersion: 2
       Hash: 408293f89d4950546351fcf0e974583f
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ExplosionPreview
+  - hash:
+      serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 16e81d0f625050d884c6013229b3e681
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AILeave
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -818,10 +1286,34 @@ ScriptsOnlyBuild:
     className: CinemachinePOV
   - hash:
       serializedVersion: 2
+      Hash: 241871ea6baedb6aa01920a20cd7ab99
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Grenade
+  - hash:
+      serializedVersion: 2
+      Hash: 1cb108560993d532586842f0584e29ac
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIAssault
+  - hash:
+      serializedVersion: 2
+      Hash: 41d21b61dc022c8a9a49199806cc1183
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFlee
+  - hash:
+      serializedVersion: 2
       Hash: 91fba0a2850ee2dd5a8a1e782bba2e26
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: ScreenSpaceReflections
+  - hash:
+      serializedVersion: 2
+      Hash: 1502b73d66be1d973275489a2a4e941a
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BuffBar
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -830,10 +1322,46 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 94f0acac6cb6e905f202064e73bd6aa2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIThreatControl
+  - hash:
+      serializedVersion: 2
+      Hash: 25afd87ad1fb041b33c79bb8b4ef2d97
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MeleeAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 1cccbba733ad49f642ce656bde61649e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AggressiveSelector
+  - hash:
+      serializedVersion: 2
       Hash: a774afc2d683a1fb0fa29ecc0d5a6fb5
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 6a01e53c34ba6b6dd97f93cd0dc24e00
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AISearch
+  - hash:
+      serializedVersion: 2
+      Hash: ef8d8cc37d8b5116ef555e98cd51ad5a
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterStamina
+  - hash:
+      serializedVersion: 2
+      Hash: a9a22ec4b229a39b068b73434fa9bd6e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: StaminaBar
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -864,6 +1392,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 361d20b389e4c80769d666d4dbc5af35
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MeleeEffects
   - hash:
       serializedVersion: 2
       Hash: ce48d82890ec4d16b02232873a2490e4
@@ -920,6 +1454,12 @@ ScriptsOnlyBuild:
     className: UnityOnBeginDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 88901bbc00ab91f6144c3a385ce49259
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TouchAiming
+  - hash:
+      serializedVersion: 2
       Hash: 0cadf67970140b3a7997770202c43c70
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -936,6 +1476,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine.PostFX
     className: CinemachineVolumeSettings
+  - hash:
+      serializedVersion: 2
+      Hash: e1d49407f290adb01729f01ae04b5846
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AutoActionToggle
   - hash:
       serializedVersion: 2
       Hash: 6237f92becd6162fa105361ab9ce2a00
@@ -956,10 +1502,34 @@ ScriptsOnlyBuild:
     className: TransitionArmModel
   - hash:
       serializedVersion: 2
+      Hash: 541fe8deb84c917b3641474ed552c152
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: EquipBar
+  - hash:
+      serializedVersion: 2
+      Hash: ffdd2f2dd8ba7a7c34ce96e8f821d754
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TopDownInput
+  - hash:
+      serializedVersion: 2
       Hash: fa7c62595553866a25a1f687b1914fd2
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 62e4fc7d45a6adc05234397072cffd25
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ResetOnDeath
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ParticleCameraMotionBlur
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -980,10 +1550,22 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseBrain
+  - hash:
+      serializedVersion: 2
       Hash: ddbf32ea39bd66ceba267a2b0674b17a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Joystick
+  - hash:
+      serializedVersion: 2
+      Hash: f5720c79978fa5b8350949b8a6b3820d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ActionButton
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -998,10 +1580,34 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e889a596c665310cd87fa1efd8d90f46
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Flashlight
+  - hash:
+      serializedVersion: 2
+      Hash: 82fa57bfddc4b3f9d0a8024447ec3721
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseActor
+  - hash:
+      serializedVersion: 2
       Hash: 1b4a83f2a2f1a4def12cdc9223cce72c
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 43838f0031c00367481d3a6b604b05a0
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterHealth
+  - hash:
+      serializedVersion: 2
+      Hash: fc83d0bf81cdc2cd3dd1c1be3068e7c1
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ReloadAnimation
   - hash:
       serializedVersion: 2
       Hash: 4862508a82e551bebf075a72a1084e27
@@ -1016,22 +1622,70 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
+      Hash: 5ec07fd43df99c60cb6288adc355410b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ThirdPersonInput
+  - hash:
+      serializedVersion: 2
+      Hash: 42f19cffa38484316250c4d8599040e2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterSounds
+  - hash:
+      serializedVersion: 2
+      Hash: b62c401cce8b082cd83aeb02bbf4c23e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DarkZone
+  - hash:
+      serializedVersion: 2
       Hash: 2c11e3687875dd78c091544cf3bccfa3
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: c22ddc1f5959d6390714d11ddb9c6bcd
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: WalkAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 21748942c6559cbce52cdeda50d54255
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMove
+  - hash:
+      serializedVersion: 2
+      Hash: cd1234a0b5eddf97ea73f919a0c3cac5
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AmmoBar
+  - hash:
+      serializedVersion: 2
+      Hash: 56a4b436e8e83b910c54400b6dca2a54
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: PathPreview
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CustomAnimation
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameInvisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 998d2e561fa624fe7702bee5c7f781eb
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HoldPositionAction
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1058,16 +1712,46 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 7de3fa03861a05ac3fe60af73780659f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MassHealAction
+  - hash:
+      serializedVersion: 2
+      Hash: 58d0c3146f3d6adfac9c95777b534ae3
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: LayerManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a909a9ffe18063fb1d36aba6da1a5a3f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AISight
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.Purchasing.Stores
     namespaceName: UnityEngine.Purchasing
     className: LifecycleNotifier
+  - hash:
+      serializedVersion: 2
+      Hash: a55fd2a077449938c215e7b9a0dec0d0
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Alert
+  - hash:
+      serializedVersion: 2
+      Hash: e889a596c665310cd87fa1efd8d90f46
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Radio
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1088,6 +1772,18 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseEffects
+  - hash:
+      serializedVersion: 2
+      Hash: b44fbe81dffab1d078e9f2f4e1f0c88c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SupportDialog
+  - hash:
+      serializedVersion: 2
       Hash: a49a017b805bc6b5963903daa5333d5d
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -1106,6 +1802,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: a91c1b47b244fc13f0384c0fa673ed8d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Actor
+  - hash:
+      serializedVersion: 2
       Hash: 99459976c7ca8bbb7c787f6b78bae304
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -1118,10 +1820,22 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
+      Hash: d9378888e6c8f6c1e1593956a6f772aa
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MobileController
+  - hash:
+      serializedVersion: 2
       Hash: e3bbb8ee2622f4f564375e9a9bbd132f
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineConfiner2D
+  - hash:
+      serializedVersion: 2
+      Hash: 0ac1913364cea9f8c8bd00a262b752ef
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: EnemyHealth
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1142,16 +1856,106 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 1bb0ae61994e5d4a0857816213831460
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIProtector
+  - hash:
+      serializedVersion: 2
+      Hash: d3c5446938bbc0664e1cac000a2b988b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterInventory
+  - hash:
+      serializedVersion: 2
+      Hash: a8794473e597633a64fd86c13743e88f
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MobileCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 4fbc1171277775f81a181cc77ce44312
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GrenadeAction
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ClimbStart
+  - hash:
+      serializedVersion: 2
+      Hash: 45bb0b2852c35c10c65d9d9aa92a2091
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AICopCall
+  - hash:
+      serializedVersion: 2
+      Hash: 0d057a12a14da61ec77c78a26f3a89d9
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AISounds
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.Purchasing.Stores
     namespaceName: UnityEngine.Purchasing.Extension
     className: UnityUtil
   - hash:
       serializedVersion: 2
+      Hash: b8d376f85d8d72cef51d541fed0fdd4c
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIWaypoints
+  - hash:
+      serializedVersion: 2
+      Hash: 5ecb3baafaeaf246bb24f11739255651
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Laser
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterPlatform
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIBase
+  - hash:
+      serializedVersion: 2
+      Hash: 6538b93960f84399e38fd3722038a768
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: UnequipAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SearchZone
+  - hash:
+      serializedVersion: 2
+      Hash: f8229b4455814d00e4b49576dc47b01d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: RandomAudio
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 62e4fc7d45a6adc05234397072cffd25
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DelayedDestroy
   - hash:
       serializedVersion: 2
       Hash: 4fcf63a779903406bc45b3897734d480
@@ -1161,9 +1965,45 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ExitToEscape
+  - hash:
+      serializedVersion: 2
+      Hash: e889a596c665310cd87fa1efd8d90f46
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Phone
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStay2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: dd79a448a41b6cd652709f2ccf05e5cc
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFlashlight
+  - hash:
+      serializedVersion: 2
+      Hash: 2380d976bef4a3807ff09a1ef4d86889
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HitAlerts
+  - hash:
+      serializedVersion: 2
+      Hash: ca86aac2d4a2a8ed4f89779e9a4c4439
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: EquipAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 7ddd5b9653ed822652b0860a6f227ab1
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIAlerts
   - hash:
       serializedVersion: 2
       Hash: 751d867553f413cde86fe5db0b02780d
@@ -1190,6 +2030,18 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GetHitAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 31e424290e3c601b22c7b95d8a52a1ec
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AICover
+  - hash:
+      serializedVersion: 2
       Hash: aa3abe62679eed605debfa89a32fd294
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -1208,16 +2060,52 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: a49889e10c9fe538f17f582d1dff5bc2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIEffects
+  - hash:
+      serializedVersion: 2
+      Hash: a9a22ec4b229a39b068b73434fa9bd6e
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
       Hash: bd3b93eecbd0fe18d9938dc47570fa20
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineImpulseListener
   - hash:
       serializedVersion: 2
+      Hash: 2dc41a4184f64f743cd2023bdd0890c0
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIFormation
+  - hash:
+      serializedVersion: 2
       Hash: f4f39b64f410b0cd98b49df4bad0eb7e
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: dd79a448a41b6cd652709f2ccf05e5cc
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIItemBase
+  - hash:
+      serializedVersion: 2
+      Hash: 6b31a33d7aafba2bbf46fd5217c23f40
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterSleep
+  - hash:
+      serializedVersion: 2
+      Hash: 998d2e561fa624fe7702bee5c7f781eb
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AttackAction
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1230,6 +2118,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 240a8cd99a742f793069fbd47d41f246
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterVertical
   - hash:
       serializedVersion: 2
       Hash: 63f2e15ef0993cf5039c11f20df8746a
@@ -1274,10 +2168,28 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 13f4ce545e6a219876e7653e40aad113
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Melee
+  - hash:
+      serializedVersion: 2
+      Hash: debfc614a840cfe8599e5ed83fd2d187
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterEffects
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnter2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 743132d2831c7b14a8ae3faf65af17fe
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterSelector
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1292,10 +2204,22 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
+      Hash: b9a87a0fd49e23f5cf886dbf5fbdfd9d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Gun
+  - hash:
+      serializedVersion: 2
       Hash: 34096a327d779b7c96a3e390f3559143
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CoverAnimation
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1308,6 +2232,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: d620c717b1dc8e5bf02ba5e4673ff7d9
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MassArmorBuffAction
+  - hash:
+      serializedVersion: 2
+      Hash: dd79a448a41b6cd652709f2ccf05e5cc
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRadio
   - hash:
       serializedVersion: 2
       Hash: bbd18fc68ceeefb10270c51811911485
@@ -1358,6 +2294,12 @@ ScriptsOnlyBuild:
     className: CinemachineShot
   - hash:
       serializedVersion: 2
+      Hash: 0a132fb28c47db438a69cc9af80b8036
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ActorHUD
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1368,6 +2310,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 95f09de1b0986be3fd1a4419f942cf71
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: BaseCamera
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -1388,6 +2336,24 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 18dd77dc1f2d6fd95f0aeae33b98bb51
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIMovement
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: Visibility
+  - hash:
+      serializedVersion: 2
+      Hash: 525de79711bc58b23d9e056bda6d12c7
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ThirdPersonCamera
+  - hash:
+      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1400,16 +2366,40 @@ ScriptsOnlyBuild:
     className: PostProcessProfile
   - hash:
       serializedVersion: 2
+      Hash: 4a2a4882af0900a4d5497b8bf694f7a9
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CloseButton
+  - hash:
+      serializedVersion: 2
+      Hash: cc23c246dde7892e23531e6f8e524554
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: SupportSelector
+  - hash:
+      serializedVersion: 2
       Hash: 80789df0e1940f5416d1f2e5d39bb34b
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessDebug
   - hash:
       serializedVersion: 2
+      Hash: 7ae168b54c164fb38ade6ceea0e32ab2
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIRegrouperHealth
+  - hash:
+      serializedVersion: 2
       Hash: 1acffdc47de1ca014dae3d384c3d1086
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 6711ec9339d652b80d1ddc301a80559d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TopDownCamera
   - hash:
       serializedVersion: 2
       Hash: f6db34ec3c3d6330db9685fc47bcbbd5
@@ -1422,6 +2412,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineStateDrivenCamera
+  - hash:
+      serializedVersion: 2
+      Hash: e2c8aff320c189dd0edeb1b728cec150
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ThreatSelector
   - hash:
       serializedVersion: 2
       Hash: 826d70cde3b432cc20561321ec0e2fb3
@@ -1448,10 +2444,28 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 729d2ed8cbefbc06a9e661242a9f9ac6
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GrenadeBar
+  - hash:
+      serializedVersion: 2
       Hash: a0c3d8ac0230199d5e0acf6626e72964
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: ColorGrading
+  - hash:
+      serializedVersion: 2
+      Hash: 5469d3fb3b7be375b6d7ec58a5af409b
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: LightZone
+  - hash:
+      serializedVersion: 2
+      Hash: d813e73b677f4054f3d4ffdb412917d4
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: GunAmmo
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1472,6 +2486,18 @@ ScriptsOnlyBuild:
     className: LensDistortion
   - hash:
       serializedVersion: 2
+      Hash: ac3dbe73268cee44efd4284e7f32dc71
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: CharacterAlerts
+  - hash:
+      serializedVersion: 2
+      Hash: 407dde6456cd3afef055e83185ecd63d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: FormationSelector
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.Purchasing.Stores
     namespaceName: UnityEngine.Purchasing
@@ -1482,6 +2508,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a40a00ca6d6196f30a4ff7f77cb33762
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: FighterBrain
   - hash:
       serializedVersion: 2
       Hash: 28873fe9170abb2910f2c4b88a93bb0f
@@ -1502,10 +2534,34 @@ ScriptsOnlyBuild:
     className: CinemachineRecomposer
   - hash:
       serializedVersion: 2
+      Hash: 88901bbc00ab91f6144c3a385ce49259
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: TouchMovement
+  - hash:
+      serializedVersion: 2
       Hash: fbb610f26ad3eb353953ad47e919401c
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineBasicMultiChannelPerlin
+  - hash:
+      serializedVersion: 2
+      Hash: 9fa9f75bd8d21e6ad72dc4e6336aae72
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: MeleeSounds
+  - hash:
+      serializedVersion: 2
+      Hash: 8d995c196ea006245bf165cd634238a5
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: RegroupButton
+  - hash:
+      serializedVersion: 2
+      Hash: 9b7c6a9fdb6a8ad13c5f5e4d0b9a4041
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: DamageBuffAction
   - hash:
       serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
@@ -1544,16 +2600,34 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: fe23571a2655b841231a7a16975258a9
+      Hash: a0d41de261b6a2e20a9ab9cdb083a559
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraMove
+  - hash:
+      serializedVersion: 2
+      Hash: 0ad69c2d86791e527adc9ccdd94bce3d
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: ThrowAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: dd79a448a41b6cd652709f2ccf05e5cc
+    assemblyName: Assembly-CSharp
+    namespaceName: CoverShooter
+    className: AIPhone
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 286ca1f382dd6fc8e50b9e16dcd85379
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpriteManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

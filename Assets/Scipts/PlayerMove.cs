@@ -1,27 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }
+    public float _dirX { get; private set; }
+    public float _dirY { get; private set; }
 
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
     [SerializeField] private Animator _anim;
     [SerializeField] private Transform _originHead;
-    [SerializeField] private Button _crouchButton;
-
-    [SerializeField] private SpriteManager _spriteManager;
 
     [SerializeField] private float _speedPlayer;
     [SerializeField] private float _powerJumpPlayer;
     [SerializeField] private float _maxSpeedPlayer, _maxJumpPlayer;
     [SerializeField] private float _distGround, _distAboveHead;
 
-    private float _dirX, _dirY;
     private string _moveX = "MoveX", _moveY = "MoveY";
     private float _currentSpeed;
 
@@ -44,6 +42,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        Debug.DrawRay(_originHead.position, _originHead.up);
     }
 
     private void MovePlayer()
@@ -59,11 +58,6 @@ public class PlayerMove : MonoBehaviour
 
         _anim.SetBool("isMove", !isCrouch);
         _anim.SetBool("isCrouch", isCrouch);
-
-        if (isCrouch)
-            _crouchButton.GetComponent<Image>().sprite = _spriteManager.WakeUpUI;
-        else
-            _crouchButton.GetComponent<Image>().sprite = _spriteManager.CrouchUI;
     }
     public void OnCrouch()
     {
@@ -72,7 +66,7 @@ public class PlayerMove : MonoBehaviour
             isCrouch = true;
 
         if (isCrouch)
-            _currentSpeed = _speedPlayer / 2;
+            _currentSpeed = _speedPlayer / 3;
         else
             _currentSpeed = _speedPlayer;
     }

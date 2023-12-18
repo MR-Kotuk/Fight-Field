@@ -74,7 +74,6 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\PressButton.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\BaseExpression.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\CharacterInventory.cs" />
-    <Compile Include="Assets\Scipts\SpriteManager.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\AIUtil.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Extra\BaseBuff.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\Count.cs" />
@@ -95,6 +94,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\And.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\MeleeTouch.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\Min.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerAnimations.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Weapons\Radio.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\Listeners\ICharacterWalkListener.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Camera\BaseCamera.cs" />
@@ -123,6 +123,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\Listeners\ICharacterToolListener.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AIForget.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Weapons\GunEffects.cs" />
+    <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AIRegrouperButton.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Weapons\BaseMelee.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\SetAnimatorTrigger.cs" />
@@ -174,11 +175,11 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Util\SerializableDictionary.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Actions\Builtin\InstantAction.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Settings\RecoilSettings.cs" />
-    <Compile Include="Assets\Scipts\ButtonsUI.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\SendEventTo.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Spawning\SpawnPoint.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AIThreatControl.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\Listeners\ICharacterHeightListener.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\IsObjectObstructed.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\IsEmpty.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Actions\Builtin\DamageBuffAction.cs" />
@@ -186,7 +187,6 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\BaseActor.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Waypoint.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\TakeCover.cs" />
-    <Compile Include="Assets\Scipts\CameraMove.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\CharacterSleep.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\CharacterName.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Controllers\TopDownInput.cs" />
@@ -226,6 +226,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Animations\CoverAnimation.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\Disarm.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\Greater.cs" />
+    <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\AutoActionToggle.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Zones\FleeZone.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Weapons\Flashlight.cs" />
@@ -252,7 +253,6 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Actions\Builtin\AnimatedAreaAction.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\AggressiveSelector.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\Move.cs" />
-    <Compile Include="Assets\Scipts\PlayerMove.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\GetStandingTopPosition.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\ThrowGrenade.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\Inc.cs" />
@@ -345,7 +345,6 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\SetOffSearch.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\UI\FormationSelector.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\GetPosition.cs" />
-    <Compile Include="Assets\Scipts\TestValues.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\SetOff.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Extra\HoldPositionMarker.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\Fire.cs" />
@@ -369,6 +368,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Character\CharacterAlerts.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Extra\TempOutline.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\IsCoverValidAgainst.cs" />
+    <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\LegacyAI\Controllers\AIBaseRegrouper.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Settings\AimSettings.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\IsRaycastNotObstructed.cs" />
@@ -407,6 +407,7 @@
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Camera\StrategyCamera.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Actions\ChanceIf.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\AI\Expressions\AveragePosition.cs" />
+    <Compile Include="Assets\Scipts\Player\CameraMove.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Zones\Zone.cs" />
     <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Util\DelayedDestroy.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />

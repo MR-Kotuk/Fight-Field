@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour
             isCrouch = true;
 
         if (isCrouch)
-            _currentSpeed = _speedPlayer / 3;
+            _currentSpeed = _speedPlayer / 2;
         else
             _currentSpeed = _speedPlayer;
     }

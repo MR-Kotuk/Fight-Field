@@ -46,12 +46,8 @@ public class PlayerMove : MonoBehaviour
         isCrouch = false;
         _currentSpeed = _speedPlayer;
     }
-    private void FixedUpdate()
-    {
-        MovePlayer?.Invoke();
-        Debug.Log(TryRay(transform.position, -transform.up, _distGround));
-        Debug.DrawRay(transform.position, -transform.up);
-    }
+        
+    private void FixedUpdate() => MovePlayer?.Invoke();
 
     private void MoveStickPlayer()
     {
@@ -67,8 +63,15 @@ public class PlayerMove : MonoBehaviour
     private void PlayerMoveCrouch()
     {
         isCrouch = !isCrouch;
-        if (!isCrouch && TryRay(_originHead.position, _originHead.up, _distAboveHead))
-            isCrouch = true;
+
+        if (TryRay(transform.position, -transform.up, _distGround))
+        {
+            if (!isCrouch && TryRay(_originHead.position, _originHead.up, _distAboveHead))
+                isCrouch = true;
+        }
+        else
+            isCrouch = false;
+        
 
         if (isCrouch)
             _currentSpeed = _speedPlayer / 2;
@@ -89,9 +92,9 @@ public class PlayerMove : MonoBehaviour
     {
         Ray ray = new Ray(origin, direction);
         RaycastHit raycastHit;
-        
+
         if (Physics.Raycast(ray, out raycastHit))
-            return raycastHit.distance < dist;
+            return raycastHit.distance <= dist;
         else
             return false;
     }

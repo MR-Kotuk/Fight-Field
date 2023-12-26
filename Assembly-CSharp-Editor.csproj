@@ -58,44 +58,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\CivilianBrain.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\BuiltinResourcesWindow.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\FleeBlock.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Cover.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\FighterBrain.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Waypoints.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\CrouchTouch.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Equip.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\HorizontalSplitView.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainLocator.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainRenamer.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Menu.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainEditorArea.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\AIActions.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\AIController.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\GunAmmo.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\CharacterHealth.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainEditorUtil.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\ThirdPersonCamera.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\DarkZone.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\MeleeAttack.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\Connector.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\CharacterMotor.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\LayerManager.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\SearchZone.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\AIRegrouperButton.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\Location.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\VerticalSplitView.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\HealthBar.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\DebugText.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainEditorPanel.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\SpawnPoint.cs" />
-    <Compile Include="Assets\ThirdPersonCoverShooter\Scripts\Editor\Brain\BrainImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

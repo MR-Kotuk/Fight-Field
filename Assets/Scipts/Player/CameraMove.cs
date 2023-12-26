@@ -11,7 +11,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private float _maxSensY, _maxSensX;
 
     [SerializeField] private GameObject _player, _bodyPlayer;
-    [SerializeField] private Joystick _cameraMoveJoy;
+    [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
 
     private float _camDirX, _camDirY;
     private float _currentMinAngle, _currentMaxAngle;
@@ -39,8 +39,8 @@ public class CameraMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _camDirX = _cameraMoveJoy.Horizontal;
-        _camDirY = _cameraMoveJoy.Vertical;
+        _camDirX = _cameraMoveJoy.Horizontal + (_shootJoy.Horizontal / 3);
+        _camDirY = _cameraMoveJoy.Vertical + (_shootJoy.Vertical / 3);
 
         transform.Rotate(new Vector3(-_camDirY, 0, 0) * _sensY);
         _player.transform.Rotate(new Vector3(0, _camDirX, 0) * _sensX);

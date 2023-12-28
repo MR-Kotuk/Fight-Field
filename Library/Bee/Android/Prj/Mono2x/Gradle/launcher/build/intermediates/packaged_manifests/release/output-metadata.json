@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.DefaultCompany.BankHack",
+  "applicationId": "com.ACTEN.BankHack",
   "variantName": "release",
   "elements": [
     {

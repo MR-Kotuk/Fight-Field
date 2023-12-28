@@ -12,7 +12,7 @@ INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gr
 INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 	package
-		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-107
+		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-98
 		INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:versionName
@@ -20,7 +20,7 @@ INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gr
 		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 		INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:108-154
+		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:99-145
 	android:versionCode
 		INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
@@ -28,7 +28,7 @@ INJECTED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gr
 	xmlns:android
 		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:155-195
+		ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:146-186
 application
 ADDED from C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:3-121
 MERGED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:5-69:19

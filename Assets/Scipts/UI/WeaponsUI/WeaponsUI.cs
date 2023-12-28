@@ -11,18 +11,28 @@ public class WeaponsUI : MonoBehaviour
 
     [SerializeField] private PlayerShoot _playerShoot;
 
+    [SerializeField] private int _minRedBulletCount;
     private Gun _gun;
 
-    private void OnValidate()
+    private void Start()
     {
         _gun = GetComponent<Gun>();
+        _playerShoot.SwitchedGun += SwitchGun;
+        _playerShoot.Shooted += BulletCount;
     }
-
-    private void Update()
+    private void BulletCount()
     {
         _bulletCount.text = $"{_gun.BulletCount}/{_gun.MaxBulletCount}";
 
-        if (_gun == _playerShoot._gun)
+        if (_gun.BulletCount <= _minRedBulletCount)
+            _bulletCount.color = Color.red;
+        else
+            _bulletCount.color = Color.white;
+
+    }
+    private void SwitchGun(Gun gun)
+    {
+        if (_gun == gun)
             _weaponButton.image.color = Color.blue;
         else
             _weaponButton.image.color = Color.white;

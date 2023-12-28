@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-
-    private Rigidbody _rb;
-
-    private void Awake()
+    private void OnCollisionEnter(Collision collision)
     {
-        _rb = GetComponent<Rigidbody>();
-
-        _rb.AddForce(-transform.up * +_speed);
+        Destroy(gameObject);
     }
 }

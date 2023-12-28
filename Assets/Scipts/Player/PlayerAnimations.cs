@@ -19,24 +19,24 @@ public class PlayerAnimations : MonoBehaviour
     }
     private void Start()
     {
-        _playerMove.MovePlayer += AnimMove;
-        _playerMove.PlayerCrouch += AnimCrouch;
-        _playerMove.PlayerJump += AnimJump;
+        _playerMove.Moved += Move;
+        _playerMove.Crouched += Crouch;
+        _playerMove.Jumped += OnJump;
     }
 
-    public void AnimMove()
+    private void Move()
     {
         _anim.SetFloat(_moveXText, _playerMove._dirX);
         _anim.SetFloat(_moveYText, _playerMove._dirY);
 
         _anim.SetBool(_isMoveText, !_playerMove.isCrouch);
     }
-    public void AnimCrouch()
+    private void Crouch()
     {
         _anim.SetBool(_isMoveText, !_playerMove.isCrouch);
         _anim.SetBool(_isCrouchText, _playerMove.isCrouch);
     }
-    public void AnimJump() => StartCoroutine(Jump());
+    private void OnJump() => StartCoroutine(Jump());
     private IEnumerator Jump()
     {
         _anim.SetBool(_isJumpText, true);

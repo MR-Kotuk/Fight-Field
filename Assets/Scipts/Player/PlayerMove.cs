@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float _dirX { get; private set; }
     public float _dirY { get; private set; }
 
-    public event Action MovePlayer, PlayerCrouch, PlayerJump;
+    public event Action Moved, Crouched, Jumped;
 
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
@@ -22,12 +22,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _distGround, _distAboveHead;
 
     private float _currentSpeed;
-    private PlayerAnimations _playerAnimations;
 
     private void OnValidate()
     {
         _rb ??= GetComponent<Rigidbody>();
-        _playerAnimations ??= GetComponent<PlayerAnimations>();
 
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
@@ -37,17 +35,14 @@ public class PlayerMove : MonoBehaviour
     }
     private void Start()
     {
-        MovePlayer += MoveStickPlayer;
-        MovePlayer += _playerAnimations.AnimMove;
-        PlayerCrouch += PlayerMoveCrouch;
-        PlayerCrouch += _playerAnimations.AnimCrouch;
-        PlayerJump += _playerAnimations.AnimJump;
+        Moved += MoveStickPlayer;
+        Crouched += MoveCrouch;
 
         isCrouch = false;
         _currentSpeed = _speedPlayer;
     }
         
-    private void FixedUpdate() => MovePlayer?.Invoke();
+    private void FixedUpdate() => Moved?.Invoke();
 
     private void MoveStickPlayer()
     {
@@ -58,9 +53,9 @@ public class PlayerMove : MonoBehaviour
         transform.localPosition += transform.right * _dirX * _currentSpeed;
     }
 
-    public void OnCrouchButton() => PlayerCrouch?.Invoke();
+    public void OnCrouchButton() => Crouched?.Invoke();
 
-    private void PlayerMoveCrouch()
+    private void MoveCrouch()
     {
         isCrouch = !isCrouch;
 
@@ -83,7 +78,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (!isCrouch && TryRay(transform.position, -transform.up, _distGround))
         {
-            PlayerJump?.Invoke();
+            Jumped?.Invoke();
             _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);
         }
     }

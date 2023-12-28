@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.DefaultCompany.BankHack",
+  "applicationId": "com.ACTEN.BankHack",
   "variantName": "release",
   "elements": []
 }

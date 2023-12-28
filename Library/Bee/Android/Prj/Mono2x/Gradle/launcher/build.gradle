@@ -18,7 +18,7 @@ android {
     defaultConfig {
         minSdkVersion 22
         targetSdkVersion 32
-        applicationId 'com.DefaultCompany.BankHack'
+        applicationId 'com.ACTEN.BankHack'
         ndk {
             abiFilters 'armeabi-v7a'
         }

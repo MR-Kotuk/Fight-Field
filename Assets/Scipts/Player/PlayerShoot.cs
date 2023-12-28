@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [HideInInspector] public Gun _gun;
+    public event Action Shooted;
+    public event Action<Gun> SwitchedGun;
 
-    public void SwitchGun(Gun gun)
+    private Gun _gun;
+
+    private bool isShoot;
+
+    private void Start()
     {
-        _gun = gun;
+        Shooted += Shoot;
     }
 
-    public void Shoot()
+    private void FixedUpdate()
     {
-        if(_gun != null)
-            _gun.Shoot();
+        if (isShoot && _gun != null)
+            Shooted?.Invoke();
+    }
+    public void OnShoot(bool shoot) => isShoot = shoot;
+    private void Shoot() => _gun.Shoot();
+    public void SwitchGun(Gun gun)
+    {
+        SwitchedGun?.Invoke(gun);
+        _gun = gun;
     }
 }

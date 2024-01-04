@@ -2,31 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(WeaponsUI))]
-public class Gun : MonoBehaviour
+public class Gun : Weapon
 {
-    public int MaxBulletCount;
-
-    [HideInInspector] public int BulletCount;
-
     [SerializeField] private GameObject _bullet;
 
-    [SerializeField] private Transform _shootTrn;
+    [SerializeField] private Transform _fireTrn;
     [SerializeField] private Camera _camera;
 
     [SerializeField] private float _waitTime;
     [SerializeField] private float _returnTime;
-    [SerializeField] private float _bulletSpeed;
 
-    private bool isReturn = false;
-
-    private void Start()
+    public override void Attack()
     {
-        BulletCount = MaxBulletCount;
-    }
-    public void Shoot()
-    {
-        if (BulletCount > 0 && !isReturn)
+        if (AttackCount > 0 && !isReturn)
         {
             Ray rayToShoot = _camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit raycastHit;
@@ -37,29 +25,33 @@ public class Gun : MonoBehaviour
             else
                 toPoint = rayToShoot.GetPoint(75);
 
-            Vector3 dirTo = toPoint - _shootTrn.position;
+            Vector3 dirTo = toPoint - _fireTrn.position;
 
-            GameObject bullet = Instantiate(_bullet, _shootTrn.position, Quaternion.identity);
+            GameObject bullet = Instantiate(_bullet, _fireTrn.position, Quaternion.identity);
 
             bullet.transform.forward = dirTo.normalized;
 
-            bullet.GetComponent<Rigidbody>().AddForce(dirTo.normalized * _bulletSpeed, ForceMode.Impulse);
+            bullet?.GetComponent<Rigidbody>().AddForce(dirTo.normalized * AttackSpeed, ForceMode.Impulse);
 
-            BulletCount--;
+            AttackCount--;
 
             StartCoroutine(ReturnWait(_waitTime));
         }
-        else if(!isReturn)
-            StartCoroutine(ReturnWait(_returnTime));
+        else if (!isReturn)
+            PlayerAttack.Reload();
     }
 
+    public override void Reload()
+    {
+        StartCoroutine(ReturnWait(_returnTime));
+    }
     private IEnumerator ReturnWait(float wait)
     {
         isReturn = true;
         yield return new WaitForSeconds(wait);
         isReturn = false;
 
-        if(wait == _returnTime)
-            BulletCount = MaxBulletCount;
+        if (wait == _returnTime)
+            AttackCount = MaxAttackCount;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(PlayerAnimations))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }
@@ -25,16 +25,16 @@ public class PlayerMove : MonoBehaviour
 
     private void OnValidate()
     {
-        _rb ??= GetComponent<Rigidbody>();
-
-        if (_rb == GetComponent<Rigidbody>())
-            _rb.freezeRotation = true;
-
         _speedPlayer = TestValues.CheckNewValue(_speedPlayer, _maxSpeedPlayer);
         _powerJumpPlayer = TestValues.CheckNewValue(_powerJumpPlayer, _maxJumpPlayer);
     }
     private void Start()
     {
+        _rb ??= GetComponent<Rigidbody>();
+
+        if (_rb == GetComponent<Rigidbody>())
+            _rb.freezeRotation = true;
+
         Moved += MoveStickPlayer;
         Crouched += MoveCrouch;
 

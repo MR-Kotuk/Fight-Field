@@ -86,17 +86,17 @@
 47            android:name="com.unity3d.player.UnityPlayerActivity"
 47-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:15-68
 48            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-48-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:180-361
+48-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:181-362
 49            android:exported="true"
-49-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:433-456
+49-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:434-457
 50            android:hardwareAccelerated="false"
-50-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:397-432
+50-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:398-433
 51            android:launchMode="singleTask"
-51-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:148-179
+51-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:149-180
 52            android:resizeableActivity="false"
-52-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:362-396
-53            android:screenOrientation="fullUser"
-53-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:111-147
+52-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:363-397
+53            android:screenOrientation="landscape"
+53-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:111-148
 54            android:theme="@style/UnityThemeSelector" >
 54-->C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:69-110
 55            <intent-filter>

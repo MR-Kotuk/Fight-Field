@@ -3,37 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Gun))]
 public class WeaponsUI : MonoBehaviour
 {
-    [SerializeField] private Text _bulletCount;
+    [SerializeField] private Text _attackCount;
     [SerializeField] private Button _weaponButton;
 
-    [SerializeField] private PlayerShoot _playerShoot;
+    [SerializeField] private PlayerAttack _playerAttack;
 
-    [SerializeField] private int _minRedBulletCount;
-    private Gun _gun;
+    [SerializeField] private int _minAttackCount;
+
+    private Weapon _weapon;
 
     private void Start()
     {
-        _gun = GetComponent<Gun>();
-        _playerShoot.SwitchedGun += SwitchGun;
-        _playerShoot.Shooted += BulletCount;
-    }
-    private void BulletCount()
-    {
-        _bulletCount.text = $"{_gun.BulletCount}/{_gun.MaxBulletCount}";
+        _weapon = GetComponent<Weapon>();
 
-        if (_gun.BulletCount <= _minRedBulletCount)
-            _bulletCount.color = Color.red;
+        _playerAttack.SwitchedWeapon += SwitchWeapon;
+    }
+    private void FixedUpdate()
+    {
+        _attackCount.text = $"{_weapon.AttackCount}/{_weapon.MaxAttackCount}";
+
+        if (_weapon.AttackCount <= _minAttackCount)
+            _attackCount.color = Color.red;
         else
-            _bulletCount.color = Color.white;
-
+            _attackCount.color = Color.white;
     }
-    private void SwitchGun(Gun gun)
+    public void SwitchWeapon(Weapon weapon)
     {
-        if (_gun == gun)
-            _weaponButton.image.color = Color.blue;
+        if (_weapon == weapon)
+        {
+            if (_weaponButton.image.color == Color.blue && _weapon.AttackCount != _weapon.MaxAttackCount)
+                _playerAttack.Reload();
+            else
+                _weaponButton.image.color = Color.blue;
+        }
         else
             _weaponButton.image.color = Color.white;
     }

@@ -2,45 +2,82 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(PlayerMove))]
+[RequireComponent(typeof(Animator), typeof(PlayerMove), typeof(PlayerAttack))]
 public class PlayerAnimations : MonoBehaviour
 {
+    [SerializeField] private GameObject _camera;
+
     private PlayerMove _playerMove;
+    private PlayerAttack _playerAttack;
     private Animator _anim;
+    private Weapon _weapon;
 
-    private const string _moveXText = "MoveX", _moveYText = "MoveY";
-    private const string _isMoveText = "isMove", _isJumpText = "isJump";
-    private const string _isCrouchText = "isCrouch";
+    private const string _moveXN = "MoveX", _moveYN = "MoveY", _camYN = "CamY";
+    private const string _isJumpN = "isJump";
+    private const string _isCrouchN = "isCrouch";
+    private const string _isReloadN = "isReload";
 
-    private void OnValidate()
+    private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Revolver", "Thompson" };
+
+    private void Start()
     {
         _anim ??= GetComponent<Animator>();
         _playerMove ??= GetComponent<PlayerMove>();
-    }
-    private void Start()
-    {
+        _playerAttack ??= GetComponent<PlayerAttack>();
+
         _playerMove.Moved += Move;
         _playerMove.Crouched += Crouch;
         _playerMove.Jumped += OnJump;
+
+        _playerAttack.Attacked += Attack;
+        _playerAttack.SwitchedWeapon += SwitchWeapon;
+        _playerAttack.Reloaded += ReloadWeapon;
     }
 
+    private void Attack()
+    {
+        
+    }
+
+    private void SwitchWeapon(Weapon weapon)
+    {
+        _weapon = weapon;
+        SwitchAnimState(_weapon.Name);
+    }
+
+    private void ReloadWeapon() => StartCoroutine(WithWait(_isReloadN));
+
+    private void SwitchAnimState(string name)
+    {
+        for (int i = 0; i < _animWeaponNames.Count; i++)
+            if (_anim.GetBool($"is{_animWeaponNames[i]}"))
+                _anim.SetBool($"is{_animWeaponNames[i]}", false);
+
+        _anim.SetBool($"is{name}", true);
+    }
     private void Move()
     {
-        _anim.SetFloat(_moveXText, _playerMove._dirX);
-        _anim.SetFloat(_moveYText, _playerMove._dirY);
+        _anim.SetFloat(_moveXN, _playerMove._dirX);
+        _anim.SetFloat(_moveYN, _playerMove._dirY);
 
-        _anim.SetBool(_isMoveText, !_playerMove.isCrouch);
+        float camRotY = _camera.transform.eulerAngles.x;
+        if (camRotY < 200)
+            camRotY += 360;
+
+        _anim.SetFloat(_camYN, camRotY);
+
+        _anim.SetBool($"is{_weapon.Name}", !_playerMove.isCrouch);
     }
     private void Crouch()
     {
-        _anim.SetBool(_isMoveText, !_playerMove.isCrouch);
-        _anim.SetBool(_isCrouchText, _playerMove.isCrouch);
+        _anim.SetBool($"is{_weapon.Name}", !_playerMove.isCrouch);
+        _anim.SetBool($"isCrouch{_weapon.Name}", _playerMove.isCrouch);
     }
-    private void OnJump() => StartCoroutine(Jump());
-    private IEnumerator Jump()
+    private void OnJump() => StartCoroutine(WithWait(_isJumpN));
+    private IEnumerator WithWait(string name)
     {
-        _anim.SetBool(_isJumpText, true);
+        _anim.SetBool(name, true);
         yield return new WaitForSeconds(0.5f);
-        _anim.SetBool(_isJumpText, false);
+        _anim.SetBool(name, false);
     }
 }

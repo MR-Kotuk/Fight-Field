@@ -66,15 +66,17 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
     <Compile Include="Assets\Scipts\UI\WeaponsUI\WeaponsUI.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\Bullet.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />
-    <Compile Include="Assets\Scipts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scipts\Player\CameraMove.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scipts\Weapon\Gun.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Hands.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\Outline.shader" />

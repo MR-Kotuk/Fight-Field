@@ -131,43 +131,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16662}
+      Script: {instanceID: 16666}
     - Class: 114
-      Script: {instanceID: 16668}
+      Script: {instanceID: 16672}
     - Class: 114
-      Script: {instanceID: 17428}
+      Script: {instanceID: 17432}
     - Class: 114
-      Script: {instanceID: 18182}
+      Script: {instanceID: 18186}
     - Class: 114
-      Script: {instanceID: 18456}
+      Script: {instanceID: 18460}
     - Class: 114
-      Script: {instanceID: 18882}
+      Script: {instanceID: 18886}
     - Class: 114
-      Script: {instanceID: 20798}
+      Script: {instanceID: 20802}
     - Class: 114
-      Script: {instanceID: 21392}
+      Script: {instanceID: 21396}
     - Class: 114
-      Script: {instanceID: 21658}
+      Script: {instanceID: 21662}
     - Class: 114
-      Script: {instanceID: 21892}
+      Script: {instanceID: 21896}
     - Class: 114
-      Script: {instanceID: 22610}
+      Script: {instanceID: 22614}
     - Class: 114
-      Script: {instanceID: 23338}
+      Script: {instanceID: 23342}
     - Class: 114
-      Script: {instanceID: 24070}
+      Script: {instanceID: 24074}
     - Class: 114
-      Script: {instanceID: 24118}
+      Script: {instanceID: 24122}
     - Class: 114
-      Script: {instanceID: 24354}
+      Script: {instanceID: 24274}
     - Class: 114
-      Script: {instanceID: 24630}
+      Script: {instanceID: 24360}
     - Class: 114
-      Script: {instanceID: 25778}
+      Script: {instanceID: 24636}
     - Class: 114
-      Script: {instanceID: 25976}
+      Script: {instanceID: 25784}
     - Class: 114
-      Script: {instanceID: 34908}
+      Script: {instanceID: 25982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1393,6 +1393,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Bullet
+  - hash:
+      serializedVersion: 2
       Hash: 04bf8dba8e867e9c3c936355c18443e4
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -1637,13 +1643,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Bullet
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Taras Sliusar/Desktop/Bank Hack/Bank Hack.apk
+  playerPath: C:/Users/Taras Sliusar/Desktop/Bank Hack.apk

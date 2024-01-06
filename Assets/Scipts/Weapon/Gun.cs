@@ -7,7 +7,6 @@ public class Gun : Weapon
     [SerializeField] private GameObject _bullet;
 
     [SerializeField] private Transform _fireTrn;
-    [SerializeField] private Camera _camera;
 
     [SerializeField] private float _waitTime;
     [SerializeField] private float _returnTime;
@@ -16,7 +15,7 @@ public class Gun : Weapon
     {
         if (AttackCount > 0 && !isReturn)
         {
-            Ray rayToShoot = _camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Ray rayToShoot = CurrentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit raycastHit;
 
             Vector3 toPoint;
@@ -48,7 +47,16 @@ public class Gun : Weapon
     private IEnumerator ReturnWait(float wait)
     {
         isReturn = true;
-        yield return new WaitForSeconds(wait);
+
+        if (isScope && wait == _returnTime)
+        {
+            Scope();
+            yield return new WaitForSeconds(wait);
+            Scope();
+        }
+        else
+            yield return new WaitForSeconds(wait);
+
         isReturn = false;
 
         if (wait == _returnTime)

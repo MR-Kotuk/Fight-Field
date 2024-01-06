@@ -16,6 +16,7 @@ public class PlayerAnimations : MonoBehaviour
     private const string _isJumpN = "isJump";
     private const string _isCrouchN = "isCrouch";
     private const string _isReloadN = "isReload";
+    private const string _isScopeN = "isScope";
 
     private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Revolver", "Thompson" };
 

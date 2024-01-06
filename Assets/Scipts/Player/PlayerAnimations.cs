@@ -65,13 +65,10 @@ public class PlayerAnimations : MonoBehaviour
             camRotY += 360;
 
         _anim.SetFloat(_camYN, camRotY);
-
-        _anim.SetBool($"is{_weapon.Name}", !_playerMove.isCrouch);
     }
     private void Crouch()
     {
-        _anim.SetBool($"is{_weapon.Name}", !_playerMove.isCrouch);
-        _anim.SetBool($"isCrouch{_weapon.Name}", _playerMove.isCrouch);
+        _anim.SetBool($"isCrouch", _playerMove.isCrouch);
     }
     private void OnJump() => StartCoroutine(WithWait(_isJumpN));
     private IEnumerator WithWait(string name)

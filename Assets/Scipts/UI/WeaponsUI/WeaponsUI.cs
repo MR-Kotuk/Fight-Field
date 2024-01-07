@@ -9,8 +9,15 @@ public class WeaponsUI : MonoBehaviour
     [SerializeField] private Button _weaponButton;
 
     [SerializeField] private PlayerAttack _playerAttack;
+    [SerializeField] private ScopeWeapon _scopeWeapon;
+
+    [SerializeField] private SpriteManager _spriteManager;
+
+    [SerializeField] private GameObject _scopeImage, _scopeButton;
 
     [SerializeField] private int _minAttackCount;
+
+    [SerializeField] private bool isNoScope;
 
     private Weapon _weapon;
 
@@ -20,7 +27,7 @@ public class WeaponsUI : MonoBehaviour
 
         _playerAttack.SwitchedWeapon += SwitchWeapon;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         _attackCount.text = $"{_weapon.AttackCount}/{_weapon.MaxAttackCount}";
 
@@ -28,6 +35,11 @@ public class WeaponsUI : MonoBehaviour
             _attackCount.color = Color.red;
         else
             _attackCount.color = Color.white;
+
+        if (_scopeWeapon.isScope)
+            _scopeImage.SetActive(false);
+        else
+            _scopeImage.SetActive(true);
     }
     public void SwitchWeapon(Weapon weapon)
     {
@@ -37,6 +49,11 @@ public class WeaponsUI : MonoBehaviour
                 _playerAttack.Reload();
             else
                 _weaponButton.image.color = Color.blue;
+
+            if (isNoScope)
+                _scopeButton.SetActive(false);
+            else
+                _scopeButton.SetActive(true);
         }
         else
             _weaponButton.image.color = Color.white;

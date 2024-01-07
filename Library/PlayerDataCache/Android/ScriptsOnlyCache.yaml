@@ -1,15 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnimationWeapon
     - Bullet
     - ButtonsUI
     - CameraMove
     - DynamicJoystick
     - FixedJoystick
     - Gun
+    - Hands
     - PlayerAnimations
+    - PlayerAttack
     - PlayerMove
-    - PlayerShoot
+    - ScopeWeapon
     - SpriteManager
     - WeaponsUI
     Unity.2D.Tilemap.Editor.dll:
@@ -35,8 +38,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationBlendTree.Node
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -68,11 +74,14 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerShoot
-    methodName: SwitchGun
+    fullTypeName: PlayerAttack
+    methodName: SwitchWeapon
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerShoot
-    methodName: SwitchGun
+    fullTypeName: PlayerAttack
+    methodName: Scop
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerAttack
+    methodName: SwitchWeapon
   - assembly: Assembly-CSharp
     fullTypeName: PlayerMove
     methodName: OnJumpButton
@@ -80,14 +89,17 @@ ScriptsOnlyBuild:
     fullTypeName: PlayerMove
     methodName: OnCrouchButton
   - assembly: Assembly-CSharp
+    fullTypeName: PlayerAttack
+    methodName: SwitchWeapon
+  - assembly: Assembly-CSharp
     fullTypeName: PlayerMove
     methodName: OnCrouchButton
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerShoot
-    methodName: OnShoot
+    fullTypeName: PlayerAttack
+    methodName: OnAttack
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerShoot
-    methodName: OnShoot
+    fullTypeName: PlayerAttack
+    methodName: OnAttack
   sceneClasses:
     Assets/Scenes/GameScene.unity:
     - Class: 1
@@ -131,11 +143,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16666}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 16672}
+      Script: {instanceID: 16668}
     - Class: 114
-      Script: {instanceID: 17432}
+      Script: {instanceID: 16714}
+    - Class: 114
+      Script: {instanceID: 17430}
+    - Class: 114
+      Script: {instanceID: 17462}
     - Class: 114
       Script: {instanceID: 18186}
     - Class: 114
@@ -143,31 +159,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18886}
     - Class: 114
-      Script: {instanceID: 20802}
+      Script: {instanceID: 20804}
     - Class: 114
-      Script: {instanceID: 21396}
+      Script: {instanceID: 21398}
     - Class: 114
-      Script: {instanceID: 21662}
+      Script: {instanceID: 21664}
     - Class: 114
-      Script: {instanceID: 21896}
+      Script: {instanceID: 21898}
     - Class: 114
-      Script: {instanceID: 22614}
+      Script: {instanceID: 22616}
     - Class: 114
-      Script: {instanceID: 23342}
+      Script: {instanceID: 23344}
     - Class: 114
-      Script: {instanceID: 24074}
+      Script: {instanceID: 24076}
     - Class: 114
-      Script: {instanceID: 24122}
+      Script: {instanceID: 24124}
     - Class: 114
-      Script: {instanceID: 24274}
+      Script: {instanceID: 24276}
     - Class: 114
-      Script: {instanceID: 24360}
+      Script: {instanceID: 24362}
     - Class: 114
-      Script: {instanceID: 24636}
+      Script: {instanceID: 24638}
     - Class: 114
-      Script: {instanceID: 25784}
+      Script: {instanceID: 25786}
     - Class: 114
-      Script: {instanceID: 25982}
+      Script: {instanceID: 25984}
+    - Class: 114
+      Script: {instanceID: 69616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,6 +239,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 8a5446d606ad30407e538d332aa229b1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ScopeWeapon
   - hash:
       serializedVersion: 2
       Hash: 01bf6cc4f89c612b67e4917c31a0d32e
@@ -311,6 +335,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FixedJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: c62f3bcdc5c8a69c2a62d0a6885e93e0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Hands
   - hash:
       serializedVersion: 2
       Hash: 967cb4d006527026be03739b2f5cb2e8
@@ -727,6 +757,12 @@ ScriptsOnlyBuild:
     className: CinemachineGroupComposer
   - hash:
       serializedVersion: 2
+      Hash: c62f3bcdc5c8a69c2a62d0a6885e93e0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Weapon
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1033,7 +1069,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: c7331d382437b54106cc029edbd59034
+      Hash: 01fc324c8e909fe084fcaeaca8bb58e3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: WeaponsUI
@@ -1357,10 +1393,10 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
+      Hash: 521d966333456e99589dd00d9e3f06cc
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: PlayerShoot
+    className: PlayerAttack
   - hash:
       serializedVersion: 2
       Hash: 34096a327d779b7c96a3e390f3559143
@@ -1459,7 +1495,7 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
+      Hash: f3e15d2edc5121092262901b0e4260c1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerAnimations
@@ -1597,7 +1633,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 9adc7cf8c7a466ad89250ab058cf9bf6
+      Hash: a43ff1a9b01e5bdbaefbe9850e694c07
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Gun
@@ -1643,6 +1679,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 95644c0d0741af46640fbb2d3bb358c5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AnimationWeapon
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Scipts\Weapon\ScopeWeapon.cs" />
     <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
     <Compile Include="Assets\Scipts\UI\WeaponsUI\WeaponsUI.cs" />
     <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />
     <Compile Include="Assets\Scipts\Player\CameraMove.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Scipts\Weapon\AnimationWeapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\Gun.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scipts\Weapon\Hands.cs" />

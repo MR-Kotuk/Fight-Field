@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
+    [SerializeField] private ScopeWeapon _scopeWeapon;
+
     [SerializeField] private GameObject _bullet;
 
     [SerializeField] private Transform _fireTrn;
 
     [SerializeField] private float _waitTime;
-    [SerializeField] private float _returnTime;
 
+    private void Start()
+    {
+        PlayerAttack.Reloaded += Reload;
+
+        AttackCount = MaxAttackCount;
+
+        isReturn = false;
+    }
     public override void Attack()
     {
         if (AttackCount > 0 && !isReturn)
         {
-            Ray rayToShoot = CurrentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Ray rayToShoot = _scopeWeapon.CurrentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit raycastHit;
 
             Vector3 toPoint;
@@ -42,24 +51,17 @@ public class Gun : Weapon
 
     public override void Reload()
     {
-        StartCoroutine(ReturnWait(_returnTime));
+        StartCoroutine(ReturnWait(ReturnTime));
     }
     private IEnumerator ReturnWait(float wait)
     {
         isReturn = true;
 
-        if (isScope && wait == _returnTime)
-        {
-            Scope();
-            yield return new WaitForSeconds(wait);
-            Scope();
-        }
-        else
-            yield return new WaitForSeconds(wait);
+        yield return new WaitForSeconds(wait);
 
         isReturn = false;
 
-        if (wait == _returnTime)
+        if (wait == ReturnTime)
             AttackCount = MaxAttackCount;
     }
 }

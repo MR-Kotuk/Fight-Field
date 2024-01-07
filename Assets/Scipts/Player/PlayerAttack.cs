@@ -5,10 +5,10 @@ using System;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Weapon StartWeapon;
-
     public event Action Attacked, Reloaded, Scoped;
     public event Action<Weapon> SwitchedWeapon;
+
+    [SerializeField] private Weapon StartWeapon;
 
     private Weapon _weapon;
 
@@ -26,10 +26,7 @@ public class PlayerAttack : MonoBehaviour
         if (isAttack)
             Attacked?.Invoke();
     }
-    public void Scop()
-    {
-        Scoped?.Invoke();
-    }
+    public void Scop() => Scoped?.Invoke();
     public void OnAttack(bool attacked) => isAttack = attacked;
     private void Attack() => _weapon.Attack();
     public void SwitchWeapon(Weapon weapon)

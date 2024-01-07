@@ -337,14 +337,18 @@
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
 "Assets/Scipts/Player/CameraMove.cs"
 "Assets/Scipts/Player/PlayerAnimations.cs"
+"Assets/Scipts/Player/PlayerAttack.cs"
 "Assets/Scipts/Player/PlayerMove.cs"
-"Assets/Scipts/Player/PlayerShoot.cs"
 "Assets/Scipts/TestSystem/TestValues.cs"
 "Assets/Scipts/UI/ButtonsUI.cs"
 "Assets/Scipts/UI/SpriteManager.cs"
 "Assets/Scipts/UI/WeaponsUI/WeaponsUI.cs"
+"Assets/Scipts/Weapon/AnimationWeapon.cs"
 "Assets/Scipts/Weapon/Bullet.cs"
 "Assets/Scipts/Weapon/Gun.cs"
+"Assets/Scipts/Weapon/Hands.cs"
+"Assets/Scipts/Weapon/ScopeWeapon.cs"
+"Assets/Scipts/Weapon/Weapon.cs"
 -langversion:9.0
 
 /deterministic

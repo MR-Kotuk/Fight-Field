@@ -136,8 +136,8 @@
 75-->[:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:51:13-44
 76            android:resizeableActivity="false"
 76-->[:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:52:13-47
-77            android:screenOrientation="landscape"
-77-->[:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:53:13-50
+77            android:screenOrientation="fullUser"
+77-->[:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:53:13-49
 78            android:theme="@style/UnityThemeSelector" >
 78-->[:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:54:13-54
 79            <intent-filter>

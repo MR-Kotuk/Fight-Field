@@ -156,7 +156,7 @@ ADDED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\
 activity#com.unity3d.player.UnityPlayerActivity
 ADDED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:46:9-68:20
 	android:screenOrientation
-		ADDED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:53:13-50
+		ADDED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:53:13-49
 	android:launchMode
 		ADDED from [:unityLibrary] C:\Users\Taras Sliusar\Bank-Hack\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:51:13-44
 	android:hardwareAccelerated

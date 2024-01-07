@@ -10,15 +10,10 @@ public class PlayerAnimations : MonoBehaviour
     private PlayerMove _playerMove;
     private PlayerAttack _playerAttack;
     private Animator _anim;
-    private Weapon _weapon;
 
     private const string _moveXN = "MoveX", _moveYN = "MoveY", _camYN = "CamY";
     private const string _isJumpN = "isJump";
     private const string _isCrouchN = "isCrouch";
-    private const string _isReloadN = "isReload";
-    private const string _isScopeN = "isScope";
-
-    private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Revolver", "Thompson" };
 
     private void Start()
     {
@@ -31,8 +26,6 @@ public class PlayerAnimations : MonoBehaviour
         _playerMove.Jumped += OnJump;
 
         _playerAttack.Attacked += Attack;
-        _playerAttack.SwitchedWeapon += SwitchWeapon;
-        _playerAttack.Reloaded += ReloadWeapon;
     }
 
     private void Attack()
@@ -40,22 +33,6 @@ public class PlayerAnimations : MonoBehaviour
         
     }
 
-    private void SwitchWeapon(Weapon weapon)
-    {
-        _weapon = weapon;
-        SwitchAnimState(_weapon.Name);
-    }
-
-    private void ReloadWeapon() => StartCoroutine(WithWait(_isReloadN));
-
-    private void SwitchAnimState(string name)
-    {
-        for (int i = 0; i < _animWeaponNames.Count; i++)
-            if (_anim.GetBool($"is{_animWeaponNames[i]}"))
-                _anim.SetBool($"is{_animWeaponNames[i]}", false);
-
-        _anim.SetBool($"is{name}", true);
-    }
     private void Move()
     {
         _anim.SetFloat(_moveXN, _playerMove._dirX);
@@ -69,7 +46,7 @@ public class PlayerAnimations : MonoBehaviour
     }
     private void Crouch()
     {
-        _anim.SetBool($"isCrouch", _playerMove.isCrouch);
+        _anim.SetBool(_isCrouchN, _playerMove.isCrouch);
     }
     private void OnJump() => StartCoroutine(WithWait(_isJumpN));
     private IEnumerator WithWait(string name)

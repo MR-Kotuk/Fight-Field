@@ -10,15 +10,13 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private float _crouchMinAngle, _crouchMaxAngle;
     [SerializeField] private float _maxSensY, _maxSensX;
 
-    [SerializeField] private GameObject _player, _bodyPlayer;
+    [SerializeField] private GameObject _player;
     [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
+
+    [SerializeField] private PlayerMove _playerMove;
 
     private float _camDirX, _camDirY;
     private float _currentMinAngle, _currentMaxAngle;
-
-    private float _distCamToBody;
-
-    private PlayerMove _playerMove;
 
     private void OnValidate()
     {
@@ -28,10 +26,6 @@ public class CameraMove : MonoBehaviour
 
     private void Start() 
     {
-        _playerMove = _player.GetComponent<PlayerMove>();
-
-        _distCamToBody = transform.position.y - _bodyPlayer.transform.position.y;
-
         _currentMinAngle = _minCamAngle;
         _currentMaxAngle = _maxCamAngle;
     }
@@ -56,10 +50,6 @@ public class CameraMove : MonoBehaviour
 
         Vector3 camAngles = transform.eulerAngles;
         transform.eulerAngles = new Vector3(camAngles.x, camAngles.y, 0);
-
-        Vector3 crouchCamPos = transform.position;
-        crouchCamPos.y = _bodyPlayer.transform.position.y + _distCamToBody;
-        transform.position = crouchCamPos;
     }
     private void Update()
     {

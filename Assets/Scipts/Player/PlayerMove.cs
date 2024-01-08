@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(Rigidbody), typeof(PlayerAnimations))]
+[RequireComponent(typeof(PlayerAnimations))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }
@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
     [SerializeField] private Transform _originHead;
+
+    [SerializeField] private Transform _player, _foot;
 
     [SerializeField] private float _speedPlayer;
     [SerializeField] private float _powerJumpPlayer;
@@ -36,7 +38,6 @@ public class PlayerMove : MonoBehaviour
             _rb.freezeRotation = true;
 
         Moved += MoveStickPlayer;
-        Crouched += MoveCrouch;
 
         isCrouch = false;
         _currentSpeed = _speedPlayer;
@@ -49,34 +50,30 @@ public class PlayerMove : MonoBehaviour
         _dirX = _moveJoystick.Horizontal;
         _dirY = _moveJoystick.Vertical;
 
-        transform.localPosition += transform.forward * _dirY * _currentSpeed;
-        transform.localPosition += transform.right * _dirX * _currentSpeed;
+        _player.localPosition += transform.forward * _dirY * _currentSpeed;
+        _player.localPosition += transform.right * _dirX * _currentSpeed;
     }
 
-    public void OnCrouchButton() => Crouched?.Invoke();
-
-    private void MoveCrouch()
+    public void OnCrouchButton()
     {
         isCrouch = !isCrouch;
 
-        if (TryRay(transform.position, -transform.up, _distGround))
-        {
-            if (!isCrouch && TryRay(_originHead.position, _originHead.up, _distAboveHead))
-                isCrouch = true;
-        }
-        else
+        if (!TryRay(_foot.position, -_foot.up, _distGround) && isCrouch)
             isCrouch = false;
-        
+
+        Crouched?.Invoke();
 
         if (isCrouch)
+        {
             _currentSpeed = _speedPlayer / 2;
+        }
         else
             _currentSpeed = _speedPlayer;
     }
 
     public void OnJumpButton()
     {
-        if (!isCrouch && TryRay(transform.position, -transform.up, _distGround))
+        if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
             Jumped?.Invoke();
             _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);

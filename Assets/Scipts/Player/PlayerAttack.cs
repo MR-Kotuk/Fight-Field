@@ -18,9 +18,9 @@ public class PlayerAttack : MonoBehaviour
     {
         Attacked += Attack;
 
-        SwitchWeapon(StartWeapon);
+        Invoke("TakeStartWeapon", 0.1f);
     }
-
+    private void TakeStartWeapon() => SwitchWeapon(StartWeapon);
     private void FixedUpdate()
     {
         if (isAttack)

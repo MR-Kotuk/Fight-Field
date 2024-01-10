@@ -30,7 +30,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Recorder.MovieRecorderEditor
     - UnityEditor.Recorder.MovieRecorderSettings
     - UnityEditor.Recorder.RecorderControllerSettings
-    - UnityEditor.Recorder.RecorderPreferencesSettings
     - UnityEditor.Recorder.RecorderSettingsPrefsEditor
     - UnityEditor.Recorder.RecorderWindow
     Unity.Rider.Editor.dll:
@@ -38,7 +37,6 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationBlendTree.Node
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -77,17 +75,14 @@ ScriptsOnlyBuild:
     fullTypeName: PlayerAttack
     methodName: SwitchWeapon
   - assembly: Assembly-CSharp
-    fullTypeName: PlayerAttack
-    methodName: Scop
+    fullTypeName: ScopeWeapon
+    methodName: OnScope
   - assembly: Assembly-CSharp
     fullTypeName: PlayerAttack
     methodName: SwitchWeapon
   - assembly: Assembly-CSharp
     fullTypeName: PlayerMove
     methodName: OnJumpButton
-  - assembly: Assembly-CSharp
-    fullTypeName: PlayerMove
-    methodName: OnCrouchButton
   - assembly: Assembly-CSharp
     fullTypeName: PlayerAttack
     methodName: SwitchWeapon
@@ -143,49 +138,49 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16662}
+      Script: {instanceID: 16666}
     - Class: 114
-      Script: {instanceID: 16668}
+      Script: {instanceID: 16672}
     - Class: 114
-      Script: {instanceID: 16714}
+      Script: {instanceID: 16718}
     - Class: 114
-      Script: {instanceID: 17430}
+      Script: {instanceID: 17434}
     - Class: 114
-      Script: {instanceID: 17462}
+      Script: {instanceID: 17466}
     - Class: 114
-      Script: {instanceID: 18186}
+      Script: {instanceID: 18190}
     - Class: 114
-      Script: {instanceID: 18460}
+      Script: {instanceID: 18464}
     - Class: 114
-      Script: {instanceID: 18886}
+      Script: {instanceID: 18890}
     - Class: 114
-      Script: {instanceID: 20804}
+      Script: {instanceID: 19636}
     - Class: 114
-      Script: {instanceID: 21398}
+      Script: {instanceID: 20810}
     - Class: 114
-      Script: {instanceID: 21664}
+      Script: {instanceID: 21404}
     - Class: 114
-      Script: {instanceID: 21898}
+      Script: {instanceID: 21670}
     - Class: 114
-      Script: {instanceID: 22616}
+      Script: {instanceID: 21904}
     - Class: 114
-      Script: {instanceID: 23344}
+      Script: {instanceID: 22622}
     - Class: 114
-      Script: {instanceID: 24076}
+      Script: {instanceID: 23350}
     - Class: 114
-      Script: {instanceID: 24124}
+      Script: {instanceID: 24082}
     - Class: 114
-      Script: {instanceID: 24276}
+      Script: {instanceID: 24130}
     - Class: 114
-      Script: {instanceID: 24362}
+      Script: {instanceID: 24282}
     - Class: 114
-      Script: {instanceID: 24638}
+      Script: {instanceID: 24368}
     - Class: 114
-      Script: {instanceID: 25786}
+      Script: {instanceID: 24644}
     - Class: 114
-      Script: {instanceID: 25984}
+      Script: {instanceID: 25792}
     - Class: 114
-      Script: {instanceID: 69616}
+      Script: {instanceID: 25990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -241,7 +236,7 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 8a5446d606ad30407e538d332aa229b1
+      Hash: df1c72a66842481a346c58ce157983ef
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ScopeWeapon
@@ -709,6 +704,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 95644c0d0741af46640fbb2d3bb358c5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AnimationWeapon
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -1117,7 +1118,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: 4e303a71abf72f67fd90e3242ec52e07
+      Hash: 945f553cdb59a7211a9921a67d442111
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMove
@@ -1495,7 +1496,7 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
-      Hash: f3e15d2edc5121092262901b0e4260c1
+      Hash: e6aae0f380345c8ad7344792840ecd42
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerAnimations
@@ -1669,7 +1670,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 22a6a98610f9edd3238ac4859b5e3a4d
+      Hash: fe460e04a4512e2d51aa7fef33c78a90
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraMove
@@ -1679,12 +1680,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 95644c0d0741af46640fbb2d3bb358c5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AnimationWeapon
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

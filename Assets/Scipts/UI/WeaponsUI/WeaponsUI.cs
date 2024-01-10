@@ -23,7 +23,7 @@ public class WeaponsUI : MonoBehaviour
 
     private void Start()
     {
-        _weapon = GetComponent<Weapon>();
+        _weapon ??= GetComponent<Weapon>();
 
         _playerAttack.SwitchedWeapon += SwitchWeapon;
     }

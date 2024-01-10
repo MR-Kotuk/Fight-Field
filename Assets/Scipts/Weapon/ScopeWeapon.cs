@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ScopeWeapon : MonoBehaviour
 {
+    public event Action Scoped;
+
     [HideInInspector] public bool isScope;
 
     [HideInInspector] public Camera CurrentCamera, CurrentScope;
 
     [SerializeField] private PlayerAttack _playerAttack;
+
+    [SerializeField] private PlayerMove _playerMove;
 
     [SerializeField] private Camera _playerCamera;
 
@@ -18,7 +23,8 @@ public class ScopeWeapon : MonoBehaviour
 
     private void Start()
     {
-        _playerAttack.Scoped += Scope;
+        Scoped += Scope;
+
         _playerAttack.SwitchedWeapon += SwitchScope;
         _playerAttack.Reloaded += OnReload;
 
@@ -30,8 +36,11 @@ public class ScopeWeapon : MonoBehaviour
 
         isScope = false;
     }
+    public void OnScope() => Scoped?.Invoke();
     private void SwitchScope(Weapon weapon)
     {
+        isScope = false;
+
         _curentWeapon = weapon;
 
         CurrentScope = _curentWeapon.ScopeCamera;
@@ -42,18 +51,14 @@ public class ScopeWeapon : MonoBehaviour
 
     private IEnumerator Reload()
     {
-        _playerAttack.Scoped -= Scope;
+        Scoped -= Scope;
 
         if (isScope)
-        {
             Scope();
-            yield return new WaitForSeconds(_curentWeapon.ReturnTime);
-            Scope();
-        }
-        else
-            yield return new WaitForSeconds(_curentWeapon.ReturnTime);
 
-        _playerAttack.Scoped += Scope;
+        yield return new WaitForSeconds(_curentWeapon.ReturnTime);
+
+        Scoped += Scope;
     }
     private void Scope()
     {

@@ -25,11 +25,6 @@ public class PlayerMove : MonoBehaviour
 
     private float _currentSpeed;
 
-    private void OnValidate()
-    {
-        _speedPlayer = TestValues.CheckNewValue(_speedPlayer, _maxSpeedPlayer);
-        _powerJumpPlayer = TestValues.CheckNewValue(_powerJumpPlayer, _maxJumpPlayer);
-    }
     private void Start()
     {
         _rb ??= GetComponent<Rigidbody>();

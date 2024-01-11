@@ -564,7 +564,7 @@ ModelImporter:
       - time: 0.5273464
         functionName: SwitchAnimWeapon
         data: Thompson/true
-        objectReferenceParameter: {fileID: 11500000, guid: b3f8bb4b76fd54543b59bf5f1770a34a,
+        objectReferenceParameter: {fileID: 11500000, guid: 9a4e52e8c80dd4543889303dd96a8c5e,
           type: 3}
         floatParameter: 0
         intParameter: 0

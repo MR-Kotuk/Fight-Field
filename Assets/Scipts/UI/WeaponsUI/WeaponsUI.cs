@@ -17,8 +17,6 @@ public class WeaponsUI : MonoBehaviour
 
     [SerializeField] private int _minAttackCount;
 
-    [SerializeField] private bool isNoScope;
-
     private Weapon _weapon;
 
     private void Start()
@@ -50,7 +48,7 @@ public class WeaponsUI : MonoBehaviour
             else
                 _weaponButton.image.color = Color.blue;
 
-            if (isNoScope)
+            if (_weapon.isNoScope)
                 _scopeButton.SetActive(false);
             else
                 _scopeButton.SetActive(true);

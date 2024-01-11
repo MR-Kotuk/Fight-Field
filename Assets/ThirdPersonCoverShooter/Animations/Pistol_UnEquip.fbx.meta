@@ -1015,8 +1015,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: Event SwitchCanScope has a time (0.500000) outside the
-      clip's valid range (0.000000..0.466667). It will never be fired
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -1057,7 +1056,7 @@ ModelImporter:
       - time: 0.54085076
         functionName: SwitchAnimWeapon
         data: Revolver/false
-        objectReferenceParameter: {fileID: 11500000, guid: b3f8bb4b76fd54543b59bf5f1770a34a,
+        objectReferenceParameter: {fileID: 11500000, guid: 9a4e52e8c80dd4543889303dd96a8c5e,
           type: 3}
         floatParameter: 0
         intParameter: 0

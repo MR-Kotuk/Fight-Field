@@ -17,6 +17,8 @@ public class AnimationWeapon : MonoBehaviour
 
     private Animator _anim;
 
+    private Weapon _currentWeapon;
+
     private const string _isReloadN = "isReload";
 
     private void Start()
@@ -59,7 +61,13 @@ public class AnimationWeapon : MonoBehaviour
 
     private void SwitchAnimState(Weapon weapon)
     {
+        if (_currentWeapon != null && !_currentWeapon.isNoScope)
+            _currentWeapon.ScopeCamera.enabled = false;
+
+        _currentWeapon = _weaponsScr[weapon.Name];
+
         string name = weapon.Name;
+
         for (int i = 0; i < _animWeaponNames.Count; i++)
             if (_anim.GetBool($"is{_animWeaponNames[i]}"))
                 _anim.SetBool($"is{_animWeaponNames[i]}", false);

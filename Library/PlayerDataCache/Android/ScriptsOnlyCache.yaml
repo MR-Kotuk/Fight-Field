@@ -30,6 +30,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Recorder.MovieRecorderEditor
     - UnityEditor.Recorder.MovieRecorderSettings
     - UnityEditor.Recorder.RecorderControllerSettings
+    - UnityEditor.Recorder.RecorderPreferencesSettings
     - UnityEditor.Recorder.RecorderSettingsPrefsEditor
     - UnityEditor.Recorder.RecorderWindow
     Unity.Rider.Editor.dll:
@@ -236,7 +237,7 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: df1c72a66842481a346c58ce157983ef
+      Hash: eaaf3946d920924f9d02b69834bd7c18
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ScopeWeapon
@@ -332,7 +333,7 @@ ScriptsOnlyBuild:
     className: FixedJoystick
   - hash:
       serializedVersion: 2
-      Hash: c62f3bcdc5c8a69c2a62d0a6885e93e0
+      Hash: 687ab692bd93f6c51d5d9114c16a6816
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Hands
@@ -758,7 +759,7 @@ ScriptsOnlyBuild:
     className: CinemachineGroupComposer
   - hash:
       serializedVersion: 2
-      Hash: c62f3bcdc5c8a69c2a62d0a6885e93e0
+      Hash: 687ab692bd93f6c51d5d9114c16a6816
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Weapon
@@ -1070,7 +1071,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 01fc324c8e909fe084fcaeaca8bb58e3
+      Hash: 1a9a3bf9dc63e353ba554039d22b5a83
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: WeaponsUI
@@ -1634,7 +1635,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: a43ff1a9b01e5bdbaefbe9850e694c07
+      Hash: b2afc0ff4da388781011fc9e23b52601
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Gun
@@ -1670,7 +1671,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: fe460e04a4512e2d51aa7fef33c78a90
+      Hash: 4a325cc1d2ab9398267b2b6dba455492
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraMove

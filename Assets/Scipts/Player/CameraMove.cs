@@ -9,6 +9,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private float _minCamAngle, _maxCamAngle;
     [SerializeField] private float _crouchMinAngle, _crouchMaxAngle;
     [SerializeField] private float _maxSensY, _maxSensX;
+    [SerializeField] private float _crouchPosY;
 
     [SerializeField] private GameObject _player;
     [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
@@ -18,10 +19,10 @@ public class CameraMove : MonoBehaviour
     private ScopeWeapon _scopeWeapon;
 
     private float _camDirX, _camDirY;
-
     private float _currentMinAngle, _currentMaxAngle;
-
     private float _currentSens;
+
+    private float _standPos;
 
     private void Start() 
     {
@@ -33,6 +34,7 @@ public class CameraMove : MonoBehaviour
         _currentMaxAngle = _maxCamAngle;
 
         _currentSens = _sensitivity;
+        _standPos = transform.localPosition.y;
     }
     private void FixedUpdate()
     {
@@ -45,16 +47,24 @@ public class CameraMove : MonoBehaviour
     }
     private void CrouchAngle()
     {
+        Vector3 pos = transform.localPosition;
+
         if (_playerMove.isCrouch)
         {
             _currentMinAngle = _crouchMinAngle;
             _currentMaxAngle = _crouchMaxAngle;
+
+            pos.y = _crouchPosY;
         }
         else
         {
             _currentMinAngle = _minCamAngle;
             _currentMaxAngle = _maxCamAngle;
+
+            pos.y = _standPos;
         }
+
+        transform.localPosition = pos;
     }
     private void Rotate()
     {

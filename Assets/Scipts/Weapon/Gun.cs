@@ -48,20 +48,4 @@ public class Gun : Weapon
         else if (!isReturn)
             PlayerAttack.Reload();
     }
-
-    public override void Reload()
-    {
-        StartCoroutine(ReturnWait(ReturnTime));
-    }
-    private IEnumerator ReturnWait(float wait)
-    {
-        isReturn = true;
-
-        yield return new WaitForSeconds(wait);
-
-        isReturn = false;
-
-        if (wait == ReturnTime)
-            AttackCount = MaxAttackCount;
-    }
 }

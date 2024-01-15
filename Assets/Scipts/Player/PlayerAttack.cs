@@ -8,11 +8,11 @@ public class PlayerAttack : MonoBehaviour
     public event Action Attacked, Reloaded;
     public event Action<Weapon> SwitchedWeapon;
 
+    [HideInInspector] public bool isAttack;
+
     [SerializeField] private Weapon StartWeapon;
 
     private Weapon _weapon;
-
-    private bool isAttack;
 
     private void Start()
     {

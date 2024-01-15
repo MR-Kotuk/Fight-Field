@@ -8,7 +8,6 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField] private GameObject _camera, _player;
 
     private PlayerMove _playerMove;
-    private PlayerAttack _playerAttack;
     private Animator _anim;
 
     private const string _moveXN = "MoveX", _moveYN = "MoveY", _camYN = "CamY";
@@ -17,18 +16,9 @@ public class PlayerAnimations : MonoBehaviour
     {
         _anim ??= GetComponent<Animator>();
         _playerMove ??= GetComponent<PlayerMove>();
-        _playerAttack ??= GetComponent<PlayerAttack>();
 
         _playerMove.Moved += Move;
-        _playerMove.Crouched += Crouch;
-
-        _playerAttack.Attacked += Attack;
     }
-
-    private void Attack()
-    {
-    }
-
     private void Move()
     {
         _anim.SetFloat(_moveXN, _playerMove._dirX);
@@ -39,8 +29,5 @@ public class PlayerAnimations : MonoBehaviour
             camRotY += 360;
 
         _anim.SetFloat(_camYN, camRotY);
-    }
-    private void Crouch()
-    {
     }
 }

@@ -410,8 +410,10 @@
 "Assets/Scipts/UI/WeaponsUI/WeaponsUI.cs"
 "Assets/Scipts/Weapon/AnimationWeapon.cs"
 "Assets/Scipts/Weapon/Bullet.cs"
+"Assets/Scipts/Weapon/Granade.cs"
 "Assets/Scipts/Weapon/Gun.cs"
 "Assets/Scipts/Weapon/Hands.cs"
+"Assets/Scipts/Weapon/Projectile.cs"
 "Assets/Scipts/Weapon/ScopeWeapon.cs"
 "Assets/Scipts/Weapon/Weapon.cs"
 -langversion:9.0

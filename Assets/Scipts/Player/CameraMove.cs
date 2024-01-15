@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+    [Header("Sensitivity")]
     [SerializeField] private float _sensitivity, _scopeSens;
+    [SerializeField] private float _maxSensY, _maxSensX;
 
+    [Header("Angles")]
     [SerializeField] private float _minCamAngle, _maxCamAngle;
     [SerializeField] private float _crouchMinAngle, _crouchMaxAngle;
-    [SerializeField] private float _maxSensY, _maxSensX;
+
     [SerializeField] private float _crouchPosY;
 
+    [Header("Objects")]
     [SerializeField] private GameObject _player;
     [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
 

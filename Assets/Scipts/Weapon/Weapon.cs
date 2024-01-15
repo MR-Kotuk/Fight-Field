@@ -21,14 +21,29 @@ public class Weapon : MonoBehaviour
     [HideInInspector] public int AttackCount;
 
     [SerializeField] protected PlayerAttack PlayerAttack;
+    [SerializeField] protected AnimationWeapon _animWeapon;
 
+    private void Start()
+    {
+        PlayerAttack.Reloaded += Reload;
+    }
     public virtual void Attack()
     {
         Debug.Log("Attack");
     }
-
-    public virtual void Reload()
+    public void Reload()
     {
-        Debug.Log("Reload");
+        StartCoroutine(ReturnWait(ReturnTime));
+    }
+    protected IEnumerator ReturnWait(float wait)
+    {
+        isReturn = true;
+
+        yield return new WaitForSeconds(wait);
+
+        isReturn = false;
+
+        if (wait == ReturnTime)
+            AttackCount = MaxAttackCount;
     }
 }

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Granade : Weapon
 {
-    [Header("Throw Settings")]
+    public float _powerThrow;
+
     [HideInInspector] public bool isThrow;
-    [SerializeField] private float _powerThrow;
 
-    [Header("Granade Settings")]
+    [SerializeField] private float _waitTime;
+
     [SerializeField] private GameObject _granade;
-    [SerializeField] private Transform _createPos;
-    [SerializeField] private Joystick _shootJoy;
 
-    private float _forceY, _forceX;
+    [SerializeField] private GranadeLineUI _lineUI;
+
     private void Start()
     {
         AttackCount = MaxAttackCount;
@@ -26,27 +26,31 @@ public class Granade : Weapon
         if (!PlayerAttack.isAttack && isThrow)
         {
             isThrow = false;
-            Throw();
+            isReturn = true;
+
+            _lineUI.OnAimGranade(false);
+            _animWeapon.GranadeAnim();
+
+            Invoke("Throw", 0.3f);
         }
     }
     public override void Attack() => Aiming();
     private void Aiming()
     {
-        isThrow = true;
+        if (AttackCount != 0 && !isReturn)
+        {
+            isThrow = true;
+
+            _lineUI.OnAimGranade(true);
+        }
     }
     private void Throw()
     {
-        if (AttackCount != 0 && !isReturn)
-        {
-            _forceY = _shootJoy.Vertical;
-            _forceX = _shootJoy.Horizontal;
+        GameObject granade = Instantiate(_granade, _lineUI._lauchPoint.position, _lineUI._lauchPoint.rotation);
+        granade.GetComponent<Rigidbody>().velocity = _powerThrow * _lineUI._lauchPoint.up;
 
-            GameObject granade = Instantiate(_granade, _createPos.position, Quaternion.identity);
-            granade.GetComponent<Rigidbody>().AddForce(new Vector3(_forceX, _forceY, 0f) * _powerThrow);
+        AttackCount--;
 
-            AttackCount--;
-
-            _animWeapon.GranadeAnim();
-        }
+        StartCoroutine(ReturnWait(_waitTime));
     }
 }

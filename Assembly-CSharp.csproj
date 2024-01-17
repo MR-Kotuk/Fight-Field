@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\Bullet.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scipts\UI\GranadeLineUI.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />

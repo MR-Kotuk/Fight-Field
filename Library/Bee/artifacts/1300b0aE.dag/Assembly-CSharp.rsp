@@ -406,6 +406,7 @@
 "Assets/Scipts/Player/PlayerMove.cs"
 "Assets/Scipts/TestSystem/TestValues.cs"
 "Assets/Scipts/UI/ButtonsUI.cs"
+"Assets/Scipts/UI/GranadeLineUI.cs"
 "Assets/Scipts/UI/SpriteManager.cs"
 "Assets/Scipts/UI/WeaponsUI/WeaponsUI.cs"
 "Assets/Scipts/Weapon/AnimationWeapon.cs"

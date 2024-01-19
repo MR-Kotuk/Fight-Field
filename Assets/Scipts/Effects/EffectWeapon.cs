@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EffectWeapon : MonoBehaviour
 {
-    public void OnEffect(GameObject effect)
+    public static void OneTimeEffect(GameObject effect, Vector3 pos, float destroyTime)
     {
-        effect.SetActive(true);
+        GameObject createdEffect = Instantiate(effect, pos, Quaternion.identity);
+        Destroy(createdEffect, destroyTime);
     }
 }

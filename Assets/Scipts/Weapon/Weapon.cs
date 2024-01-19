@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
 
     public bool isReturn;
 
-    public bool isNoScope;
+    public bool isNoScope, isNoAim;
 
     public Camera ScopeCamera;
 

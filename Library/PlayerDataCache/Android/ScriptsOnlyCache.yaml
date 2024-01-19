@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - ButtonsUI
     - CameraMove
     - DynamicJoystick
+    - EffectWeapon
     - FixedJoystick
     - Granade
     - GranadeLineUI
@@ -154,43 +155,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18186}
     - Class: 114
-      Script: {instanceID: 18452}
+      Script: {instanceID: 18330}
     - Class: 114
-      Script: {instanceID: 18460}
+      Script: {instanceID: 18454}
     - Class: 114
-      Script: {instanceID: 18888}
+      Script: {instanceID: 18462}
     - Class: 114
-      Script: {instanceID: 19634}
+      Script: {instanceID: 18890}
     - Class: 114
-      Script: {instanceID: 20808}
+      Script: {instanceID: 19636}
     - Class: 114
-      Script: {instanceID: 21402}
+      Script: {instanceID: 20810}
     - Class: 114
-      Script: {instanceID: 21668}
+      Script: {instanceID: 21404}
     - Class: 114
-      Script: {instanceID: 21902}
+      Script: {instanceID: 21670}
     - Class: 114
-      Script: {instanceID: 22620}
+      Script: {instanceID: 21904}
     - Class: 114
-      Script: {instanceID: 23086}
+      Script: {instanceID: 22622}
     - Class: 114
-      Script: {instanceID: 23350}
+      Script: {instanceID: 23088}
     - Class: 114
-      Script: {instanceID: 24082}
+      Script: {instanceID: 23352}
     - Class: 114
-      Script: {instanceID: 24130}
+      Script: {instanceID: 24084}
     - Class: 114
-      Script: {instanceID: 24282}
+      Script: {instanceID: 24132}
     - Class: 114
-      Script: {instanceID: 24358}
+      Script: {instanceID: 24284}
     - Class: 114
-      Script: {instanceID: 24370}
+      Script: {instanceID: 24360}
     - Class: 114
-      Script: {instanceID: 24646}
+      Script: {instanceID: 24372}
     - Class: 114
-      Script: {instanceID: 25794}
+      Script: {instanceID: 24648}
     - Class: 114
-      Script: {instanceID: 25992}
+      Script: {instanceID: 25796}
+    - Class: 114
+      Script: {instanceID: 25994}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -206,6 +209,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -462,6 +469,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachinePipeline
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EffectWeapon
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1472,7 +1485,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f4c2cf94f123afb088d6dc45a2b64a12
+      Hash: a6142b72a735c06e858165ae46ed5ace
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Projectile

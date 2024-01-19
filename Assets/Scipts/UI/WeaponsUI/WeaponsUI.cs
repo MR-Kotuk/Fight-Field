@@ -17,7 +17,7 @@ public class WeaponsUI : MonoBehaviour
 
     [SerializeField] private int _minAttackCount;
 
-    private Weapon _weapon;
+    private Weapon _weapon, _currentWeapon;
 
     private void Start()
     {
@@ -34,13 +34,18 @@ public class WeaponsUI : MonoBehaviour
         else
             _attackCount.color = Color.white;
 
-        if (_scopeWeapon.isScope)
-            _scopeImage.SetActive(false);
-        else
-            _scopeImage.SetActive(true);
+        if (_currentWeapon == _weapon)
+        {
+            if (_scopeWeapon.isScope || _weapon.isNoAim)
+                _scopeImage.SetActive(false);
+            else
+                _scopeImage.SetActive(true);
+        }
     }
     public void SwitchWeapon(Weapon weapon)
     {
+        _currentWeapon = weapon;
+
         if (_weapon == weapon)
         {
             if (_weaponButton.image.color == Color.blue && _weapon.AttackCount != _weapon.MaxAttackCount)

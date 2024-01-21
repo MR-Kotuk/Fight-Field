@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class GranadeLineUI : MonoBehaviour
 {
-    public Transform _lauchPoint;
-
     [SerializeField] private Granade _granade;
 
     [SerializeField] private int _linePoints = 175;
     [SerializeField] private float _intervalPoints = 0.1f;
 
     private LineRenderer _line;
+    private Transform _lauchPoint;
 
     private void Start()
     {
@@ -19,6 +18,8 @@ public class GranadeLineUI : MonoBehaviour
     }
     public void OnAimGranade(bool isDraw)
     {
+        _lauchPoint = _granade._createTrn;
+
         if(_line != null)
         {
             if (isDraw)

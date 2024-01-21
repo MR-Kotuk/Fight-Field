@@ -351,7 +351,7 @@ ScriptsOnlyBuild:
     className: FixedJoystick
   - hash:
       serializedVersion: 2
-      Hash: 80d46677743acf2ffd76fc70775ac3a9
+      Hash: ad2b036ead3bab1fb31f0c49dbe116ae
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Hands
@@ -789,7 +789,7 @@ ScriptsOnlyBuild:
     className: CinemachineGroupComposer
   - hash:
       serializedVersion: 2
-      Hash: 80d46677743acf2ffd76fc70775ac3a9
+      Hash: ad2b036ead3bab1fb31f0c49dbe116ae
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Weapon
@@ -1275,7 +1275,7 @@ ScriptsOnlyBuild:
     className: UnityUtil
   - hash:
       serializedVersion: 2
-      Hash: 58d27c9e78106a45df4c7bca5b56a8e9
+      Hash: 50aed8bce74d40b260923cc550e967de
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Granade
@@ -1485,7 +1485,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: a6142b72a735c06e858165ae46ed5ace
+      Hash: 38b2ada2906d13f4de78541e40aa2268
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Projectile
@@ -1677,7 +1677,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 78e4174ebffea8a95a6c0eb122012d9b
+      Hash: b2287f538f454faca16b2dde1546cdc4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Gun
@@ -1726,4 +1726,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Taras Sliusar/Desktop/Bank Hack.apk
+  playerPath: C:/Users/Taras Sliusar/Desktop/Bank Hack/Build/Bank Hack.apk

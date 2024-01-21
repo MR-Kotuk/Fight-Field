@@ -6,6 +6,8 @@ public class Granade : Weapon
 {
     public float _powerThrow;
 
+    public Transform _createTrn;
+
     [HideInInspector] public bool isThrow;
 
     [SerializeField] private float _waitTime;
@@ -37,17 +39,14 @@ public class Granade : Weapon
     public override void Attack() => Aiming();
     private void Aiming()
     {
-        if (AttackCount != 0 && !isReturn)
-        {
-            isThrow = true;
+        isThrow = true;
 
-            _lineUI.OnAimGranade(true);
-        }
+        _lineUI.OnAimGranade(true);
     }
     private void Throw()
     {
-        GameObject granade = Instantiate(_granade, _lineUI._lauchPoint.position, _lineUI._lauchPoint.rotation);
-        granade.GetComponent<Rigidbody>().velocity = _powerThrow * _lineUI._lauchPoint.up;
+        GameObject granade = Instantiate(_granade, _createTrn.position, _createTrn.rotation);
+        granade.GetComponent<Rigidbody>().velocity = _powerThrow * _createTrn.up;
 
         AttackCount--;
 

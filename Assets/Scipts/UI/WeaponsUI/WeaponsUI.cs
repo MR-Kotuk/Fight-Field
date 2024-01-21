@@ -36,7 +36,7 @@ public class WeaponsUI : MonoBehaviour
 
         if (_currentWeapon == _weapon)
         {
-            if (_scopeWeapon.isScope || _weapon.isNoAim)
+            if (_scopeWeapon.isScope || (_weapon.Name == "Granade" && _playerAttack.isAttack))
                 _scopeImage.SetActive(false);
             else
                 _scopeImage.SetActive(true);

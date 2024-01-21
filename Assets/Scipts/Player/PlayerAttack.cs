@@ -23,8 +23,13 @@ public class PlayerAttack : MonoBehaviour
     private void TakeStartWeapon() => SwitchWeapon(StartWeapon);
     private void FixedUpdate()
     {
-        if (isAttack)
-            Attacked?.Invoke();
+        if(_weapon != null && isAttack)
+        {
+            if (_weapon.AttackCount > 0 && !_weapon.isReturn)
+                Attacked?.Invoke();
+            else if (!_weapon.isReturn)
+                Reloaded?.Invoke();
+        }
     }
     public void OnAttack(bool attacked) => isAttack = attacked;
     private void Attack() => _weapon.Attack();

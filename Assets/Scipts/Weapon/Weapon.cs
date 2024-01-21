@@ -13,8 +13,7 @@ public class Weapon : MonoBehaviour
     public string Name;
 
     public bool isReturn;
-
-    public bool isNoScope, isNoAim;
+    public bool isNoScope;
 
     public Camera ScopeCamera;
 
@@ -22,11 +21,6 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] protected PlayerAttack PlayerAttack;
     [SerializeField] protected AnimationWeapon _animWeapon;
-
-    private void Start()
-    {
-        PlayerAttack.Reloaded += Reload;
-    }
     public virtual void Attack()
     {
         Debug.Log("Attack");

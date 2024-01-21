@@ -69,8 +69,8 @@ public class CameraMove : MonoBehaviour
     }
     private void Rotate()
     {
-        _camDirX = _cameraMoveJoy.Horizontal + (_shootJoy.Horizontal / 5);
-        _camDirY = _cameraMoveJoy.Vertical + (_shootJoy.Vertical / 5);
+        _camDirX = _cameraMoveJoy.Horizontal + (_shootJoy.Horizontal / 4f);
+        _camDirY = _cameraMoveJoy.Vertical + (_shootJoy.Vertical / 4f);
 
         transform.Rotate(new Vector3(-_camDirY, 0, 0) * _currentSens);
         _player.transform.Rotate(new Vector3(0, _camDirX, 0) * _currentSens);

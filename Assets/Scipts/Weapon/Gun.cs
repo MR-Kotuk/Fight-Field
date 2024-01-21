@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
+    public GameObject ShootFX, CatridgeCaseFX;
+
     [SerializeField] private ScopeWeapon _scopeWeapon;
 
     [SerializeField] private GameObject _bullet;
 
-    [SerializeField] private Transform _fireTrn;
+    [SerializeField] private Transform _createTrn;
 
     [SerializeField] private float _waitTime;
 
@@ -22,30 +24,25 @@ public class Gun : Weapon
     }
     public override void Attack()
     {
-        if (AttackCount > 0 && !isReturn)
-        {
-            Ray rayToShoot = _scopeWeapon.CurrentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit raycastHit;
+        Ray rayToShoot = _scopeWeapon.CurrentCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit raycastHit;
 
-            Vector3 toPoint;
-            if (Physics.Raycast(rayToShoot, out raycastHit))
-                toPoint = raycastHit.point;
-            else
-                toPoint = rayToShoot.GetPoint(75);
+        Vector3 toPoint;
+        if (Physics.Raycast(rayToShoot, out raycastHit))
+            toPoint = raycastHit.point;
+        else
+            toPoint = rayToShoot.GetPoint(75);
 
-            Vector3 dirTo = toPoint - _fireTrn.position;
+        Vector3 dirTo = toPoint - _createTrn.position;
 
-            GameObject bullet = Instantiate(_bullet, _fireTrn.position, Quaternion.identity);
+        GameObject bullet = Instantiate(_bullet, _createTrn.position, Quaternion.identity);
 
-            bullet.transform.forward = dirTo.normalized;
+        bullet.transform.forward = dirTo.normalized;
 
-            bullet?.GetComponent<Rigidbody>().AddForce(dirTo.normalized * AttackSpeed, ForceMode.Impulse);
+        bullet?.GetComponent<Rigidbody>().AddForce(dirTo.normalized * AttackSpeed, ForceMode.Impulse);
 
-            AttackCount--;
+        AttackCount--;
 
-            StartCoroutine(ReturnWait(_waitTime));
-        }
-        else if (!isReturn)
-            PlayerAttack.Reload();
+        StartCoroutine(ReturnWait(_waitTime));
     }
 }

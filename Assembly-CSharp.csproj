@@ -59,26 +59,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\EffectCore\scripts\ECdestroyMe.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerAnimations.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShake.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scipts\Weapon\ScopeWeapon.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeCaller.cs" />
     <Compile Include="Assets\Scipts\Weapon\Granade.cs" />
+    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\instantiateEffectCallerExplosion1.cs" />
     <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
+    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\ExplodingProjectileExplosion1.cs" />
     <Compile Include="Assets\Scipts\UI\WeaponsUI\WeaponsUI.cs" />
     <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\Bullet.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scipts\UI\GranadeLineUI.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeProjectile.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECProjectile.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECEffectActor.cs" />
+    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\projectileActorExplosion1.cs" />
     <Compile Include="Assets\Scipts\Player\CameraMove.cs" />
+    <Compile Include="Assets\EffectCore\scripts\ECparticleColorChangerMaster.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scipts\Effects\EffectWeapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\AnimationWeapon.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECExplodingProjectile.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECprojectileActor.cs" />
     <Compile Include="Assets\Scipts\Weapon\Gun.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scipts\Weapon\Projectile.cs" />
@@ -86,12 +98,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\Outline.shader" />
+    <None Include="Assets\EffectCore\packs\StylizedExplosionPack1\Tips &amp; Documentations StylizedExplosionPack1.txt" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\ExplosionPreviewMobile.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\ExplosionPreview.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Prototyping\Grass\standart 2sided.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\GrenadePath.shader" />
+    <None Include="Assets\EffectCore\packs\StylizedExplosionPack1\shader\alphaBlend_depthBlend_glow.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Fonts\3D Text Shader.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\Projector.shader" />
+    <None Include="Assets\EffectCore\packs\StylizedExplosionPack1\shader\alphaBlend_glow.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

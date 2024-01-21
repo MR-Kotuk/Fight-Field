@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     private void Awake() => Invoke("Explode", _explosionTime);
     private void Explode()
     {
-        EffectWeapon.OneTimeEffect(_effect, transform.position, _effectTime);
+        EffectWeapon.OneTimeFX(_effect, transform.position, _effectTime);
 
         Collider[] explodeRadius = Physics.OverlapSphere(transform.position, _radius);
 

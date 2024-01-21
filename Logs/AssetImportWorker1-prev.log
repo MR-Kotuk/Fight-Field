@@ -1,0 +1,834 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 7558 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/Taras Sliusar/Bank-Hack
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+56279
+Successfully changed project path to: C:/Users/Taras Sliusar/Bank-Hack
+C:/Users/Taras Sliusar/Bank-Hack
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15476] Host "[IP] 192.168.1.21 [Port] 0 [Flags] 2 [Guid] 1274282924 [EditorId] 1274282924 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4DLGDL4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [15476] Host "[IP] 192.168.1.21 [Port] 0 [Flags] 2 [Guid] 1274282924 [EditorId] 1274282924 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4DLGDL4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 48.44 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.4f1 (35713cd46cd7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Taras Sliusar/Bank-Hack/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro M1000M (ID=0x13b1)
+    Vendor:   NVIDIA
+    VRAM:     2006 MB
+    Driver:   31.0.15.3779
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.045851 seconds.
+- Loaded All Assemblies, in  0.974 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 632 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.480 seconds
+Domain Reload Profiling: 2448ms
+	BeginReloadAssembly (241ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (86ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (186ms)
+	LoadAllAssembliesAndSetupDomain (427ms)
+		LoadAssemblies (238ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (404ms)
+			TypeCache.Refresh (403ms)
+				TypeCache.ScanAssembly (372ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1481ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1340ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (966ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (253ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.825 seconds
+Refreshing native plugins compatible for Editor in 33.34 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.040 seconds
+Domain Reload Profiling: 4852ms
+	BeginReloadAssembly (372ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (109ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (126ms)
+	LoadAllAssembliesAndSetupDomain (2172ms)
+		LoadAssemblies (1294ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1056ms)
+			TypeCache.Refresh (957ms)
+				TypeCache.ScanAssembly (906ms)
+			ScanForSourceGeneratedMonoScriptInfo (75ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (2041ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1527ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (79ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (218ms)
+			ProcessInitializeOnLoadAttributes (811ms)
+			ProcessInitializeOnLoadMethodAttributes (383ms)
+			AfterProcessingInitializeOnLoad (25ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 33.72 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4730 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 102 unused Assets / (325.3 KB). Loaded Objects now: 5186.
+Memory consumption went from 258.3 MB to 258.0 MB.
+Total: 19.283800 ms (FindLiveObjects: 1.134300 ms CreateObjectMapping: 0.595600 ms MarkObjects: 17.118500 ms  DeleteObjects: 0.432700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 537743.338650 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/template/explosion_stylized_large_template.prefab
+  artifactKey: Guid(d5b3c211b43586b499a0d598d51a1af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/template/explosion_stylized_large_template.prefab using Guid(d5b3c211b43586b499a0d598d51a1af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bfe61a4b37cd2a2901f7e5de7c95702') in 0.305171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/template/explosion_stylized_medium_template.prefab
+  artifactKey: Guid(8b20af3ffd4fbda4ca0104a347b43e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/template/explosion_stylized_medium_template.prefab using Guid(8b20af3ffd4fbda4ca0104a347b43e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02a15fb2f52780916d8c09d6563bbb6') in 0.045277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/funkyMix_jokerFire/explosion_stylized_medium_jokerFire.prefab
+  artifactKey: Guid(14933de245c6d804f80f071fe8a2c9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/funkyMix_jokerFire/explosion_stylized_medium_jokerFire.prefab using Guid(14933de245c6d804f80f071fe8a2c9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad0dfe62759cc673d22e38f6d305b97') in 0.056034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/blue_demonFire/explosion_stylized_medium_demonFire.prefab
+  artifactKey: Guid(c80add9b36d77a64bbc0b82c4ca7c690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/blue_demonFire/explosion_stylized_medium_demonFire.prefab using Guid(c80add9b36d77a64bbc0b82c4ca7c690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef687e4efedf875a39a5029381b92025') in 0.050828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 28.82 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (271.3 KB). Loaded Objects now: 5195.
+Memory consumption went from 173.6 MB to 173.3 MB.
+Total: 16.195700 ms (FindLiveObjects: 0.596900 ms CreateObjectMapping: 0.590000 ms MarkObjects: 14.873800 ms  DeleteObjects: 0.133700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 12.676154 seconds.
+  path: Assets/Prefabs/Grenade.prefab
+  artifactKey: Guid(b5c6427b79649e54f8244ce8dde2112b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Grenade.prefab using Guid(b5c6427b79649e54f8244ce8dde2112b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9483804308c9f17d52bd26e506b6e6af') in 0.158738 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 115
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.999 seconds
+Refreshing native plugins compatible for Editor in 30.97 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.696 seconds
+Domain Reload Profiling: 4683ms
+	BeginReloadAssembly (368ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (89ms)
+	RebuildCommonClasses (78ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (1446ms)
+		LoadAssemblies (837ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (794ms)
+			TypeCache.Refresh (779ms)
+				TypeCache.ScanAssembly (742ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (2697ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1233ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (71ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (193ms)
+			ProcessInitializeOnLoadAttributes (618ms)
+			ProcessInitializeOnLoadMethodAttributes (318ms)
+			AfterProcessingInitializeOnLoad (24ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 26.11 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4676 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 77 unused Assets / (298.3 KB). Loaded Objects now: 5209.
+Memory consumption went from 245.2 MB to 244.9 MB.
+Total: 13.499000 ms (FindLiveObjects: 0.630100 ms CreateObjectMapping: 0.483300 ms MarkObjects: 11.372700 ms  DeleteObjects: 1.011300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.051 seconds
+Refreshing native plugins compatible for Editor in 32.00 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.703 seconds
+Domain Reload Profiling: 4744ms
+	BeginReloadAssembly (300ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (81ms)
+	RebuildCommonClasses (86ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (74ms)
+	LoadAllAssembliesAndSetupDomain (1551ms)
+		LoadAssemblies (842ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (830ms)
+			TypeCache.Refresh (815ms)
+				TypeCache.ScanAssembly (776ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (2705ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1256ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (73ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (192ms)
+			ProcessInitializeOnLoadAttributes (618ms)
+			ProcessInitializeOnLoadMethodAttributes (341ms)
+			AfterProcessingInitializeOnLoad (25ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 39.80 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4677 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 75 unused Assets / (302.9 KB). Loaded Objects now: 5224.
+Memory consumption went from 245.5 MB to 245.2 MB.
+Total: 13.977100 ms (FindLiveObjects: 1.099300 ms CreateObjectMapping: 0.882000 ms MarkObjects: 11.304100 ms  DeleteObjects: 0.689000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.909 seconds
+Refreshing native plugins compatible for Editor in 29.74 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.695 seconds
+Domain Reload Profiling: 4590ms
+	BeginReloadAssembly (289ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (1434ms)
+		LoadAssemblies (776ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (770ms)
+			TypeCache.Refresh (753ms)
+				TypeCache.ScanAssembly (715ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2695ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1231ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (194ms)
+			ProcessInitializeOnLoadAttributes (615ms)
+			ProcessInitializeOnLoadMethodAttributes (322ms)
+			AfterProcessingInitializeOnLoad (24ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 34.85 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4677 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 75 unused Assets / (297.7 KB). Loaded Objects now: 5239.
+Memory consumption went from 245.5 MB to 245.2 MB.
+Total: 15.622400 ms (FindLiveObjects: 0.480000 ms CreateObjectMapping: 0.605100 ms MarkObjects: 14.339700 ms  DeleteObjects: 0.196100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 269.646501 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/purple_darkFire/explosion_stylized_medium_darkFire.prefab
+  artifactKey: Guid(903e801f854c3594999ca7cb92050c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/legacy/purple_darkFire/explosion_stylized_medium_darkFire.prefab using Guid(903e801f854c3594999ca7cb92050c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6a0f8271e510a5fb1a8c4b3d9ffdaa') in 0.165558 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 2.346018 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/blue_demonFire_ShaderGraph/explosion_stylized_medium_demonFire_ShaderGraph.prefab
+  artifactKey: Guid(d750af61c62eb2140b5bfda6bafa9e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/blue_demonFire_ShaderGraph/explosion_stylized_medium_demonFire_ShaderGraph.prefab using Guid(d750af61c62eb2140b5bfda6bafa9e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4cfc1981a3521063228be3d4ed3ae93') in 0.099140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 92
+========================================================================
+Received Import Request.
+  Time since last request: 0.372797 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/funkyMix_jokerFire_ShaderGraph/explosion_stylized_medium_jokerFire_ShaderGraph.prefab
+  artifactKey: Guid(1d6a4ff60fd09914fa24631e5ad080f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/funkyMix_jokerFire_ShaderGraph/explosion_stylized_medium_jokerFire_ShaderGraph.prefab using Guid(1d6a4ff60fd09914fa24631e5ad080f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323398424c16fcd9508e72149b69ab25') in 0.049661 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 94
+========================================================================
+Received Import Request.
+  Time since last request: 0.830420 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/red_originalFire_ShaderGraph/explosion_stylized_medium_originalFire_ShaderGraph.prefab
+  artifactKey: Guid(b788c9b266117f842b31226e33510eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/red_originalFire_ShaderGraph/explosion_stylized_medium_originalFire_ShaderGraph.prefab using Guid(b788c9b266117f842b31226e33510eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '781a3494e7571e4dca8ed3fd932a0c32') in 0.046448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/red_originalFire_ShaderGraph/explosion_stylized_small_originalFire_ShaderGraph.prefab
+  artifactKey: Guid(77ddfc8ca3fb23e4c8d33539623cc265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/red_originalFire_ShaderGraph/explosion_stylized_small_originalFire_ShaderGraph.prefab using Guid(77ddfc8ca3fb23e4c8d33539623cc265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7e7e4b6073cc453c1822056fc55ade') in 0.043987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.253166 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/template_ShaderGraph/explosion_stylized_medium_template_ShaderGraph.prefab
+  artifactKey: Guid(e4612d1230e4d6a4891f77cd0bd835ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/prefabs/ShaderGraphVersion/template_ShaderGraph/explosion_stylized_medium_template_ShaderGraph.prefab using Guid(e4612d1230e4d6a4891f77cd0bd835ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be8c23870b119122f80f888745fa790') in 0.050469 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.009 seconds
+Refreshing native plugins compatible for Editor in 28.03 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.425 seconds
+Domain Reload Profiling: 5423ms
+	BeginReloadAssembly (285ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (81ms)
+	RebuildCommonClasses (67ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (1561ms)
+		LoadAssemblies (875ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (794ms)
+			TypeCache.Refresh (774ms)
+				TypeCache.ScanAssembly (731ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (3426ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1205ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (188ms)
+			ProcessInitializeOnLoadAttributes (604ms)
+			ProcessInitializeOnLoadMethodAttributes (315ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 34.52 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4676 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 77 unused Assets / (298.4 KB). Loaded Objects now: 5254.
+Memory consumption went from 245.5 MB to 245.2 MB.
+Total: 17.652200 ms (FindLiveObjects: 0.670500 ms CreateObjectMapping: 0.752500 ms MarkObjects: 15.858200 ms  DeleteObjects: 0.369400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Taras Sliusar\Bank-Hack\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  2.012 seconds
+Refreshing native plugins compatible for Editor in 31.41 ms, found 6 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.831 seconds
+Domain Reload Profiling: 4830ms
+	BeginReloadAssembly (279ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (75ms)
+	RebuildNativeTypeToScriptingClass (26ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (1549ms)
+		LoadAssemblies (842ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (815ms)
+			TypeCache.Refresh (799ms)
+				TypeCache.ScanAssembly (759ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2833ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1357ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (75ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (199ms)
+			ProcessInitializeOnLoadAttributes (627ms)
+			ProcessInitializeOnLoadMethodAttributes (414ms)
+			AfterProcessingInitializeOnLoad (33ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+Refreshing native plugins compatible for Editor in 38.97 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4677 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 75 unused Assets / (297.7 KB). Loaded Objects now: 5269.
+Memory consumption went from 245.8 MB to 245.5 MB.
+Total: 16.446700 ms (FindLiveObjects: 0.831800 ms CreateObjectMapping: 0.606500 ms MarkObjects: 14.510200 ms  DeleteObjects: 0.496500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 259.006984 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/decal/decal_explode_glow_shadergraph.mat
+  artifactKey: Guid(50a62e11cd6079e4db072437f1fff353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/decal/decal_explode_glow_shadergraph.mat using Guid(50a62e11cd6079e4db072437f1fff353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2275c6f1edaebaa33a2fd1e5aa28447d') in 0.143670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/decal/decal_mobile_explode_additive.mat
+  artifactKey: Guid(f464259c42b03374c8d72dbe779745f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/decal/decal_mobile_explode_additive.mat using Guid(f464259c42b03374c8d72dbe779745f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55cb7358a25435b7b6ef3e12a06892dd') in 0.041831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.749250 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/fire_glow_legacy.mat
+  artifactKey: Guid(68fc9dc3849314044a2ffd05fa380e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/fire_glow_legacy.mat using Guid(68fc9dc3849314044a2ffd05fa380e2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f4c2ce3c07cca220068ca9096f997b') in 0.020744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/fire_glow_ShaderGraph.mat
+  artifactKey: Guid(9fe779e23aaa9c040b146050f9f4df94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/fire_glow_ShaderGraph.mat using Guid(9fe779e23aaa9c040b146050f9f4df94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9add56248d5ad73ff4c75923c38f9c9a') in 0.014078 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/MeltingFire_glow_ShaderGraph.mat
+  artifactKey: Guid(1fcbd63f1dd2e114db4bc8182693c9b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/MeltingFire_glow_ShaderGraph.mat using Guid(1fcbd63f1dd2e114db4bc8182693c9b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e567196a877dbc216fe8953084183e') in 0.013922 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/flarespark_add.mat
+  artifactKey: Guid(67f68f23144536b4e877ce1ec887e12b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/fire/flarespark_add.mat using Guid(67f68f23144536b4e877ce1ec887e12b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63db40ebbfb7cb31f294845b72dd4b59') in 0.030383 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.844344 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/generic/circle_glow_ShaderGraph.mat
+  artifactKey: Guid(024e694398cffe140a9393862506ce2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/generic/circle_glow_ShaderGraph.mat using Guid(024e694398cffe140a9393862506ce2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5d1c853c2a806eee296e4e0cf650b3') in 0.010108 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.004943 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/generic/circle_mobile_additive.mat
+  artifactKey: Guid(bc72e6eed86393449a9a1341395dda1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/generic/circle_mobile_additive.mat using Guid(bc72e6eed86393449a9a1341395dda1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '925ca5294920974286f2ca0144f4a22d') in 0.033741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.713540 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/smoke/cartoonSmoke_glow_ShaderGraph.mat
+  artifactKey: Guid(dc148af0fa068e54a81408b09ec22658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/smoke/cartoonSmoke_glow_ShaderGraph.mat using Guid(dc148af0fa068e54a81408b09ec22658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbbd966000486610f298eeec124ffc57') in 0.011565 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002026 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/smoke/cartoonSmoke_mobile_alphaBlend.mat
+  artifactKey: Guid(03fd84cf49a935f47a37a95ea69ab88e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/materials_StylizedExplosionPack1/smoke/cartoonSmoke_mobile_alphaBlend.mat using Guid(03fd84cf49a935f47a37a95ea69ab88e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e79a06fa4c29a8a171514e05a3179512') in 0.028399 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.194367 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/textures/explodedecal.psd
+  artifactKey: Guid(53c9fb08f0fd10f44a08c41571289779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/textures/explodedecal.psd using Guid(53c9fb08f0fd10f44a08c41571289779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d2886a993a61a936da964598165071') in 0.036894 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/textures/fire.psd
+  artifactKey: Guid(13d2bd189265fe04896378a2a197794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/textures/fire.psd using Guid(13d2bd189265fe04896378a2a197794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07dad084a527b4748cce9ddfa70adf46') in 0.030854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/textures/pixel.psd
+  artifactKey: Guid(ac8d49d5a89a13949929a05bf1c32ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/textures/pixel.psd using Guid(ac8d49d5a89a13949929a05bf1c32ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e2d76cb401c84d818e8e66912263326') in 0.028360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/textures/hardball.psd
+  artifactKey: Guid(06c2bb6e43b6fdc46bd759df5d5b35b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/textures/hardball.psd using Guid(06c2bb6e43b6fdc46bd759df5d5b35b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2833a871f866b92e66815fbd2e67da8d') in 0.029188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.213862 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Blue_DemonFire/bomb_blue_demonfire_medium.prefab
+  artifactKey: Guid(05a35841cab253a479d8898d6ff8de71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Blue_DemonFire/bomb_blue_demonfire_medium.prefab using Guid(05a35841cab253a479d8898d6ff8de71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5628aae786a072df2ecff53c774fcc') in 0.103346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 1.393933 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire_NoSmoke/bomb_Red_OriginalFire_noSmoke_medium.prefab
+  artifactKey: Guid(227f6b2c3613a1b4db8f2643f7925c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire_NoSmoke/bomb_Red_OriginalFire_noSmoke_medium.prefab using Guid(227f6b2c3613a1b4db8f2643f7925c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1504c6097d4dd89ffa0d296178a8c4a') in 0.270806 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire_NoSmoke/bomb_Red_OriginalFire_noSmoke_small.prefab
+  artifactKey: Guid(ac74095d46fe8454abfc5f3f5a336ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire_NoSmoke/bomb_Red_OriginalFire_noSmoke_small.prefab using Guid(ac74095d46fe8454abfc5f3f5a336ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39310dbc5591dd82d35ec5f7f520cfd4') in 0.051277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 0.247988 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire/bomb_Red_OriginalFire_medium.prefab
+  artifactKey: Guid(2c0e63458a7e4124f8181aec001c446b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Red_OriginalFire/bomb_Red_OriginalFire_medium.prefab using Guid(2c0e63458a7e4124f8181aec001c446b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1c58e94179752022b0b1f99a9a5579') in 0.055893 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 0.525166 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Purple_DarkFire/bomb_Purple_DarkFire_medium.prefab
+  artifactKey: Guid(85a30b8a195075a4891a49ebe3b5a359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Purple_DarkFire/bomb_Purple_DarkFire_medium.prefab using Guid(85a30b8a195075a4891a49ebe3b5a359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c194b363ecd4971e24f837a1a447c2fe') in 0.040228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Purple_DarkFire/bomb_Purple_DarkFire_small.prefab
+  artifactKey: Guid(a2a6ae3798c304c46878ad8c243a7124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Purple_DarkFire/bomb_Purple_DarkFire_small.prefab using Guid(a2a6ae3798c304c46878ad8c243a7124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987315f0375b7e2c8e55d6c21a18db7b') in 0.044899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 0.389391 seconds.
+  path: Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Green_Wildfire/bomb_green_wildfire_medium.prefab
+  artifactKey: Guid(471239f9b0c4c7b4e8c06f350d104ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/StylizedExplosionPack1/WebDemo/bombPrefabs/Green_Wildfire/bomb_green_wildfire_medium.prefab using Guid(471239f9b0c4c7b4e8c06f350d104ad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed3848369c3e5f0408e1a77ff63b5e8') in 0.079063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 102
+========================================================================
+Received Import Request.
+  Time since last request: 14.944149 seconds.
+  path: Assets/EffectCore/packs/WebDemoAssets/example_scene_environment/ground.mat
+  artifactKey: Guid(fe2df1dc09c9feb46b07c602dbff423a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/WebDemoAssets/example_scene_environment/ground.mat using Guid(fe2df1dc09c9feb46b07c602dbff423a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df701c5b594e4db259da05623d4eeb1') in 0.142974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/EffectCore/packs/WebDemoAssets/example_scene_environment/sphere.mat
+  artifactKey: Guid(54038e9bab0efd44dbbdabb055fa2578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectCore/packs/WebDemoAssets/example_scene_environment/sphere.mat using Guid(54038e9bab0efd44dbbdabb055fa2578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c63940b0577e303eb4c4be6d360faba') in 0.053279 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1

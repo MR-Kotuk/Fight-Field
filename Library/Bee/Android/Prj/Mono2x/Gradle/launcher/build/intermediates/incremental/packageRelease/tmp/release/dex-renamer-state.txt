@@ -1,4 +1,4 @@
-#Fri Jan 19 23:21:56 CET 2024
+#Sun Jan 21 16:14:39 CET 2024
 base.0=C\:\\Users\\Taras Sliusar\\Bank-Hack\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

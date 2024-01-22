@@ -45,8 +45,8 @@ public class PlayerMove : MonoBehaviour
         _dirX = _moveJoystick.Horizontal;
         _dirY = _moveJoystick.Vertical;
 
-        _player.localPosition += transform.forward * _dirY * _currentSpeed;
-        _player.localPosition += transform.right * _dirX * _currentSpeed;
+        _player.localPosition += _player.transform.forward * _dirY * _currentSpeed;
+        _player.localPosition += _player.transform.right * _dirX * _currentSpeed;
     }
 
     public void OnCrouchButton()

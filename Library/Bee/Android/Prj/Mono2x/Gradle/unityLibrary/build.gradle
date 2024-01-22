@@ -27,7 +27,7 @@ android {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName '1.0'
+        versionName '2.8'
         consumerProguardFiles 'proguard-unity.txt'
     }
 

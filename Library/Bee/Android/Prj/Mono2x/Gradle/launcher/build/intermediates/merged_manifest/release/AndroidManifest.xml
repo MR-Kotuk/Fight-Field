@@ -3,7 +3,7 @@
     package="com.ACTEN.BankHack"
     android:installLocation="preferExternal"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="2.8" >
 
     <uses-sdk
         android:minSdkVersion="22"

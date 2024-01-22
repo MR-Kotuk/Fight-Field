@@ -14,14 +14,12 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
-    [SerializeField] private Transform _originHead;
 
     [SerializeField] private Transform _player, _foot;
 
     [SerializeField] private float _speedPlayer;
     [SerializeField] private float _powerJumpPlayer;
-    [SerializeField] private float _maxSpeedPlayer, _maxJumpPlayer;
-    [SerializeField] private float _distGround, _distAboveHead;
+    [SerializeField] private float _distGround;
 
     private float _currentSpeed;
 
@@ -52,9 +50,6 @@ public class PlayerMove : MonoBehaviour
     public void OnCrouchButton()
     {
         isCrouch = !isCrouch;
-
-        if (!TryRay(_foot.position, -_foot.up, _distGround) && isCrouch)
-            isCrouch = false;
 
         Crouched?.Invoke();
 

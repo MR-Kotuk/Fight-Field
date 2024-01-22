@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     public bool isReturn;
     public bool isNoScope;
 
-    public Camera ScopeCamera;
+    public Camera ScopeCamera, WeaponCamera;
 
     [HideInInspector] public int AttackCount;
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private float _sensitivity, _scopeSens;
-    [SerializeField] private float _maxSensY, _maxSensX;
 
     [SerializeField] private float _minCamAngle, _maxCamAngle;
     [SerializeField] private float _crouchMinAngle, _crouchMaxAngle;

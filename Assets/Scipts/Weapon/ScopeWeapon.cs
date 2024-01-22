@@ -9,17 +9,19 @@ public class ScopeWeapon : MonoBehaviour
 
     [HideInInspector] public bool isScope;
 
-    [HideInInspector] public Camera CurrentCamera, CurrentScope;
+    [HideInInspector] public Camera CurrentCamera;
 
     [SerializeField] private PlayerAttack _playerAttack;
 
-    [SerializeField] private Camera _playerCamera;
+    [SerializeField] private Camera _playerCamera, _playerWeaponCamera;
 
     [SerializeField] private Canvas _gameCanvas;
 
     [SerializeField] private float _switchTime;
 
     private Weapon _curentWeapon;
+
+    private Camera _currentScope, _currentWeaponCamera;
 
     private void Start()
     {
@@ -30,18 +32,18 @@ public class ScopeWeapon : MonoBehaviour
 
         SwitchCamera(_playerCamera);
 
-        CurrentCamera.enabled = true;
-
         isScope = false;
     }
     public void OnScope() => Scoped?.Invoke();
     private void SwitchScope(Weapon weapon)
     {
-        isScope = false;
         _curentWeapon = weapon;
-        CurrentScope = _curentWeapon.ScopeCamera;
 
         SwitchCamera(_playerCamera);
+
+        _currentScope = _curentWeapon.ScopeCamera;
+        _currentWeaponCamera = _curentWeapon.WeaponCamera;
+
         StartCoroutine(Reload());
     }
     private void OnReload() => StartCoroutine(Reload());
@@ -64,7 +66,7 @@ public class ScopeWeapon : MonoBehaviour
         isScope = !isScope;
 
         if (isScope)
-            SwitchCamera(CurrentScope);
+            SwitchCamera(_currentScope);
         else
             SwitchCamera(_playerCamera);
     }
@@ -72,11 +74,24 @@ public class ScopeWeapon : MonoBehaviour
     {
         if (_playerCamera == newCamera)
         {
-            if(CurrentScope != null)
-                CurrentScope.enabled = false;
+            isScope = false;
+
+            _playerWeaponCamera.enabled = true;
+
+            if(_currentScope != null)
+            {
+                _currentScope.enabled = false;
+                _currentWeaponCamera.enabled = false;
+            }
         }
         else
+        {
+            if (_currentWeaponCamera != null)
+                _currentWeaponCamera.enabled = true;
+
             _playerCamera.enabled = false;
+            _playerWeaponCamera.enabled = false;
+        }
 
         newCamera.enabled = true;
 

@@ -19,7 +19,7 @@ public class AnimationWeapon : MonoBehaviour
 
     private Weapon _currentWeapon;
 
-    private const string _isReloadN = "isReload", _isAttackN = "isAttack";
+    private const string _isReloadN = "isReload", _isAttackN = "isAttack", _granadeN = "Granade";
 
     private void Start()
     {
@@ -28,6 +28,7 @@ public class AnimationWeapon : MonoBehaviour
 
         _playerAttack.SwitchedWeapon += SwitchAnimState;
         _playerAttack.Reloaded += ReloadWeapon;
+        _playerAttack.Attacked += Attack;
 
         for (int i = 0; i < _weapons.Count; i++)
         {
@@ -38,7 +39,12 @@ public class AnimationWeapon : MonoBehaviour
             _weaponsObjects[i].SetActive(false);
         }
     }
-    public void GranadeAnim() => StartCoroutine(WithWait("isAttack"));
+    private void Attack()
+    {
+        if (_currentWeapon.Name != _granadeN)
+            AttackAnim();
+    }
+    public void AttackAnim() => StartCoroutine(WithWait(_isAttackN));
     public void SwitchAnimWeapon(string name)
     {
         bool isTake;

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
     <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\ExplodingProjectileExplosion1.cs" />
     <Compile Include="Assets\Scipts\UI\WeaponsUI\WeaponsUI.cs" />
+    <Compile Include="Assets\Scipts\Audio\SFX\Weapon\WeaponAudio.cs" />
     <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scipts\Weapon\Bullet.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerAttack.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeProjectile.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Scipts\TestSystem\TestValues.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECProjectile.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECEffectActor.cs" />
     <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\projectileActorExplosion1.cs" />

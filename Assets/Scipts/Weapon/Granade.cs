@@ -46,6 +46,7 @@ public class Granade : Weapon
     private void Throw()
     {
         GameObject granade = Instantiate(_granade, _createTrn.position, _createTrn.rotation);
+        granade.SetActive(true);
         granade.GetComponent<Rigidbody>().velocity = _powerThrow * _createTrn.up;
 
         AttackCount--;

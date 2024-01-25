@@ -6,13 +6,16 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private GameObject _effect;
 
+    [SerializeField] private EffectWeapon _effectWeapon;
+
     [SerializeField] private float _explosionTime, _effectTime;
     [SerializeField] private float _radius;
     [SerializeField] private float _power;
+
     private void Awake() => Invoke("Explode", _explosionTime);
     private void Explode()
     {
-        EffectWeapon.OneTimeFX(_effect, transform.position, _effectTime);
+        _effectWeapon.OneTimeFX(_effect, transform.position, _effectTime);
 
         Collider[] explodeRadius = Physics.OverlapSphere(transform.position, _radius);
 

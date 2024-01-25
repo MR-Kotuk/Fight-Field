@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(PlayerAnimations))]
+[RequireComponent(typeof(PlayerAnimations), typeof(PlayerAudio))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }
-    public float _dirX { get; private set; }
-    public float _dirY { get; private set; }
+    public float DirX { get; private set; }
+    public float DirY { get; private set; }
 
     public event Action Moved, Crouched, Jumped;
 
@@ -40,11 +40,11 @@ public class PlayerMove : MonoBehaviour
 
     private void MoveStickPlayer()
     {
-        _dirX = _moveJoystick.Horizontal;
-        _dirY = _moveJoystick.Vertical;
+        DirX = _moveJoystick.Horizontal;
+        DirY = _moveJoystick.Vertical;
 
-        _player.localPosition += _player.transform.forward * _dirY * _currentSpeed;
-        _player.localPosition += _player.transform.right * _dirX * _currentSpeed;
+        _player.localPosition += _player.transform.forward * DirY * _currentSpeed;
+        _player.localPosition += _player.transform.right * DirX * _currentSpeed;
     }
 
     public void OnCrouchButton()

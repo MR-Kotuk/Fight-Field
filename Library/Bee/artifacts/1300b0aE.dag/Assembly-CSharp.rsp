@@ -412,6 +412,7 @@
 "Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
+"Assets/Scipts/Audio/SFX/Player/PlayerAudio.cs"
 "Assets/Scipts/Audio/SFX/Weapon/WeaponAudio.cs"
 "Assets/Scipts/Effects/EffectWeapon.cs"
 "Assets/Scipts/Player/CameraMove.cs"

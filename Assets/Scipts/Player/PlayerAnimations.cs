@@ -21,8 +21,8 @@ public class PlayerAnimations : MonoBehaviour
     }
     private void Move()
     {
-        _anim.SetFloat(_moveXN, _playerMove._dirX);
-        _anim.SetFloat(_moveYN, _playerMove._dirY);
+        _anim.SetFloat(_moveXN, _playerMove.DirX);
+        _anim.SetFloat(_moveYN, _playerMove.DirY);
 
         float camRotY = _camera.transform.eulerAngles.x;
         if (camRotY < 200)

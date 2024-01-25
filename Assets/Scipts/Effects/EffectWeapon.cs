@@ -32,7 +32,7 @@ public class EffectWeapon : MonoBehaviour
         effect.SetActive(false);
         effect.SetActive(true);
     }
-    public static void OneTimeFX(GameObject effect, Vector3 pos, float destroyTime)
+    public void OneTimeFX(GameObject effect, Vector3 pos, float destroyTime)
     {
         GameObject createdEffect = Instantiate(effect, pos, Quaternion.identity);
         Destroy(createdEffect, destroyTime);

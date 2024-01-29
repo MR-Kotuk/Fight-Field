@@ -23,7 +23,7 @@ public class Granade : Weapon
         isReturn = false;
         isThrow = false;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (!PlayerAttack.isAttack && isThrow)
         {

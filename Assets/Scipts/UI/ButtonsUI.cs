@@ -10,7 +10,11 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private SpriteManager _spriteManager;
     [SerializeField] private PlayerMove _playerMove;
 
-    private void Update()
+    private void Start()
+    {
+        _playerMove.Crouched += Crouch;
+    }
+    private void Crouch()
     {
         if (_playerMove.isCrouch)
             _crouchButton.GetComponent<Image>().sprite = _spriteManager.WakeUpUI;

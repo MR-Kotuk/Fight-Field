@@ -1055,6 +1055,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.99558014
+        functionName: CanAttack
+        data: true
+        objectReferenceParameter: {fileID: 11500000, guid: 9a4e52e8c80dd4543889303dd96a8c5e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -11,9 +11,9 @@ public class ScopeWeapon : MonoBehaviour
 
     [HideInInspector] public Camera CurrentCamera;
 
-    [SerializeField] private PlayerAttack _playerAttack;
-
     [SerializeField] private Camera _playerCamera, _playerWeaponCamera;
+
+    [SerializeField] private PlayerAttack _playerAttack;
 
     [SerializeField] private Canvas _gameCanvas;
 
@@ -34,6 +34,16 @@ public class ScopeWeapon : MonoBehaviour
 
         isScope = false;
     }
+    private void Update()
+    {
+        if (_playerAttack.isCanAttack && !_curentWeapon.isReturn)
+        {
+            if (Scoped == null)
+                Scoped += Scope;
+        }
+        else if (Scoped != null)
+            Scoped -= Scope;
+    }
     public void OnScope() => Scoped?.Invoke();
     private void SwitchScope(Weapon weapon)
     {
@@ -43,23 +53,11 @@ public class ScopeWeapon : MonoBehaviour
 
         _currentScope = _curentWeapon.ScopeCamera;
         _currentWeaponCamera = _curentWeapon.WeaponCamera;
-
-        StartCoroutine(Reload());
     }
-    private void OnReload() => StartCoroutine(Reload());
-
-    private IEnumerator Reload()
+    private void OnReload()
     {
-        if (isScope)
+        if(isScope)
             Scope();
-
-        if(Scoped != null)
-            Scoped -= Scope;
-
-        yield return new WaitForSeconds(_curentWeapon.ReturnTime);
-
-        if(Scoped == null)
-            Scoped += Scope;
     }
     private void Scope()
     {

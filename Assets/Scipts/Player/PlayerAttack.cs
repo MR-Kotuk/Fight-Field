@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public event Action Attacked, Reloaded;
     public event Action<Weapon> SwitchedWeapon;
 
-    [HideInInspector] public bool isAttack;
+    [HideInInspector] public bool isAttack, isCanAttack;
 
     [SerializeField] private Weapon StartWeapon;
 
@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
     private void TakeStartWeapon() => SwitchWeapon(StartWeapon);
     private void FixedUpdate()
     {
-        if(_weapon != null && isAttack)
+        if(_weapon != null && isAttack && isCanAttack)
         {
             if (_weapon.AttackCount > 0 && !_weapon.isReturn)
                 Attacked?.Invoke();

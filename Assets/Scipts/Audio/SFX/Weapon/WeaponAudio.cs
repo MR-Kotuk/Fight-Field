@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponAudio : MonoBehaviour
 {
+    [SerializeField] private AudioClip _reload;
+
     [SerializeField] private List<AudioClip> _handAttacks;
     [SerializeField] private List<AudioClip> _shoot;
 
@@ -20,6 +22,15 @@ public class WeaponAudio : MonoBehaviour
 
         _playerAttack.SwitchedWeapon += SwitchWeapon;
         _playerAttack.Attacked += Attack;
+        _playerAttack.Reloaded += Reload;
+    }
+    private void Reload()
+    {
+        if (_currentWeapon is Gun)
+        {
+            _gunPosSFX.clip = _reload;
+            _gunPosSFX.Play();
+        }
     }
     public void HandAttack()
     {

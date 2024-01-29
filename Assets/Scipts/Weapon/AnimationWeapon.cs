@@ -45,6 +45,11 @@ public class AnimationWeapon : MonoBehaviour
             AttackAnim();
     }
     public void AttackAnim() => StartCoroutine(WithWait(_isAttackN));
+    public void CanAttack(string can)
+    {
+        bool isCan = Convert.ToBoolean(can);
+        _playerAttack.isCanAttack = isCan;
+    }
     public void SwitchAnimWeapon(string name)
     {
         bool isTake;

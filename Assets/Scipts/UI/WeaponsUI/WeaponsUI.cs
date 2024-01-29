@@ -27,15 +27,15 @@ public class WeaponsUI : MonoBehaviour
     }
     private void Update()
     {
-        _attackCount.text = $"{_weapon.AttackCount}/{_weapon.MaxAttackCount}";
-
-        if (_weapon.AttackCount <= _minAttackCount)
-            _attackCount.color = Color.red;
-        else
-            _attackCount.color = Color.white;
-
         if (_currentWeapon == _weapon)
         {
+            _attackCount.text = $"{_weapon.AttackCount}/{_weapon.MaxAttackCount}";
+
+            if (_weapon.AttackCount <= _minAttackCount)
+                _attackCount.color = Color.red;
+            else
+                _attackCount.color = Color.white;
+
             if (_scopeWeapon.isScope || (_weapon.Name == "Granade" && _playerAttack.isAttack && _weapon.AttackCount > 0 && !_weapon.isReturn))
                 _scopeImage.SetActive(false);
             else
@@ -46,7 +46,7 @@ public class WeaponsUI : MonoBehaviour
     {
         _currentWeapon = weapon;
 
-        if (_weapon == weapon)
+        if (_weapon == _currentWeapon)
         {
             if (_weaponButton.image.color == Color.blue && _weapon.AttackCount != _weapon.MaxAttackCount)
                 _playerAttack.Reload();

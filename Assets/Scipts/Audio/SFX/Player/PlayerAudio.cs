@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
+    [SerializeField] private AudioClip _jumpSFX;
+
     [SerializeField] private List<AudioClip> _moveSFX;
 
     [SerializeField] private AudioSource _foot;
 
-    [SerializeField] private float _timeMiddleMoveSFX;
+    [SerializeField] private float _timeMove, _crouchTimeMove;
 
     private PlayerMove _playerMove;
+
+    private float _moveVolume;
+    private float _currentTimeMove;
 
     private bool isMove;
 
     private void Start()
     {
         _playerMove ??= GetComponent<PlayerMove>();
+
+        _playerMove.Jumped += Jump;
+
+        _moveVolume = _foot.volume;
+        _currentTimeMove = _timeMove;
 
         StartCoroutine(MoveAudio());
     }
@@ -26,20 +36,31 @@ public class PlayerAudio : MonoBehaviour
         if ((_playerMove.DirX != 0 || _playerMove.DirY != 0) && isMove)
             StartCoroutine(MoveAudio());
     }
+    private void Jump()
+    {
+        _foot.clip = _jumpSFX;
+        _foot.Play();
+    }
 
     private IEnumerator MoveAudio()
     {
         isMove = false;
 
-        if (_foot.clip != null)
+        if (_playerMove.isCrouch && _foot.volume == _moveVolume)
         {
-            _foot.clip = _moveSFX[Random.Range(0, _moveSFX.Count)];
-            _foot.Play();
+            _foot.volume = _moveVolume / 3;
+            _currentTimeMove = _crouchTimeMove;
         }
-        else
-            _foot.clip = _moveSFX[Random.Range(0, _moveSFX.Count)];
+        else if (!_playerMove.isCrouch && _foot.volume != _moveVolume)
+        {
+            _foot.volume = _moveVolume;
+            _currentTimeMove = _timeMove;
+        }
 
-        yield return new WaitForSeconds(_timeMiddleMoveSFX);
+        _foot.clip = _moveSFX[Random.Range(0, _moveSFX.Count)];
+        _foot.Play();
+
+        yield return new WaitForSeconds(_currentTimeMove);
 
         isMove = true;
     }

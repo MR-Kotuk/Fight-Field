@@ -23,7 +23,7 @@ android {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName '2.8'
+        versionName '3.5'
     }
 
     aaptOptions {

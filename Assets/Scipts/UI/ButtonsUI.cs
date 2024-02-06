@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class ButtonsUI : MonoBehaviour
 {
+    [Header("Buttons")]
     [SerializeField] private Button _crouchButton;
 
+    [Header("Scripts")]
     [SerializeField] private SpriteManager _spriteManager;
     [SerializeField] private PlayerMove _playerMove;
 

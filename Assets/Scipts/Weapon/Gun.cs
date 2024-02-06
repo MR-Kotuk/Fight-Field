@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Gun : Weapon
 {
+    [Header("Create Bullet Settings")]
+    [SerializeField] private GameObject _bullet;
+    [SerializeField] private Transform _createTrn;
+    [Space]
+
+    [Header("Effects Settings")]
     public GameObject ShootFX, CatridgeCaseFX;
 
     [SerializeField] private ScopeWeapon _scopeWeapon;
-
-    [SerializeField] private GameObject _bullet;
-
-    [SerializeField] private Transform _createTrn;
-
-    [SerializeField] private float _waitTime;
 
     private void Start()
     {

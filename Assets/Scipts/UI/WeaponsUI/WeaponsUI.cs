@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class WeaponsUI : MonoBehaviour
 {
+    [Header("UI Settings")]
+    [SerializeField] private int _minAttackCount;
+    [Space]
+
+    [Header("UI Objects Settings")]
     [SerializeField] private Text _attackCount;
     [SerializeField] private Button _weaponButton;
 
+    [SerializeField] private GameObject _scopeImage, _scopeButton;
+    [Space]
+
+    [Header("Scripts")]
     [SerializeField] private PlayerAttack _playerAttack;
     [SerializeField] private ScopeWeapon _scopeWeapon;
 
     [SerializeField] private SpriteManager _spriteManager;
-
-    [SerializeField] private GameObject _scopeImage, _scopeButton;
-
-    [SerializeField] private int _minAttackCount;
 
     private Weapon _weapon, _currentWeapon;
 

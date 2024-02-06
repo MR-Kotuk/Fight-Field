@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator), typeof(PlayerMove), typeof(PlayerAttack))]
 public class PlayerAnimations : MonoBehaviour
 {
+    [Header("Game Objects")]
     [SerializeField] private GameObject _camera, _player;
 
     private PlayerMove _playerMove;

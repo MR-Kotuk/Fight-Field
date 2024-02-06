@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
 
     [HideInInspector] public bool isAttack, isCanAttack;
 
+    [Header("Scripts")]
     [SerializeField] private Weapon StartWeapon;
 
     private Weapon _weapon;

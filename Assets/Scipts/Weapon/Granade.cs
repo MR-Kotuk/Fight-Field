@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Granade : Weapon
 {
+    [Header("Throw Settings")]
     public float _powerThrow;
 
     public Transform _createTrn;
 
     [HideInInspector] public bool isThrow;
 
-    [SerializeField] private float _waitTime;
-
     [SerializeField] private GameObject _granade;
+    [Space]
 
+    [Header("Graffic Settings")]
     [SerializeField] private GranadeLineUI _lineUI;
 
     private void Start()

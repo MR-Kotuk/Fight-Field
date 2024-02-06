@@ -5,22 +5,41 @@ using UnityEngine;
 [RequireComponent(typeof(WeaponsUI))]
 public class Weapon : MonoBehaviour
 {
-    public float ReturnTime;
-
-    public int MaxAttackCount;
-    public int AttackSpeed;
-
+    [Header("Weapon Type Settings")]
     public string Name;
 
-    public bool isReturn;
     public bool isNoScope;
+    [Space]
 
-    public Camera ScopeCamera, WeaponCamera;
-
+    [Header("Attack Settings")]
+    public int AttackSpeed;
+    public int MaxAttackCount, MinAttackCount;
     [HideInInspector] public int AttackCount;
+    [Space]
 
+    [Header("Return Settings")]
+    public float ReturnTime;
+
+    [HideInInspector] public bool isReturn;
+
+    [SerializeField] protected float _waitTime;
+    [Space]
+
+    [Header("Weapon Camers Settings")]
+    public Camera ScopeCamera, WeaponCamera;
+    [Space]
+
+    [Header("Scripts")]
     [SerializeField] protected PlayerAttack PlayerAttack;
     [SerializeField] protected AnimationWeapon _animWeapon;
+
+    private void OnValidate()
+    {
+        if (AttackCount < MinAttackCount)
+            AttackCount = MinAttackCount;
+        else if (AttackCount > MaxAttackCount)
+            AttackCount = MaxAttackCount;
+    }
     public virtual void Attack()
     {
         Debug.Log("Attack");

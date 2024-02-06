@@ -9,19 +9,22 @@ public class ScopeWeapon : MonoBehaviour
 
     [HideInInspector] public bool isScope;
 
+    [Header("Game Camers Settings")]
     [HideInInspector] public Camera CurrentCamera;
 
     [SerializeField] private Camera _playerCamera, _playerWeaponCamera;
 
+    private Camera _currentScope, _currentWeaponCamera;
+    [Space]
+
+    [Header("Scripts")]
     [SerializeField] private PlayerAttack _playerAttack;
 
-    [SerializeField] private Canvas _gameCanvas;
-
-    [SerializeField] private float _switchTime;
-
     private Weapon _curentWeapon;
+    [Space]
 
-    private Camera _currentScope, _currentWeaponCamera;
+    [Header("UI Settings")]
+    [SerializeField] private Canvas _gameCanvas;
 
     private void Start()
     {

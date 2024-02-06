@@ -5,6 +5,7 @@ using System;
 
 public class AnimationWeapon : MonoBehaviour
 {
+    [Header("Weapons Settings")]
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private List<GameObject> _weaponsObjects;
 
@@ -14,10 +15,9 @@ public class AnimationWeapon : MonoBehaviour
     private Dictionary<string, GameObject> _weaponsObj = new Dictionary<string, GameObject>();
 
     private PlayerAttack _playerAttack;
+    private Weapon _currentWeapon;
 
     private Animator _anim;
-
-    private Weapon _currentWeapon;
 
     private const string _isReloadN = "isReload", _isAttackN = "isAttack", _granadeN = "Granade";
 

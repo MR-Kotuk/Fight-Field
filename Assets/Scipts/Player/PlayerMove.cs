@@ -12,13 +12,16 @@ public class PlayerMove : MonoBehaviour
 
     public event Action Moved, Crouched, Jumped;
 
+    [Header("Commponents")]
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Joystick _moveJoystick;
 
     [SerializeField] private Transform _player, _foot;
+    [Space]
 
-    [SerializeField] private float _speedPlayer;
-    [SerializeField] private float _powerJumpPlayer;
+    [Header("Player Settings")]
+    [SerializeField] private float _speed;
+    [SerializeField] private float _powerJump;
     [SerializeField] private float _distGround;
 
     private float _currentSpeed;
@@ -33,7 +36,7 @@ public class PlayerMove : MonoBehaviour
         Moved += MoveStickPlayer;
 
         isCrouch = false;
-        _currentSpeed = _speedPlayer;
+        _currentSpeed = _speed;
     }
         
     private void FixedUpdate() => Moved?.Invoke();
@@ -55,10 +58,10 @@ public class PlayerMove : MonoBehaviour
 
         if (isCrouch)
         {
-            _currentSpeed = _speedPlayer / 2;
+            _currentSpeed = _speed / 2;
         }
         else
-            _currentSpeed = _speedPlayer;
+            _currentSpeed = _speed;
     }
 
     public void OnJumpButton()
@@ -66,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
             Jumped?.Invoke();
-            _rb.AddForce(new Vector3(0, 1, 0) * _powerJumpPlayer);
+            _rb.AddForce(new Vector3(0, 1, 0) * _powerJump);
         }
     }
     

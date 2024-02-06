@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GranadeLineUI : MonoBehaviour
 {
-    [SerializeField] private Granade _granade;
-
+    [Header("Settings")]
     [SerializeField] private int _linePoints = 175;
     [SerializeField] private float _intervalPoints = 0.1f;
+    [Space]
+
+    [Header("Scripts")]
+    [SerializeField] private Granade _granade;
 
     private LineRenderer _line;
     private Transform _lauchPoint;

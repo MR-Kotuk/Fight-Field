@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] private float _timeMove, _crouchTimeMove;
+    [Space]
+
+    [Header("SFX")]
     [SerializeField] private AudioClip _jumpSFX;
 
     [SerializeField] private List<AudioClip> _moveSFX;
 
     [SerializeField] private AudioSource _foot;
-
-    [SerializeField] private float _timeMove, _crouchTimeMove;
 
     private PlayerMove _playerMove;
 

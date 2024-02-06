@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+    [Header("Sensitivity")]
     [SerializeField] private float _sensitivity, _scopeSens;
+    [SerializeField] private float _maxSens, _minSens;
+    [SerializeField] private float _maxScopeSens, _minScopeSens;
+    [Space]
 
+    [Header("Angls")]
     [SerializeField] private float _minCamAngle, _maxCamAngle;
     [SerializeField] private float _crouchMinAngle, _crouchMaxAngle;
+    [Space]
 
+    [Header("Crouch Settings")]
     [SerializeField] private float _crouchPosY;
+    [Space]
 
+    [Header("Game Objects")]
     [SerializeField] private GameObject _player;
     [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
+    [Space]
 
+    [Header("Scripts")]
     [SerializeField] private PlayerMove _playerMove;
 
     private ScopeWeapon _scopeWeapon;
@@ -24,6 +35,13 @@ public class CameraMove : MonoBehaviour
 
     private float _standPos;
 
+    private void OnValidate()
+    {
+        if (_sensitivity < _minSens)
+            _sensitivity = _minSens;
+        else if (_sensitivity > _maxSens)
+            _sensitivity = _maxSens;
+    }
     private void Start() 
     {
         _scopeWeapon ??= GetComponent<ScopeWeapon>();

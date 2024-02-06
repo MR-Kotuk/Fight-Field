@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EffectWeapon : MonoBehaviour
 {
+    [Header("Scripts")]
     [SerializeField] private PlayerAttack _playerAttack;
 
     private Weapon _currentWeapon;

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class WeaponAudio : MonoBehaviour
 {
+    [Header("SFX")]
     [SerializeField] private AudioClip _reload;
 
     [SerializeField] private List<AudioClip> _handAttacks;
     [SerializeField] private List<AudioClip> _shoot;
 
-    [SerializeField] private AudioSource _gunPosSFX;
-
-    [SerializeField] private AudioSource _audioSourceCamera;
+    [SerializeField] private AudioSource _gunPosSFX, _audioSourceCamera;
 
     private PlayerAttack _playerAttack;
 

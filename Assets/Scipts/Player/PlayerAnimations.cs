@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(PlayerMove), typeof(PlayerAttack))]
+[RequireComponent(typeof(Animator))]
 public class PlayerAnimations : MonoBehaviour
 {
     [Header("Game Objects")]

@@ -32,14 +32,6 @@ public class Weapon : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] protected PlayerAttack PlayerAttack;
     [SerializeField] protected AnimationWeapon _animWeapon;
-
-    private void OnValidate()
-    {
-        if (AttackCount < MinAttackCount)
-            AttackCount = MinAttackCount;
-        else if (AttackCount > MaxAttackCount)
-            AttackCount = MaxAttackCount;
-    }
     public virtual void Attack()
     {
         Debug.Log("Attack");

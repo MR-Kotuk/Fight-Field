@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(PlayerAnimations), typeof(PlayerAudio))]
+[RequireComponent(typeof(PlayerAnimations), typeof(PlayerAudio), typeof(PlayerAttack))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }

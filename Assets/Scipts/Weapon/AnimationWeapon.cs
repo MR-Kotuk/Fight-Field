@@ -36,7 +36,9 @@ public class AnimationWeapon : MonoBehaviour
             _weaponsObj.Add(_weapons[i].Name, _weaponsObjects[i]);
 
             _weapons[i].enabled = false;
-            _weaponsObjects[i].SetActive(false);
+
+            if(_weaponsObjects[i] != null)
+                _weaponsObjects[i].SetActive(false);
         }
     }
     private void Attack()
@@ -64,7 +66,9 @@ public class AnimationWeapon : MonoBehaviour
                 name = name.Substring(0, name.Length - (name.Length - --i));
 
                 _weaponsScr[name].enabled = isTake;
-                _weaponsObj[name].SetActive(isTake);
+
+                if(_weaponsObj[name] != null)
+                    _weaponsObj[name].SetActive(isTake);
             }
         }
         
@@ -89,8 +93,11 @@ public class AnimationWeapon : MonoBehaviour
 
     private IEnumerator WithWait(string name)
     {
-        _anim.SetBool(name, true);
-        yield return new WaitForSeconds(0.5f);
-        _anim.SetBool(name, false);
+        if (!_anim.GetBool(name))
+        {
+            _anim.SetBool(name, true);
+            yield return new WaitForSeconds(0.5f);
+            _anim.SetBool(name, false);
+        }
     }
 }

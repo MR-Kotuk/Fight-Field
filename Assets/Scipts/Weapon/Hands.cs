@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hands : Weapon
 {
-    private void Start()
+    private void Awake()
     {
         AttackCount = MaxAttackCount;
         isReturn = false;

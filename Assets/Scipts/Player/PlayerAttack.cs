@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(_weapon != null && isAttack && isCanAttack)
         {
-            if (_weapon.AttackCount > 0 && !_weapon.isReturn)
+            if (_weapon.AttackCount > _weapon.MinAttackCount && !_weapon.isReturn)
                 Attacked?.Invoke();
             else if (!_weapon.isReturn)
                 Reloaded?.Invoke();

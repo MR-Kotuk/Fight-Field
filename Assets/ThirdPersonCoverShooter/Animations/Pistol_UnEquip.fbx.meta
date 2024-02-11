@@ -1055,7 +1055,7 @@ ModelImporter:
       events:
       - time: 0.54085076
         functionName: SwitchAnimWeapon
-        data: Revolver/false
+        data: Pistol/false
         objectReferenceParameter: {fileID: 11500000, guid: 9a4e52e8c80dd4543889303dd96a8c5e,
           type: 3}
         floatParameter: 0

@@ -1,0 +1,215 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 7558 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker252
+-projectPath
+C:/Users/Taras Sliusar/Bank-Hack
+-logFile
+Logs/AssetImportWorker252.log
+-srvPort
+57344
+Successfully changed project path to: C:/Users/Taras Sliusar/Bank-Hack
+C:/Users/Taras Sliusar/Bank-Hack
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [18264] Host "[IP] 192.168.1.21 [Port] 0 [Flags] 2 [Guid] 1947323300 [EditorId] 1947323300 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4DLGDL4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [18264] Host "[IP] 192.168.1.21 [Port] 0 [Flags] 2 [Guid] 1947323300 [EditorId] 1947323300 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4DLGDL4) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+mdb reader table full -> cleaning up stale readers. Current readers:
+    pid     thread     txnid
+     15280 5500 -
+     15280 918 -
+     23772 5650 -
+     24164 3964 -
+     15280 4910 -
+      1228 f44 -
+      9192 4ed8 -
+     10044 3504 -
+      1072 4e6c -
+      1516 2308 -
+     19060 4a58 -
+     21540 59c -
+     15388 3360 -
+     15496 575c -
+      7072 51bc -
+     20004 2b58 -
+     17184 1a24 -
+     17624 3154 -
+     23432 5a00 -
+     22696 1d50 -
+     15784 5c3c -
+      9484 57a4 -
+     13996 328c -
+     12788 3bfc -
+      2192 49f4 -
+     11036 3150 -
+     17584 2ab4 -
+     23872 4950 -
+     10880 52d4 -
+     11516 4504 -
+     18612 2694 -
+     16380 495c -
+      6064 28b8 -
+     14012 1638 -
+     17512 36c0 -
+      4176 4180 40754
+     22200 11c8 -
+     18364 30ac -
+     18240 2ab0 -
+     24028 12d8 -
+     16196 c88 -
+     23392 56a4 -
+      1340 3624 -
+     19416 5958 -
+     13592 4d34 -
+      9704 496c -
+       952 1e84 -
+     22548 59fc -
+      7632 2978 -
+     17252 b3c -
+     18084 5438 -
+     12984 c7c -
+      5436 3c7c -
+      7284 4e34 -
+     22220 31d0 -
+     10820 504c -
+      6048 dd4 -
+     15044 1bc4 -
+     21448 3228 -
+      1848 3e78 -
+     23564 fc0 -
+     24404 2158 -
+     19964 4cf4 -
+     20812 3004 -
+     19620 45f4 -
+      8132 21cc -
+     10668 1488 -
+     11556 b6c -
+     14072 85c -
+     21308 47ac -
+     18196 4d78 -
+     18336 5600 -
+     11616 1e7c -
+     24380 5590 -
+      9460 4b30 -
+     21660 4514 -
+     13576 3d28 -
+     19000 442c -
+     21680 5d3c -
+      1236 3fb8 -
+     18408 2630 -
+     10976 394c -
+      4144 54b8 -
+     17808 1fbc -
+      2036 51dc -
+     16372 5950 -
+     23700 75c -
+     20432 4438 -
+     21124 16a8 -
+      2728 14d0 -
+     16680 2db8 -
+     18676 30d0 -
+      9184 4f74 -
+     15492 4344 -
+     10980 5568 -
+     13648 3630 -
+      7408 57a8 -
+     21300 b50 -
+      7704 43e0 -
+     24512 3814 -
+     23892 4f1c -
+     22820 5498 -
+       808 e84 -
+     18808 39a8 -
+     20404 254c -
+     16392 4a6c -
+     16020 2610 -
+      9224 7cc -
+     10236 5574 -
+     23540 513c -
+     23396 2b54 -
+     20880 16dc -
+     11680 aa0 -
+     11888 561c -
+     22664 2064 -
+     24280 54e8 -
+      3780 542c -
+     14312 313c -
+      9256 43b8 -
+      8988 30f8 -
+      7560 10e0 -
+     17536 ee8 -
+      6200 3218 -
+     23176 4d30 -
+     15804 5324 -
+      8484 3680 -
+Cleaned out 122 stale readers
+Refreshing native plugins compatible for Editor in 67.49 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.4f1 (35713cd46cd7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Taras Sliusar/Bank-Hack/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro M1000M (ID=0x13b1)
+    Vendor:   NVIDIA
+    VRAM:     2006 MB
+    Driver:   31.0.15.3779
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.049265 seconds.
+- Loaded All Assemblies, in  1.033 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 737 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly

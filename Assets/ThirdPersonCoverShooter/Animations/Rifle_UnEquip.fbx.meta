@@ -1058,7 +1058,7 @@ ModelImporter:
       events:
       - time: 0.581364
         functionName: SwitchAnimWeapon
-        data: Thompson/false
+        data: M4/false
         objectReferenceParameter: {fileID: 11500000, guid: 9a4e52e8c80dd4543889303dd96a8c5e,
           type: 3}
         floatParameter: 0

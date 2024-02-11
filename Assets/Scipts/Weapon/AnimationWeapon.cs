@@ -9,7 +9,7 @@ public class AnimationWeapon : MonoBehaviour
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private List<GameObject> _weaponsObjects;
 
-    private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Revolver", "Thompson" };
+    private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Pistol", "M4" };
 
     private Dictionary<string, Weapon> _weaponsScr = new Dictionary<string, Weapon>();
     private Dictionary<string, GameObject> _weaponsObj = new Dictionary<string, GameObject>();

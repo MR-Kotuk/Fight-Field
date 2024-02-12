@@ -62,8 +62,10 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\EffectCore\scripts\ECdestroyMe.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerAnimations.cs" />
+    <Compile Include="Assets\Scipts\PlayerHealth.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
+    <Compile Include="Assets\Scipts\FireExtinguisherHealth.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShake.cs" />
     <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -84,7 +86,6 @@
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeProjectile.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Scipts\Healt.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECProjectile.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECEffectActor.cs" />
     <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\projectileActorExplosion1.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECExplodingProjectile.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECprojectileActor.cs" />
     <Compile Include="Assets\Scipts\Weapon\Gun.cs" />
+    <Compile Include="Assets\Scipts\Health.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scipts\Weapon\Hands.cs" />
   </ItemGroup>

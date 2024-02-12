@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Player Settings")]
     [SerializeField] private float _speed;
-    [SerializeField] private float _powerJump;
+    [SerializeField] private float _pushPowerJump;
     [SerializeField] private float _distGround;
 
     private float _currentSpeed;
@@ -69,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
             Jumped?.Invoke();
-            _rb.AddForce(new Vector3(0, 1, 0) * _powerJump);
+            _rb.AddForce(new Vector3(0, 1, 0) * _pushPowerJump);
         }
     }
     

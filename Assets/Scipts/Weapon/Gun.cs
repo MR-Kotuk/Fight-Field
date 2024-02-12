@@ -36,9 +36,9 @@ public class Gun : Weapon
         Vector3 dirTo = toPoint - _createTrn.position;
 
         GameObject bullet = Instantiate(_bullet, _createTrn.position, Quaternion.identity);
-
         bullet.transform.forward = dirTo.normalized;
 
+        bullet.GetComponent<Bullet>().Dammage = Dammage;
         bullet?.GetComponent<Rigidbody>().AddForce(dirTo.normalized * AttackSpeed, ForceMode.Impulse);
 
         AttackCount--;

@@ -11,14 +11,16 @@ public class Explosion : MonoBehaviour
     [Space]
 
     [Header("Effect Settings")]
-    [SerializeField] private float _explosionTime, _effectTime;
+    [SerializeField] private float _timeToExplosion, _effectTime;
     [Space]
 
     [Header("Explosion Settings")]
     [SerializeField] private float _radius;
-    [SerializeField] private float _power;
+    [SerializeField] private float _pushPower;
 
-    private void Awake() => Invoke("Explode", _explosionTime);
+    [SerializeField] private float _dammage;
+
+    private void Awake() => Invoke("Explode", _timeToExplosion);
     private void Explode()
     {
         _effectWeapon.OneTimeFX(_effect, transform.position, _effectTime);
@@ -30,7 +32,15 @@ public class Explosion : MonoBehaviour
             Rigidbody rb = explodeRadius[i].attachedRigidbody;
 
             if (rb)
-                rb.AddExplosionForce(_power, transform.position, _radius);
+                rb.AddExplosionForce(_pushPower, transform.position, _radius);
+
+            PlayerHealth playerHealth = explodeRadius[i].gameObject.GetComponent<PlayerHealth>();
+            FireExtinguisherHealth fireExtinguisherHealth = explodeRadius[i].gameObject.GetComponent<FireExtinguisherHealth>();
+
+            if (playerHealth != null)
+                playerHealth.Dammage(_dammage);
+            else if (fireExtinguisherHealth != null)
+                fireExtinguisherHealth.Dammage(_dammage);
         }
 
         Destroy(gameObject);

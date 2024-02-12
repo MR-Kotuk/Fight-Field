@@ -15,6 +15,8 @@ public class Weapon : MonoBehaviour
     public int AttackSpeed;
     public int MaxAttackCount, MinAttackCount;
     [HideInInspector] public int AttackCount;
+
+    [SerializeField] protected float Dammage;
     [Space]
 
     [Header("Return Settings")]

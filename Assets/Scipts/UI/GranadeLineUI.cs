@@ -23,7 +23,7 @@ public class GranadeLineUI : MonoBehaviour
     {
         _lauchPoint = _granade._createTrn;
 
-        if(_line != null)
+        if (_line != null)
         {
             if (isDraw)
             {
@@ -43,7 +43,7 @@ public class GranadeLineUI : MonoBehaviour
 
         float time = 0;
 
-        for(int i = 0; i < _linePoints; i++)
+        for (int i = 0; i < _linePoints; i++)
         {
             var x = (startVelocity.x * time) + (Physics.gravity.x / 2 * time * time);
             var y = (startVelocity.y * time) + (Physics.gravity.y / 2 * time * time);
@@ -55,5 +55,5 @@ public class GranadeLineUI : MonoBehaviour
             time += _intervalPoints;
         }
     }
-    
+
 }

@@ -1,3 +1,0 @@
-Library/SourceAssetDB filter=lfs diff=lfs merge=lfs -text
-Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
-Library/PackageCache/com.unity.burst@1.8.7/.Runtime/libburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2022_3_4;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_4;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -49,7 +49,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.18</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2022.3.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -58,55 +58,68 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scipts\Audio\SFX\Player\PlayerAudio.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\EffectCore\scripts\ECdestroyMe.cs" />
-    <Compile Include="Assets\Scipts\Player\PlayerAnimations.cs" />
-    <Compile Include="Assets\Scipts\PlayerHealth.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
-    <Compile Include="Assets\Scipts\FireExtinguisherHealth.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\Gun.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\Hands.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShake.cs" />
-    <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
-    <Compile Include="Assets\Scipts\Weapon\ScopeWeapon.cs" />
-    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeCaller.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Granade.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\WeaponSettings.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\AttackWeapon.cs" />
     <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\instantiateEffectCallerExplosion1.cs" />
-    <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
-    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\ExplodingProjectileExplosion1.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\FireExtinguisherHealth.cs" />
     <Compile Include="Assets\Scipts\UI\WeaponsUI\WeaponsUI.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Explosion.cs" />
-    <Compile Include="Assets\Scipts\Audio\SFX\Weapon\WeaponAudio.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Scipts\GPU\GpuIntrancingEnabler.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Bullet.cs" />
-    <Compile Include="Assets\Scipts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Enemy\EnemyWeaponAI.cs" />
     <Compile Include="Assets\Scipts\UI\GranadeLineUI.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeProjectile.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECProjectile.cs" />
+    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECEffectActor.cs" />
-    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\projectileActorExplosion1.cs" />
     <Compile Include="Assets\Scipts\Player\CameraMove.cs" />
-    <Compile Include="Assets\EffectCore\scripts\ECparticleColorChangerMaster.cs" />
+    <Compile Include="Assets\Scipts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\Scipts\Effects\EffectWeapon.cs" />
-    <Compile Include="Assets\Scipts\Weapon\AnimationWeapon.cs" />
-    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECExplodingProjectile.cs" />
-    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECprojectileActor.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Gun.cs" />
-    <Compile Include="Assets\Scipts\Health.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\Scipts\Weapon\Hands.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\Bullet.cs" />
+    <Compile Include="Assets\Scipts\Audio\SFX\Player\PlayerAudio.cs" />
+    <Compile Include="Assets\Scipts\Player\MoveAnimations.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerAnimations.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\Weapon.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Scipts\Enemy\EnemyLook.cs" />
+    <Compile Include="Assets\Scipts\UI\SpriteManager.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Player\Explosion.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Player\Granade.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Scipts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECCameraShakeCaller.cs" />
+    <Compile Include="Assets\Scipts\UI\ButtonsUI.cs" />
+    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\ExplodingProjectileExplosion1.cs" />
+    <Compile Include="Assets\Scipts\Audio\SFX\Weapon\WeaponAudio.cs" />
+    <Compile Include="Assets\Scipts\Weapon\All\AnimationWeapon.cs" />
+    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\Scipts\Weapon\Player\ScopeWeapon.cs" />
+    <Compile Include="Assets\Scipts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECProjectile.cs" />
+    <Compile Include="Assets\EffectCore\packs\StylizedExplosionPack1\WebDemo\scripts\projectileActorExplosion1.cs" />
+    <Compile Include="Assets\EffectCore\scripts\ECparticleColorChangerMaster.cs" />
+    <Compile Include="Assets\Scipts\Effects\EffectWeapon.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECExplodingProjectile.cs" />
+    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\ExampleScript.cs" />
+    <Compile Include="Assets\Scipts\System\GpuIntrancingEnabler.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ECprojectileActor.cs" />
+    <Compile Include="Assets\Scipts\Enemy\EnemyAnimation.cs" />
+    <Compile Include="Assets\Scipts\Health.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\Outline.shader" />
-    <None Include="Assets\___www.unityassetcollection.com___.txt" />
+    <None Include="Assets\Unity-Sun-Shafts-PPSv2-main\Shaders\SimpleClear.shader" />
     <None Include="Assets\EffectCore\packs\StylizedExplosionPack1\Tips &amp; Documentations StylizedExplosionPack1.txt" />
+    <None Include="Assets\Unity-Sun-Shafts-PPSv2-main\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\ExplosionPreviewMobile.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\ExplosionPreview.shader" />
+    <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Prototyping\Grass\standart 2sided.shader" />
     <None Include="Assets\ThirdPersonCoverShooter\Assets\Shaders\GrenadePath.shader" />
     <None Include="Assets\PolygonHeist\Scenes\README.txt" />
@@ -142,6 +155,12 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ContentLoadModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
@@ -301,6 +320,9 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
@@ -758,11 +780,17 @@
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
@@ -782,8 +810,14 @@
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
@@ -797,11 +831,17 @@
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
+    <Reference Include="PPv2URPConverters">
+      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
@@ -824,14 +864,26 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -850,6 +902,9 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
@@ -890,6 +945,9 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
@@ -914,8 +972,17 @@
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>

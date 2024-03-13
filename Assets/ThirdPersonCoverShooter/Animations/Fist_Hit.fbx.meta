@@ -1048,17 +1048,17 @@ ModelImporter:
       curves: []
       events:
       - time: 0.2541512
-        functionName: HandAttack
+        functionName: Hit
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: fab2108c1c5658746b990340d371418d,
+        objectReferenceParameter: {fileID: 11500000, guid: 528defcf7f101374799efaf54aaf27c7,
           type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.611167
-        functionName: HandAttack
+        functionName: Hit
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: fab2108c1c5658746b990340d371418d,
+        objectReferenceParameter: {fileID: 11500000, guid: 528defcf7f101374799efaf54aaf27c7,
           type: 3}
         floatParameter: 0
         intParameter: 0

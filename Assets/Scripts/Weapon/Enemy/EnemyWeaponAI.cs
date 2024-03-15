@@ -33,7 +33,6 @@ public class EnemyWeaponAI : MonoBehaviour
         if (_enemyAI.isPlayerInSeeZone || _enemyAI.isSafeTarget)
         {
             Vector3 target = _navAgent.destination;
-            target.y = 0f;
 
             transform.LookAt(target);
 

@@ -9,8 +9,8 @@ public class PlayerHealth : Health
         base.Damage(Damage);
     }
 
-    protected override void Deaded()
+    protected override void Dieded()
     {
-        base.Deaded();
+        base.Dieded();
     }
 }

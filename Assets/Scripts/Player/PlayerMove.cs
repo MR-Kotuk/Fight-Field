@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(PlayerAnimations), typeof(PlayerAudio), typeof(AttackWeapon))]
+[RequireComponent(typeof(PlayerAnimations), typeof(MoveAudio), typeof(AttackWeapon))]
 public class PlayerMove : MonoBehaviour
 {
     public bool isCrouch { get; private set; }
@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _pushPowerJump;
     [SerializeField] private float _distGround;
 
+    private MoveAudio _moveAudio;
+
     private float _currentSpeed;
 
     private void OnEnable()
@@ -33,6 +35,7 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         _rb ??= GetComponent<Rigidbody>();
+        _moveAudio ??= GetComponent<MoveAudio>();
 
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
@@ -56,6 +59,9 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             OnCrouchButton();
+
+        if(DirX != 0f || DirY != 0f)
+            _moveAudio.Move(isCrouch);
     }
 
     public void OnCrouchButton()
@@ -78,6 +84,8 @@ public class PlayerMove : MonoBehaviour
         {
             Jumped?.Invoke();
             _rb.AddForce(new Vector3(0, 1, 0) * _pushPowerJump);
+
+            _moveAudio.Jump();
         }
     }
     

@@ -32,7 +32,7 @@ public class Granade : Weapon
             WeaponSettings.isReturn = true;
 
             _lineUI.OnAimGranade(false);
-            _animWeapon.AttackAnim();
+            AnimWeapon.AttackAnim();
 
             Invoke("Throw", 0.3f);
         }

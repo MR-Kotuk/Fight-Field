@@ -9,7 +9,7 @@ public class AnimationWeapon : MonoBehaviour
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private List<GameObject> _weaponsObjects;
 
-    private List<string> _animWeaponNames = new List<string>() { "Hand", "Granade", "Pistol", "M4" };
+    private List<string> AnimWeaponNames = new List<string>() { "Hand", "Granade", "Pistol", "M4" };
 
     private Dictionary<string, Weapon> _weaponsScr = new Dictionary<string, Weapon>();
     private Dictionary<string, GameObject> _weaponsObj = new Dictionary<string, GameObject>();
@@ -88,9 +88,9 @@ public class AnimationWeapon : MonoBehaviour
 
         string name = weapon.WeaponSettings.Name;
 
-        for (int i = 0; i < _animWeaponNames.Count; i++)
-            if (_anim.GetBool($"is{_animWeaponNames[i]}"))
-                _anim.SetBool($"is{_animWeaponNames[i]}", false);
+        for (int i = 0; i < AnimWeaponNames.Count; i++)
+            if (_anim.GetBool($"is{AnimWeaponNames[i]}"))
+                _anim.SetBool($"is{AnimWeaponNames[i]}", false);
 
         _anim.SetBool($"is{name}", true);
     }

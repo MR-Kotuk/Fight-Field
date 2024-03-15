@@ -8,13 +8,13 @@ public class Weapon : MonoBehaviour
     public WeaponSettings WeaponSettings;
     [Space]
 
-    [Header("Weapon Camers Settings")]
+    [Header("Weapon Camers")]
     public Camera ScopeCamera, WeaponCamera;
     [Space]
 
     [Header("Scripts")]
     [SerializeField] protected AttackWeapon AttackWeapon;
-    [SerializeField] protected AnimationWeapon _animWeapon;
+    [SerializeField] protected AnimationWeapon AnimWeapon;
     public virtual void Attack()
     {
         Debug.Log("Attack");

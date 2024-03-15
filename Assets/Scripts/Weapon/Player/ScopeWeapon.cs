@@ -38,8 +38,6 @@ public class ScopeWeapon : MonoBehaviour
     private void Start()
     {
         SwitchCamera(_playerCamera);
-
-        isScope = false;
     }
     private void Update()
     {
@@ -55,7 +53,8 @@ public class ScopeWeapon : MonoBehaviour
     {
         _curentWeapon = weapon;
 
-        SwitchCamera(_playerCamera);
+        if (isScope)
+            Scope();
 
         _currentScope = _curentWeapon.ScopeCamera;
         _currentWeaponCamera = _curentWeapon.WeaponCamera;

@@ -16,7 +16,7 @@ public class CameraMove : MonoBehaviour
     [Space]
 
     [Header("Crouch Settings")]
-    [SerializeField] private float _crouchPosY;
+    [SerializeField] private float _crouchScale;
     [Space]
 
     [Header("Game Objects")]
@@ -34,8 +34,6 @@ public class CameraMove : MonoBehaviour
     private float _currentSens;
 
     private float _lastAngleX, _lastAngleY;
-
-    private float _standPos;
 
     private void OnValidate()
     {
@@ -56,7 +54,6 @@ public class CameraMove : MonoBehaviour
         _currentMaxAngle = _maxCamAngle;
 
         _currentSens = _sensitivity;
-        _standPos = transform.localPosition.y;
     }
     private void FixedUpdate()
     {
@@ -69,24 +66,22 @@ public class CameraMove : MonoBehaviour
     }
     private void CrouchAngle()
     {
-        Vector3 pos = transform.localPosition;
-
         if (_playerMove.isCrouch)
         {
             _currentMinAngle = _crouchMinAngle;
             _currentMaxAngle = _crouchMaxAngle;
 
-            pos.y = _crouchPosY;
+            _player.transform.localScale = new Vector3(_crouchScale, _crouchScale, _crouchScale);
+            transform.localScale = new Vector3(transform.localScale.x / _crouchScale, transform.localScale.y / _crouchScale, transform.localScale.z / _crouchScale);
         }
         else
         {
             _currentMinAngle = _minCamAngle;
             _currentMaxAngle = _maxCamAngle;
 
-            pos.y = _standPos;
+            _player.transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
-
-        transform.localPosition = pos;
     }
     private void Rotate()
     {

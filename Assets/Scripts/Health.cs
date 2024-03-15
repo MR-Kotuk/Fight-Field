@@ -5,29 +5,29 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] protected float MaxHealt;
-    [SerializeField] protected float MyHealt;
+    [SerializeField] protected float MaxHealth;
+    [SerializeField] protected float MyHealth;
 
     private void Start()
     {
-        MyHealt = MaxHealt;
+        MyHealth = MaxHealth;
     }
     public virtual void Damage(float damage)
     {
-        if (MyHealt > 0)
+        if (MyHealth > 0)
         {
-            if (MyHealt - damage > 0)
-                MyHealt -= damage;
+            if (MyHealth - damage > 0)
+                MyHealth -= damage;
             else
-                Deaded();
+                Dieded();
         }
         else
-            Deaded();
+            Dieded();
     }
 
-    protected virtual void Deaded()
+    protected virtual void Dieded()
     {
-        Debug.Log($"{gameObject.name} dieded");
+        Debug.LogError($"{gameObject.name} dieded");
 
         Destroy(gameObject);
     }

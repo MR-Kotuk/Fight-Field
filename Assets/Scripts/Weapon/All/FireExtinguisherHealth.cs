@@ -14,22 +14,22 @@ public class FireExtinguisherHealth : Health
 
     private void Start()
     {
-        MyHealt = MaxHealt;
+        MyHealth = MaxHealth;
     }
     public override void Damage(float damage)
     {
-        if (MyHealt > 0)
+        if (MyHealth > 0)
         {
-            if (MyHealt - damage > 0)
-                MyHealt -= damage;
+            if (MyHealth - damage > 0)
+                MyHealth -= damage;
             else
-                Deaded();
+                Dieded();
         }
         else
-            Deaded();
+            Dieded();
     }
 
-    protected override void Deaded()
+    protected override void Dieded()
     {
         _effectWeapon.OneTimeFX(_smoke, gameObject.transform.position, _smokeTime);
         Destroy(this);

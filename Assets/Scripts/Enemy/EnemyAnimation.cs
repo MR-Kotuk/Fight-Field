@@ -13,15 +13,14 @@ public class EnemyAnimation : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
     }
+
     public void Move(float dirX, float dirZ)
     {
         _anim.SetFloat(_moveX, dirX);
         _anim.SetFloat(_moveZ, dirZ);
     }
-    public void Attack()
-    {
-        StartCoroutine(OneTimeAnim(_isAttack, 0.2f));
-    }
+
+    public void Attack() => StartCoroutine(OneTimeAnim(_isAttack, 0.2f));
 
     private IEnumerator OneTimeAnim(string animName, float waitTime)
     {

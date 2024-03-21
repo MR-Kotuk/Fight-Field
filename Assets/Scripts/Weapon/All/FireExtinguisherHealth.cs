@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireExtinguisherHealth : Health
+public class FireExtinguisherHealth : MonoBehaviour, IHealth
 {
+    [Header("Health Settings")]
+    [SerializeField] private float MaxHealth;
+    [SerializeField] private float MyHealth;
+    [Space]
+
     [Header("Smoke Settings")]
     [SerializeField] private GameObject _smoke;
     [SerializeField] private float _smokeTime;
@@ -12,26 +17,19 @@ public class FireExtinguisherHealth : Health
     [Header("Scripts")]
     [SerializeField] private EffectWeapon _effectWeapon;
 
-    private void Start()
+    private void Start() => MyHealth = MaxHealth;
+
+    public void Damage(float damage)
     {
-        MyHealth = MaxHealth;
-    }
-    public override void Damage(float damage)
-    {
-        if (MyHealth > 0)
-        {
-            if (MyHealth - damage > 0)
-                MyHealth -= damage;
-            else
-                Dieded();
-        }
+        if (MyHealth - damage > 0)
+            MyHealth -= damage;
         else
             Dieded();
     }
 
-    protected override void Dieded()
+    private void Dieded()
     {
-        _effectWeapon.OneTimeFX(_smoke, gameObject.transform.position, _smokeTime);
+        _effectWeapon.OneTimeFX(_smoke, transform.position, _smokeTime);
         Destroy(this);
     }
 }

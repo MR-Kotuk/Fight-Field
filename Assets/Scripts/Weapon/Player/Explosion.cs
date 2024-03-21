@@ -20,8 +20,8 @@ public class Explosion : MonoBehaviour
     [SerializeField] private float _radius;
     [SerializeField] private float _pushPower;
 
-
     private void Awake() => Invoke("Explode", _timeToExplosion);
+
     private void Explode()
     {
         _effectWeapon.OneTimeFX(_effect, transform.position, _effectTime);
@@ -35,7 +35,7 @@ public class Explosion : MonoBehaviour
             if (rb)
                 rb.AddExplosionForce(_pushPower, transform.position, _radius);
 
-            Health health = explodeRadius[i].gameObject.GetComponent<Health>();
+            IHealth health = explodeRadius[i].gameObject.GetComponent<IHealth>();
 
             if(health != null)
                 health.Damage(Damage);

@@ -35,10 +35,9 @@ public class ScopeWeapon : MonoBehaviour
         _AttackWeapon.SwitchedWeapon += SwitchScope;
         _AttackWeapon.Reloaded += OnReload;
     }
-    private void Start()
-    {
-        SwitchCamera(_playerCamera);
-    }
+
+    private void Start() => SwitchCamera(_playerCamera);
+
     private void Update()
     {
         if (_AttackWeapon.isCanAttack && !_curentWeapon.WeaponSettings.isReturn)
@@ -49,6 +48,7 @@ public class ScopeWeapon : MonoBehaviour
         else if (Scoped != null)
             Scoped -= Scope;
     }
+
     private void SwitchScope(Weapon weapon)
     {
         _curentWeapon = weapon;
@@ -59,11 +59,13 @@ public class ScopeWeapon : MonoBehaviour
         _currentScope = _curentWeapon.ScopeCamera;
         _currentWeaponCamera = _curentWeapon.WeaponCamera;
     }
+
     private void OnReload()
     {
         if(isScope)
             Scope();
     }
+
     private void Scope()
     {
         isScope = !isScope;
@@ -73,6 +75,7 @@ public class ScopeWeapon : MonoBehaviour
         else
             SwitchCamera(_playerCamera);
     }
+
     private void SwitchCamera(Camera newCamera)
     {
         if (_playerCamera == newCamera)
@@ -102,6 +105,7 @@ public class ScopeWeapon : MonoBehaviour
 
         _gameCanvas.worldCamera = CurrentCamera;
     }
+
     private void OnDisable()
     {
         Scoped -= Scope;

@@ -15,23 +15,33 @@ public class Weapon : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] protected AttackWeapon AttackWeapon;
     [SerializeField] protected AnimationWeapon AnimWeapon;
-    public virtual void Attack()
+
+    private float _frames;
+
+    private float _currentWait;
+
+    public virtual void Attack() => Debug.Log("Attack");
+
+    public void Reload() => ReturnWait(WeaponSettings.ReturnTime);
+
+    private void Update()
     {
-        Debug.Log("Attack");
+        if (WeaponSettings.isReturn && _frames >= _currentWait)
+        {
+            WeaponSettings.isReturn = false;
+            _frames = 0f;
+
+            if (_currentWait == WeaponSettings.ReturnTime)
+                WeaponSettings.AttackCount = WeaponSettings.MaxAttackCount;
+        }
+        else if (WeaponSettings.isReturn)
+            _frames += Time.deltaTime;
     }
-    public void Reload()
-    {
-        StartCoroutine(ReturnWait(WeaponSettings.ReturnTime));
-    }
-    protected IEnumerator ReturnWait(float wait)
+
+    protected void ReturnWait(float wait)
     {
         WeaponSettings.isReturn = true;
 
-        yield return new WaitForSeconds(wait);
-
-        WeaponSettings.isReturn = false;
-
-        if (wait == WeaponSettings.ReturnTime)
-            WeaponSettings.AttackCount = WeaponSettings.MaxAttackCount;
+        _currentWait = wait;
     }
 }

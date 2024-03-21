@@ -24,6 +24,7 @@ public class Granade : Weapon
         isThrow = false;
         WeaponSettings.isReturn = false;
     }
+
     private void FixedUpdate()
     {
         if (!AttackWeapon.isAttack && isThrow)
@@ -37,13 +38,16 @@ public class Granade : Weapon
             Invoke("Throw", 0.3f);
         }
     }
+
     public override void Attack() => Aiming();
+
     private void Aiming()
     {
         isThrow = true;
 
         _lineUI.OnAimGranade(true);
     }
+
     private void Throw()
     {
         GameObject granade = Instantiate(_granade, _createTrn.position, _createTrn.rotation);
@@ -53,6 +57,6 @@ public class Granade : Weapon
 
         WeaponSettings.AttackCount--;
 
-        StartCoroutine(ReturnWait(WeaponSettings._waitTime));
+        ReturnWait(WeaponSettings._waitTime);
     }
 }

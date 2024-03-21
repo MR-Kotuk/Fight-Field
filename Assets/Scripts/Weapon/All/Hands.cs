@@ -16,10 +16,8 @@ public class Hands : Weapon
         WeaponSettings.AttackCount = WeaponSettings.MaxAttackCount;
         WeaponSettings.isReturn = false;
     }
-    public override void Attack()
-    {
-        base.Attack();
-    }
+
+    public override void Attack() => base.Attack();
 
     public void Hit()
     {
@@ -38,7 +36,7 @@ public class Hands : Weapon
         {
             if (Vector3.Distance(transform.position, raycastHit.point) <= _hitRange)
             {
-                Health health = raycastHit.collider.gameObject.GetComponent<Health>();
+                IHealth health = raycastHit.collider.gameObject.GetComponent<IHealth>();
 
                 if (health != null && raycastHit.collider.gameObject != gameObject)
                     health.Damage(WeaponSettings.Damage);

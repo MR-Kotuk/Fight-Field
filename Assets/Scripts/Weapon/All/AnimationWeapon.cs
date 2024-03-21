@@ -29,6 +29,7 @@ public class AnimationWeapon : MonoBehaviour
         _attackWeapon.Reloaded += ReloadWeapon;
         _attackWeapon.Attacked += Attack;
     }
+
     private void Awake()
     {
         _anim ??= GetComponent<Animator>();
@@ -45,17 +46,21 @@ public class AnimationWeapon : MonoBehaviour
             }
         }
     }
+
     private void Attack()
     {
         if (_currentWeapon.WeaponSettings.Name != _granadeN)
             AttackAnim();
     }
+
     public void AttackAnim() => StartCoroutine(WithWait(_isAttackN));
+
     public void CanAttack(string can)
     {
         bool isCan = Convert.ToBoolean(can);
         _attackWeapon.isCanAttack = isCan;
     }
+
     public void SwitchAnimWeapon(string name)
     {
         bool isTake;
@@ -77,6 +82,7 @@ public class AnimationWeapon : MonoBehaviour
         }
         
     }
+
     private void ReloadWeapon() => StartCoroutine(WithWait(_isReloadN));
 
     private void SwitchAnimState(Weapon weapon)
@@ -104,6 +110,7 @@ public class AnimationWeapon : MonoBehaviour
             _anim.SetBool(name, false);
         }
     }
+
     private void OnDisable()
     {
         _attackWeapon.SwitchedWeapon -= SwitchAnimState;

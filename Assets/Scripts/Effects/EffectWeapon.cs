@@ -14,10 +14,9 @@ public class EffectWeapon : MonoBehaviour
         _attackWeapon.Attacked += Shoot;
         _attackWeapon.SwitchedWeapon += SwitchWeapon;
     }
-    private void SwitchWeapon(Weapon weapon)
-    {
-        _currentWeapon = weapon;
-    }
+
+    private void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
+
     private void Shoot()
     {
         if(_currentWeapon != null && _currentWeapon is Gun)
@@ -28,16 +27,19 @@ public class EffectWeapon : MonoBehaviour
             DontDestroyFX(gun.CatridgeCaseFX);
         }
     }
+
     private void DontDestroyFX(GameObject effect)
     {
         effect.SetActive(false);
         effect.SetActive(true);
     }
+
     public void OneTimeFX(GameObject effect, Vector3 pos, float destroyTime)
     {
         GameObject createdEffect = Instantiate(effect, pos, Quaternion.identity);
         Destroy(createdEffect, destroyTime);
     }
+
     private void OnDisable()
     {
         _attackWeapon.Attacked -= Shoot;

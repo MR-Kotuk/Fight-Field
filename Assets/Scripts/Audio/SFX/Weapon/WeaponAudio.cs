@@ -29,11 +29,13 @@ public class WeaponAudio : MonoBehaviour
         _attackWeapon.Reloaded += Reload;
         _hands.Hitted += HandAttack;
     }
+
     private void Reload()
     {
         _gunPosSFX.clip = _reload;
         _gunPosSFX.Play();
     }
+
     private void HandAttack()
     {
         if (_currentWeapon is Hands)
@@ -42,6 +44,7 @@ public class WeaponAudio : MonoBehaviour
             _audioSourceCamera.Play();
         }
     }
+
     private void Attack()
     {
         if (_currentWeapon is Gun)
@@ -50,10 +53,8 @@ public class WeaponAudio : MonoBehaviour
             _gunPosSFX.Play();
         }
     }
-    private void SwitchWeapon(Weapon weapon)
-    {
-        _currentWeapon = weapon;
-    }
+
+    private void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
 
     private void OnDisable()
     {

@@ -30,6 +30,7 @@ public class WeaponsUI : MonoBehaviour
 
         _attackWeapon.SwitchedWeapon += SwitchWeapon;
     }
+
     private void Update()
     {
         if (_currentWeapon == _weapon)
@@ -47,6 +48,7 @@ public class WeaponsUI : MonoBehaviour
                 _scopeImage.SetActive(true);
         }
     }
+
     public void SwitchWeapon(Weapon weapon)
     {
         _currentWeapon = weapon;
@@ -66,8 +68,6 @@ public class WeaponsUI : MonoBehaviour
         else
             _weaponButton.image.color = Color.white;
     }
-    private void OnDisable()
-    {
-        _attackWeapon.SwitchedWeapon -= SwitchWeapon;
-    }
+
+    private void OnDisable() => _attackWeapon.SwitchedWeapon -= SwitchWeapon;
 }

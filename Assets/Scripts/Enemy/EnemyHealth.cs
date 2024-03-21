@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : Health
+public class EnemyHealth : MonoBehaviour, IHealth
 {
-    public override void Damage(float Damage)
+    [Header("Health Settings")]
+    [SerializeField] private float MaxHealth;
+    [SerializeField] private float MyHealth;
+
+    public void Damage(float damage)
     {
-        base.Damage(Damage);
+        if (MyHealth - damage > 0)
+            MyHealth -= damage;
+        else
+            Dieded();
     }
 
-    protected override void Dieded()
+    private void Dieded()
     {
-        base.Dieded();
+        Debug.Log($"{gameObject.name} died");
+        Destroy(gameObject);
     }
 }

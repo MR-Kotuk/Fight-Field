@@ -12,10 +12,8 @@ public class ButtonsUI : MonoBehaviour
     [SerializeField] private SpriteManager _spriteManager;
     [SerializeField] private PlayerMove _playerMove;
 
-    private void OnEnable()
-    {
-        _playerMove.Crouched += Crouch;
-    }
+    private void OnEnable() => _playerMove.Crouched += Crouch;
+
     private void Crouch()
     {
         if (_playerMove.isCrouch)
@@ -23,8 +21,6 @@ public class ButtonsUI : MonoBehaviour
         else
             _crouchButton.GetComponent<Image>().sprite = _spriteManager.CrouchUI;
     }
-    private void OnDisable()
-    {
-        _playerMove.Crouched -= Crouch;
-    }
+
+    private void OnDisable() => _playerMove.Crouched -= Crouch;
 }

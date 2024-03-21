@@ -6,6 +6,7 @@ public class EnemyLook : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private Transform _head;
+    [SerializeField] private Transform _playerHead;
     [Space]
 
     [Header("Look Settings")]
@@ -16,13 +17,10 @@ public class EnemyLook : MonoBehaviour
 
     private EnemyAI _enemyAI;
 
-    private Transform _player;
-
     private Vector3 _smokePos;
-    private void Start()
-    {
-        _enemyAI = GetComponent<EnemyAI>();
-    }
+
+    private void Start() => _enemyAI = GetComponent<EnemyAI>();
+
     private void Update()
     {
         if (isSmokeInSeeZone && Vector3.Distance(transform.position, _smokePos) <= _distToSmoke)
@@ -37,16 +35,17 @@ public class EnemyLook : MonoBehaviour
 
         if (isPlayerInSeeZone)
         {
-            Vector3 playerPosition = _player.position - _head.position;
+            Vector3 playerPosition = _playerHead.position - _head.position;
 
-            if (TryRay(_head.position, playerPosition).transform.gameObject != _player.gameObject)
-                _enemyAI.OnPlayerExit(_player.position);
+            if (TryRay(_head.position, playerPosition).transform.gameObject != _playerHead.gameObject)
+                _enemyAI.OnPlayerExit(_playerHead.position);
             else
-                _enemyAI.OnPlayerEnter(_player);
+                _enemyAI.OnPlayerEnter(_playerHead);
 
             Debug.DrawRay(_head.position, playerPosition);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerHealth>() != null)
@@ -54,10 +53,7 @@ public class EnemyLook : MonoBehaviour
             Vector3 playerPosition = other.gameObject.transform.position - _head.position;
 
             if (TryRay(_head.position, playerPosition).transform.gameObject == other.gameObject)
-            {
                 isPlayerInSeeZone = true;
-                _player = other.transform;
-            }
         }
 
         if (other.gameObject.GetComponent<ParticleSystem>() != null && isPlayerInSeeZone)
@@ -66,11 +62,13 @@ public class EnemyLook : MonoBehaviour
             _smokePos = other.transform.position;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponent<ParticleSystem>() != null && isPlayerInSeeZone)
             isSmokeInSeeZone = false;
     }
+
     private RaycastHit TryRay(Vector3 origin, Vector3 direction)
     {
         Ray ray = new Ray(origin, direction);

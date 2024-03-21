@@ -19,17 +19,14 @@ public class MoveAnimations : MonoBehaviour
 
         _playerMove.Moved += Move;
     }
-    private void Start()
-    {
-        _anim ??= GetComponent<Animator>();
-    }
+
+    private void Start() => _anim ??= GetComponent<Animator>();
+
     private void Move()
     {
         _anim.SetFloat(_moveXN, _playerMove.DirX);
         _anim.SetFloat(_moveYN, _playerMove.DirY);
     }
-    private void OnDisable()
-    {
-        _playerMove.Moved -= Move;
-    }
+
+    private void OnDisable() => _playerMove.Moved -= Move;
 }

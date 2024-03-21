@@ -15,10 +15,8 @@ public class GranadeLineUI : MonoBehaviour
     private LineRenderer _line;
     private Transform _lauchPoint;
 
-    private void Start()
-    {
-        _line ??= GetComponent<LineRenderer>();
-    }
+    private void Start() => _line ??= GetComponent<LineRenderer>();
+
     public void OnAimGranade(bool isDraw)
     {
         _lauchPoint = _granade._createTrn;
@@ -34,6 +32,7 @@ public class GranadeLineUI : MonoBehaviour
                 _line.enabled = false;
         }
     }
+
     private void DrawTrajectory()
     {
         Vector3 origin = _lauchPoint.position;
@@ -55,5 +54,4 @@ public class GranadeLineUI : MonoBehaviour
             time += _intervalPoints;
         }
     }
-
 }

@@ -28,10 +28,8 @@ public class PlayerMove : MonoBehaviour
 
     private float _currentSpeed;
 
-    private void OnEnable()
-    {
-        Moved += MoveStickPlayer;
-    }
+    private void OnEnable() => Moved += MoveStickPlayer;
+
     private void Start()
     {
         _rb ??= GetComponent<Rigidbody>();
@@ -71,9 +69,7 @@ public class PlayerMove : MonoBehaviour
         Crouched?.Invoke();
 
         if (isCrouch)
-        {
             _currentSpeed = _speed / 2;
-        }
         else
             _currentSpeed = _speed;
     }
@@ -99,8 +95,6 @@ public class PlayerMove : MonoBehaviour
         else
             return false;
     }
-    private void OnDisable()
-    {
-        Moved -= MoveStickPlayer;
-    }
+
+    private void OnDisable() => Moved -= MoveStickPlayer;
 }

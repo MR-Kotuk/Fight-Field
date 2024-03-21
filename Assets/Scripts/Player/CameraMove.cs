@@ -42,10 +42,9 @@ public class CameraMove : MonoBehaviour
         else if (_sensitivity > _maxSens)
             _sensitivity = _maxSens;
     }
-    private void OnEnable()
-    {
-        _playerMove.Crouched += CrouchAngle;
-    }
+
+    private void OnEnable() => _playerMove.Crouched += CrouchAngle;
+
     private void Start() 
     {
         _scopeWeapon ??= GetComponent<ScopeWeapon>();
@@ -55,6 +54,7 @@ public class CameraMove : MonoBehaviour
 
         _currentSens = _sensitivity;
     }
+
     private void FixedUpdate()
     {
         if (_scopeWeapon.isScope)
@@ -64,6 +64,7 @@ public class CameraMove : MonoBehaviour
 
         Rotate();
     }
+
     private void CrouchAngle()
     {
         if (_playerMove.isCrouch)
@@ -83,6 +84,7 @@ public class CameraMove : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
+
     private void Rotate()
     {
         _camDirX = _cameraMoveJoy.Horizontal + (_shootJoy.Horizontal / _sensitivity);
@@ -109,8 +111,6 @@ public class CameraMove : MonoBehaviour
             _lastAngleY = _camDirY;
         }
     }
-    private void OnDisable()
-    {
-        _playerMove.Crouched -= CrouchAngle;
-    }
+
+    private void OnDisable() => _playerMove.Crouched -= CrouchAngle;
 }

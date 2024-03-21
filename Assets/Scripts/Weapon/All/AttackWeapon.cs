@@ -15,14 +15,10 @@ public class AttackWeapon : MonoBehaviour
 
     private Weapon _weapon;
 
-    private void OnEnable()
-    {
-        Attacked += Attack;
-    }
-    private void Start()
-    {
-        SwitchWeapon(StartWeapon);
-    }
+    private void OnEnable() => Attacked += Attack;
+
+    private void Start() => SwitchWeapon(StartWeapon);
+
     private void FixedUpdate()
     {
         if(_weapon != null && isAttack && isCanAttack)
@@ -33,8 +29,11 @@ public class AttackWeapon : MonoBehaviour
                 Reloaded?.Invoke();
         }
     }
+
     public void OnAttack(bool attacked) => isAttack = attacked;
+
     private void Attack() => _weapon.Attack();
+
     public void SwitchWeapon(Weapon weapon)
     {
         SwitchedWeapon?.Invoke(weapon);
@@ -46,8 +45,6 @@ public class AttackWeapon : MonoBehaviour
         if (!_weapon.WeaponSettings.isReturn)
             Reloaded?.Invoke();
     }
-    private void OnDisable()
-    {
-        Attacked -= Attack;
-    }
+
+    private void OnDisable() => Attacked -= Attack;
 }

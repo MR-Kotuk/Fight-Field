@@ -28,6 +28,7 @@ public class MoveAudio : MonoBehaviour
         _moveVolume = _foot.volume;
         _currentMoveDelay = _moveDelay;
     }
+
     public void Jump()
     {
         _foot.clip = _jumpSFX;
@@ -47,6 +48,7 @@ public class MoveAudio : MonoBehaviour
             }
         }
     }
+
     public void Move(bool isCrouch)
     {
         if (isMove)

@@ -20,16 +20,15 @@ public class Gun : Weapon
 
     private Vector3 _dirTo;
 
-    private void OnEnable()
-    {
-        AttackWeapon.Reloaded += Reload;
-    }
+    private void OnEnable() => AttackWeapon.Reloaded += Reload;
+
     private void Start()
     {
         WeaponSettings.AttackCount = WeaponSettings.MaxAttackCount;
 
         WeaponSettings.isReturn = false;
     }
+
     public override void Attack()
     {
         if(_scopeWeapon != null)
@@ -65,10 +64,8 @@ public class Gun : Weapon
 
         WeaponSettings.AttackCount--;
 
-        StartCoroutine(ReturnWait(WeaponSettings._waitTime));
+        ReturnWait(WeaponSettings._waitTime);
     }
-    private void OnDisable()
-    {
-        AttackWeapon.Reloaded -= Reload;
-    }
+
+    private void OnDisable() => AttackWeapon.Reloaded -= Reload;
 }

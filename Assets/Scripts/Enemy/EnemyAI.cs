@@ -48,10 +48,9 @@ public class EnemyAI : MonoBehaviour
         isCheck = false;
         isSafeTarget = true;
     }
-    private void FixedUpdate()
-    {
-        Move();
-    }
+
+    private void FixedUpdate() => Move();
+
     private void Move()
     {
         _navAgent.SetDestination(CurrentTarget);
@@ -64,6 +63,7 @@ public class EnemyAI : MonoBehaviour
 
         MoveAnim();
     }
+
     private void MoveAnim()
     {
         _frames++;
@@ -82,6 +82,7 @@ public class EnemyAI : MonoBehaviour
             _lastEnemyPos = transform.localPosition;
         }
     }
+
     private IEnumerator CheckLastPlayerPos()
     {
         for (int i = 0; i < _lookAroundCount; i++)
@@ -107,6 +108,7 @@ public class EnemyAI : MonoBehaviour
         isSafeTarget = true;
         isCheck = false;
     }
+
     public void OnPlayerEnter(Transform target)
     {
         isPlayerInSeeZone = true;
@@ -118,6 +120,7 @@ public class EnemyAI : MonoBehaviour
         CurrentTarget = target.position;
         _navAgent.stoppingDistance = _distToPlayer;
     }
+
     public void OnPlayerExit(Vector3 lastPosition)
     {
         isPlayerInSeeZone = false;

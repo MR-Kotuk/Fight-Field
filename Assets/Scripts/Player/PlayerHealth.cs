@@ -10,9 +10,9 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
     public void Damage(float damage)
     {
-        if (MyHealth - damage > 0)
-            MyHealth -= damage;
-        else
+        MyHealth -= damage;
+
+        if (MyHealth <= 0)
             Dieded();
     }
 

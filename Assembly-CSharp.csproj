@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2CC0F734-F262-ACC1-5EB0-5DD42329A159}</ProjectGuid>
+    <ProjectGuid>{99EF3E29-84E0-C619-FEE8-198DA0D84068}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,53 +58,32 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyLook.cs" />
     <Compile Include="Assets\Scripts\Weapon\Player\ScopeWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponEvents.cs" />
-    <Compile Include="Assets\Scripts\UI\ButtonsUI.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\AnimationWeapon.cs" />
-    <Compile Include="Assets\Scripts\Weapon\Enemy\EnemyWeaponAI.cs" />
     <Compile Include="Assets\Scripts\UI\GranadeLineUI.cs" />
-    <Compile Include="Assets\Scripts\Weapon\All\Bullet.cs" />
     <Compile Include="Assets\Scripts\Weapon\ISubjectWeapon.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAnimation.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Weapon\Player\Granade.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\IHealth.cs" />
     <Compile Include="Assets\Scripts\Audio\SFX\Weapon\WeaponAudio.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\AttackWeapon.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\Weapon\Player\Explosion.cs" />
-    <Compile Include="Assets\Scripts\UI\SpriteManager.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\IWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Audio\SFX\MoveAudio.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\FireExtinguisherHealth.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\WeaponSettings.cs" />
     <Compile Include="Assets\Scripts\System\GpuIntrancingEnabler.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Gun.cs" />
-    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\SunShafts.cs" />
     <Compile Include="Assets\Scripts\Effects\EffectWeapon.cs" />
     <Compile Include="Assets\Scripts\UI\WeaponsUI\WeaponsUI.cs" />
-    <Compile Include="Assets\Unity-Sun-Shafts-PPSv2-main\Scripts\ExampleScript.cs" />
-    <Compile Include="Assets\Scripts\Player\MoveAnimations.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Hands.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Unity-Sun-Shafts-PPSv2-main\Shaders\SimpleClear.shader" />
-    <None Include="Assets\Unity-Sun-Shafts-PPSv2-main\Shaders\SunShaftsComposite.shader" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
   </ItemGroup>

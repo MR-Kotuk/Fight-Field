@@ -14,55 +14,94 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Commponents")]
     [SerializeField] private Rigidbody _rb;
-    [SerializeField] private Joystick _moveJoystick;
 
     [SerializeField] private Transform _player, _foot;
     [Space]
 
     [Header("Player Settings")]
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed, _addRunSpeed;
     [SerializeField] private float _pushPowerJump;
     [SerializeField] private float _distGround;
+    [Space]
 
-    private MoveAudio _moveAudio;
+    [Header("Audio")]
+    [SerializeField] private MoveAudio _moveAudio;
 
     private float _currentSpeed;
 
-    private void OnEnable() => Moved += MoveStickPlayer;
+    private bool isCanJump, isCanCrouch, isCanMove, isCanRun;
 
     private void Start()
     {
-        _rb ??= GetComponent<Rigidbody>();
-        _moveAudio ??= GetComponent<MoveAudio>();
-
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
 
         isCrouch = false;
         _currentSpeed = _speed;
     }
-        
-    private void FixedUpdate() => Moved?.Invoke();
 
-    private void MoveStickPlayer()
+    private void Update()
     {
-        DirX = _moveJoystick.Horizontal + Input.GetAxis("Horizontal");
-        DirY = _moveJoystick.Vertical + Input.GetAxis("Vertical");
+        InputKeys();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveActions();
+    }
+
+    private void InputKeys()
+    {
+        DirX = Input.GetAxis("Horizontal");
+        DirY = Input.GetAxis("Vertical");
+
+        if (DirX != 0f || DirY != 0f)
+            isCanMove = true;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            isCanJump = true;
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            isCanCrouch = true;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            _currentSpeed += _addRunSpeed;
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+            _currentSpeed -= _addRunSpeed;
+    }
+
+    private void MoveActions()
+    {
+        if (isCanMove)
+        {
+            isCanMove = false;
+            MovePlayer();
+        }
+        if (isCanCrouch)
+        {
+            isCanCrouch = false;
+            OnCrouch();
+        }
+        if (isCanJump)
+        {
+            isCanJump = false;
+            OnJump();
+        }
+    }
+
+    private void MovePlayer()
+    {
+        DirX = Input.GetAxis("Horizontal");
+        DirY = Input.GetAxis("Vertical");
 
         _player.localPosition += _player.transform.forward * DirY * _currentSpeed;
         _player.localPosition += _player.transform.right * DirX * _currentSpeed;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            OnJumpButton();
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            OnCrouchButton();
 
         if(DirX != 0f || DirY != 0f)
             _moveAudio.Move(isCrouch);
     }
 
-    public void OnCrouchButton()
+    public void OnCrouch()
     {
         isCrouch = !isCrouch;
 
@@ -74,7 +113,7 @@ public class PlayerMove : MonoBehaviour
             _currentSpeed = _speed;
     }
 
-    public void OnJumpButton()
+    public void OnJump()
     {
         if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
@@ -95,6 +134,4 @@ public class PlayerMove : MonoBehaviour
         else
             return false;
     }
-
-    private void OnDisable() => Moved -= MoveStickPlayer;
 }

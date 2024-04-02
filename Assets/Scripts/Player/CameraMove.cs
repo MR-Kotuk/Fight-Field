@@ -5,7 +5,10 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [Header("Sensitivity")]
+    [SerializeField] private float _smoothTime;
+
     [SerializeField] private float _sensitivity, _scopeSens;
+
     [SerializeField] private float _maxSens, _minSens;
     [SerializeField] private float _maxScopeSens, _minScopeSens;
     [Space]
@@ -21,7 +24,6 @@ public class CameraMove : MonoBehaviour
 
     [Header("Game Objects")]
     [SerializeField] private GameObject _player;
-    [SerializeField] private Joystick _cameraMoveJoy, _shootJoy;
     [Space]
 
     [Header("Scripts")]
@@ -29,11 +31,12 @@ public class CameraMove : MonoBehaviour
 
     private ScopeWeapon _scopeWeapon;
 
-    private float _camDirX, _camDirY;
     private float _currentMinAngle, _currentMaxAngle;
     private float _currentSens;
 
-    private float _lastAngleX, _lastAngleY;
+    private float xRot, yRot;
+    private float xRotCurrent, yRotCurrent;
+    private float curentVelosityX, curentVelosityY;
 
     private void OnValidate()
     {
@@ -87,29 +90,18 @@ public class CameraMove : MonoBehaviour
 
     private void Rotate()
     {
-        _camDirX = _cameraMoveJoy.Horizontal + (_shootJoy.Horizontal / _sensitivity);
-        _camDirY = _cameraMoveJoy.Vertical + (_shootJoy.Vertical / _sensitivity);
+        Cursor.lockState = CursorLockMode.Locked;
 
-        if ((_camDirX != _lastAngleX || _camDirY != _lastAngleY) || (_shootJoy.Horizontal != 0 || _shootJoy.Vertical != 0))
-        {
-            transform.Rotate(new Vector3(-_camDirY, 0, 0) * _currentSens);
-            _player.transform.Rotate(new Vector3(0, _camDirX, 0) * _currentSens);
+        xRot += Input.GetAxis("Mouse X") * _currentSens;
+        yRot += Input.GetAxis("Mouse Y") * _currentSens;
 
-            var angleX = transform.localEulerAngles.x;
+        yRot = Mathf.Clamp(yRot, _currentMinAngle, _currentMaxAngle);
 
-            if (angleX > _currentMinAngle && angleX < 180)
-                angleX = _currentMinAngle;
-            if (angleX < _currentMaxAngle && angleX > 180)
-                angleX = _currentMaxAngle;
+        xRotCurrent = Mathf.SmoothDamp(xRot, xRotCurrent, ref curentVelosityX, _smoothTime);
+        yRotCurrent = Mathf.SmoothDamp(yRot, yRotCurrent, ref curentVelosityY, _smoothTime);
 
-            transform.localEulerAngles = new Vector3(angleX, 0, 0);
-
-            Vector3 camAngles = transform.eulerAngles;
-            transform.eulerAngles = new Vector3(camAngles.x, camAngles.y, 0);
-
-            _lastAngleX = _camDirX;
-            _lastAngleY = _camDirY;
-        }
+        transform.localRotation = Quaternion.Euler(-yRotCurrent, 0f, 0f);
+        _player.transform.rotation = Quaternion.Euler(0f, xRotCurrent, 0f);
     }
 
     private void OnDisable() => _playerMove.Crouched -= CrouchAngle;

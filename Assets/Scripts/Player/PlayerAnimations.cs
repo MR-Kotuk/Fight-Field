@@ -2,25 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class PlayerAnimations : MonoBehaviour
 {
     [Header("Game Objects")]
     [SerializeField] private GameObject _camera, _player;
+    [Space]
 
-    private PlayerMove _playerMove;
-    private Animator _anim;
+    [Header("Player")]
+    [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private Animator _anim;
 
     private const string _moveXN = "MoveX", _moveYN = "MoveY";
 
-    private void OnEnable()
-    {
-        _playerMove ??= GetComponent<PlayerMove>();
-
-        _playerMove.Moved += Move;
-    }
-
-    private void Start() => _anim ??= GetComponent<Animator>();
+    private void OnEnable() => _playerMove.Moved += Move;
 
     private void Move()
     {

@@ -13,14 +13,12 @@ public class WeaponsUI : MonoBehaviour
     [SerializeField] private Text _attackCount;
     [SerializeField] private Button _weaponButton;
 
-    [SerializeField] private GameObject _scopeImage, _scopeButton;
+    [SerializeField] private GameObject _scopeImage;
     [Space]
 
     [Header("Scripts")]
     [SerializeField] private AttackWeapon _attackWeapon;
     [SerializeField] private ScopeWeapon _scopeWeapon;
-
-    [SerializeField] private SpriteManager _spriteManager;
 
     private Weapon _weapon, _currentWeapon;
 
@@ -59,11 +57,6 @@ public class WeaponsUI : MonoBehaviour
                 _attackWeapon.Reload();
             else
                 _weaponButton.image.color = Color.blue;
-
-            if (_weapon.WeaponSettings.isNoScope)
-                _scopeButton.SetActive(false);
-            else
-                _scopeButton.SetActive(true);
         }
         else
             _weaponButton.image.color = Color.white;

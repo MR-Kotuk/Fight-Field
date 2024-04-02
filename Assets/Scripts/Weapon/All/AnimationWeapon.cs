@@ -8,6 +8,10 @@ public class AnimationWeapon : MonoBehaviour
     [Header("Weapons Settings")]
     [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private List<GameObject> _weaponsObjects;
+    [Space]
+
+    [Header("Player")]
+    [SerializeField] private Animator _anim;
 
     private List<string> AnimWeaponNames = new List<string>() { "Hand", "Granade", "Pistol", "M4" };
 
@@ -16,8 +20,6 @@ public class AnimationWeapon : MonoBehaviour
 
     private AttackWeapon _attackWeapon;
     private Weapon _currentWeapon;
-
-    private Animator _anim;
 
     private const string _isReloadN = "isReload", _isAttackN = "isAttack", _granadeN = "Granade";
 

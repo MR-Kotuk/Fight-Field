@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class AnimationWeapon : MonoBehaviour
+public class AnimationWeapon : MonoBehaviour, ISubjectWeapon
 {
     [Header("Weapons Settings")]
     [SerializeField] private List<Weapon> _weapons;
@@ -12,25 +12,17 @@ public class AnimationWeapon : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] private Animator _anim;
+    [SerializeField] private AttackWeapon _attackWeapon;
 
     private List<string> AnimWeaponNames = new List<string>() { "Hand", "Granade", "Pistol", "M4" };
 
     private Dictionary<string, Weapon> _weaponsScr = new Dictionary<string, Weapon>();
     private Dictionary<string, GameObject> _weaponsObj = new Dictionary<string, GameObject>();
 
-    private AttackWeapon _attackWeapon;
+    
     private Weapon _currentWeapon;
 
     private const string _isReloadN = "isReload", _isAttackN = "isAttack", _granadeN = "Granade";
-
-    private void OnEnable()
-    {
-        _attackWeapon ??= GetComponent<AttackWeapon>();
-
-        _attackWeapon.SwitchedWeapon += SwitchAnimState;
-        _attackWeapon.Reloaded += ReloadWeapon;
-        _attackWeapon.Attacked += Attack;
-    }
 
     private void Awake()
     {
@@ -49,7 +41,7 @@ public class AnimationWeapon : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (_currentWeapon.WeaponSettings.Name != _granadeN)
             AttackAnim();
@@ -85,9 +77,9 @@ public class AnimationWeapon : MonoBehaviour
         
     }
 
-    private void ReloadWeapon() => StartCoroutine(WithWait(_isReloadN));
+    public void Reload() => StartCoroutine(WithWait(_isReloadN));
 
-    private void SwitchAnimState(Weapon weapon)
+    public void SwitchWeapon(Weapon weapon)
     {
         if (_currentWeapon != null && !_currentWeapon.WeaponSettings.isNoScope && _currentWeapon.ScopeCamera != null)
             _currentWeapon.ScopeCamera.enabled = false;
@@ -111,12 +103,5 @@ public class AnimationWeapon : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             _anim.SetBool(name, false);
         }
-    }
-
-    private void OnDisable()
-    {
-        _attackWeapon.SwitchedWeapon -= SwitchAnimState;
-        _attackWeapon.Reloaded -= ReloadWeapon;
-        _attackWeapon.Attacked -= Attack;
     }
 }

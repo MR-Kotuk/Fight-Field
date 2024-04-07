@@ -2,22 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectWeapon : MonoBehaviour
+public class EffectWeapon : MonoBehaviour, ISubjectWeapon
 {
-    [Header("Scripts")]
-    [SerializeField] private AttackWeapon _attackWeapon;
-
     private Weapon _currentWeapon;
 
-    private void OnEnable()
-    {
-        _attackWeapon.Attacked += Shoot;
-        _attackWeapon.SwitchedWeapon += SwitchWeapon;
-    }
+    public void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
 
-    private void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
-
-    private void Shoot()
+    public void Attack()
     {
         if(_currentWeapon != null && _currentWeapon is Gun)
         {
@@ -40,9 +31,5 @@ public class EffectWeapon : MonoBehaviour
         Destroy(createdEffect, destroyTime);
     }
 
-    private void OnDisable()
-    {
-        _attackWeapon.Attacked -= Shoot;
-        _attackWeapon.SwitchedWeapon -= SwitchWeapon;
-    }
+    public void Reload() { }
 }

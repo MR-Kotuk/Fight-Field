@@ -29,8 +29,6 @@ public class PlayerMove : MonoBehaviour
 
     private float _currentSpeed;
 
-    private bool isCanJump, isCanCrouch, isCanMove, isCanRun;
-
     private void Start()
     {
         if (_rb == GetComponent<Rigidbody>())
@@ -45,48 +43,21 @@ public class PlayerMove : MonoBehaviour
         InputKeys();
     }
 
-    private void FixedUpdate()
-    {
-        MoveActions();
-    }
-
     private void InputKeys()
     {
         DirX = Input.GetAxis("Horizontal");
         DirY = Input.GetAxis("Vertical");
 
         if (DirX != 0f || DirY != 0f)
-            isCanMove = true;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            isCanJump = true;
-
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            isCanCrouch = true;
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            _currentSpeed += _addRunSpeed;
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-            _currentSpeed -= _addRunSpeed;
+            MovePlayer();
     }
 
-    private void MoveActions()
+    public void Acceleration(bool isRun)
     {
-        if (isCanMove)
-        {
-            isCanMove = false;
-            MovePlayer();
-        }
-        if (isCanCrouch)
-        {
-            isCanCrouch = false;
-            OnCrouch();
-        }
-        if (isCanJump)
-        {
-            isCanJump = false;
-            OnJump();
-        }
+        if(isRun)
+            _currentSpeed += _addRunSpeed;
+        else
+            _currentSpeed -= _addRunSpeed;
     }
 
     private void MovePlayer()
@@ -94,8 +65,8 @@ public class PlayerMove : MonoBehaviour
         DirX = Input.GetAxis("Horizontal");
         DirY = Input.GetAxis("Vertical");
 
-        _player.localPosition += _player.transform.forward * DirY * _currentSpeed;
-        _player.localPosition += _player.transform.right * DirX * _currentSpeed;
+        _player.localPosition += _player.transform.forward * DirY * _currentSpeed * Time.deltaTime;
+        _player.localPosition += _player.transform.right * DirX * _currentSpeed * Time.deltaTime;
 
         if(DirX != 0f || DirY != 0f)
             _moveAudio.Move(isCrouch);
@@ -115,10 +86,12 @@ public class PlayerMove : MonoBehaviour
 
     public void OnJump()
     {
+        Debug.Log("Jump");
+
         if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
             Jumped?.Invoke();
-            _rb.AddForce(new Vector3(0, 1, 0) * _pushPowerJump);
+            _rb.AddForce(new Vector3(0, 1, 0) * _pushPowerJump * Time.fixedDeltaTime);
 
             _moveAudio.Jump();
         }

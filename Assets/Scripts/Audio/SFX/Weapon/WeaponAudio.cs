@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponAudio : MonoBehaviour
+public class WeaponAudio : MonoBehaviour, ISubjectWeapon
 {
     [Header("SFX")]
     [SerializeField] private AudioClip _reload;
@@ -16,21 +16,14 @@ public class WeaponAudio : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private Hands _hands;
 
-    private AttackWeapon _attackWeapon;
-
     private Weapon _currentWeapon;
 
     private void OnEnable()
     {
-        _attackWeapon ??= GetComponent<AttackWeapon>();
-
-        _attackWeapon.SwitchedWeapon += SwitchWeapon;
-        _attackWeapon.Attacked += Attack;
-        _attackWeapon.Reloaded += Reload;
         _hands.Hitted += HandAttack;
     }
 
-    private void Reload()
+    public void Reload()
     {
         _gunPosSFX.clip = _reload;
         _gunPosSFX.Play();
@@ -45,7 +38,7 @@ public class WeaponAudio : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (_currentWeapon is Gun)
         {
@@ -54,13 +47,10 @@ public class WeaponAudio : MonoBehaviour
         }
     }
 
-    private void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
+    public void SwitchWeapon(Weapon weapon) => _currentWeapon = weapon;
 
     private void OnDisable()
     {
-        _attackWeapon.SwitchedWeapon -= SwitchWeapon;
-        _attackWeapon.Attacked -= Attack;
-        _attackWeapon.Reloaded -= Reload;
         _hands.Hitted -= HandAttack;
     }
 }

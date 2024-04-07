@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\Audio\SFX\Weapon\WeaponAudio.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\AttackWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\Player\Explosion.cs" />
-    <Compile Include="Assets\Scripts\Weapon\All\IWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\CameraMove.cs" />
     <Compile Include="Assets\Scripts\Audio\SFX\MoveAudio.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\FireExtinguisherHealth.cs" />
@@ -80,6 +79,7 @@
     <Compile Include="Assets\Scripts\System\GpuIntrancingEnabler.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Gun.cs" />
     <Compile Include="Assets\Scripts\Effects\EffectWeapon.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\UI\WeaponsUI\WeaponsUI.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Hands.cs" />
   </ItemGroup>

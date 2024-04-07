@@ -4,9 +4,9 @@ using UnityEngine;
 
 public interface ISubjectWeapon
 {
-    public void OnSwitchWeapon(Weapon weapon);
+    public void SwitchWeapon(Weapon weapon);
 
-    public void OnAttack();
+    public void Attack();
 
-    public void OnReload();
+    public void Reload();
 }

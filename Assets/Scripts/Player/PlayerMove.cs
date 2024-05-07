@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
 
-        _myView = GetComponent<PhotonView>();
+        _myView ??= GetComponent<PhotonView>();
 
         isCrouch = false;
         _currentSpeed = _speed;

@@ -30,7 +30,8 @@ public class CameraMove : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private PlayerMove _playerMove;
-    [SerializeField] private PhotonView _playerView;
+
+    private PhotonView _myView;
 
     private ScopeWeapon _scopeWeapon;
 
@@ -54,6 +55,7 @@ public class CameraMove : MonoBehaviour
     private void Start() 
     {
         _scopeWeapon ??= GetComponent<ScopeWeapon>();
+        _myView ??= GetComponent<PhotonView>();
 
         _currentMinAngle = _minCamAngle;
         _currentMaxAngle = _maxCamAngle;
@@ -63,7 +65,7 @@ public class CameraMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_playerView.IsMine)
+        if (_myView.IsMine)
         {
             if (_scopeWeapon.isScope)
                 _currentSens = _scopeSens;
@@ -72,6 +74,8 @@ public class CameraMove : MonoBehaviour
 
             Rotate();
         }
+        else
+            GetComponent<Camera>().enabled = false;
     }
 
     private void CrouchAngle()
@@ -96,7 +100,7 @@ public class CameraMove : MonoBehaviour
 
     private void Rotate()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         xRot += Input.GetAxis("Mouse X") * _currentSens;
         yRot += Input.GetAxis("Mouse Y") * _currentSens;

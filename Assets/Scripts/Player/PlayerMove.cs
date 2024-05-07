@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 [RequireComponent(typeof(PlayerAnimations), typeof(MoveAudio), typeof(AttackWeapon))]
 public class PlayerMove : MonoBehaviour
@@ -14,7 +15,6 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Commponents")]
     [SerializeField] private Rigidbody _rb;
-
     [SerializeField] private Transform _player, _foot;
     [Space]
 
@@ -29,10 +29,14 @@ public class PlayerMove : MonoBehaviour
 
     private float _currentSpeed;
 
+    private PhotonView _myView;
+
     private void Start()
     {
         if (_rb == GetComponent<Rigidbody>())
             _rb.freezeRotation = true;
+
+        _myView = GetComponent<PhotonView>();
 
         isCrouch = false;
         _currentSpeed = _speed;
@@ -40,7 +44,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        InputKeys();
+        if(_myView.IsMine)
+            InputKeys();
     }
 
     private void InputKeys()

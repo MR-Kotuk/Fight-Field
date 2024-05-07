@@ -50,16 +50,6 @@ public class WeaponsUI : MonoBehaviour
     public void SwitchWeapon(Weapon weapon)
     {
         _currentWeapon = weapon;
-
-        if (_weapon == _currentWeapon)
-        {
-            if (_weaponButton.image.color == Color.blue && _weapon.WeaponSettings.AttackCount != _weapon.WeaponSettings.MaxAttackCount)
-                _attackWeapon.Reload();
-            else
-                _weaponButton.image.color = Color.blue;
-        }
-        else
-            _weaponButton.image.color = Color.white;
     }
 
     private void OnDisable() => _attackWeapon.SwitchedWeapon -= SwitchWeapon;

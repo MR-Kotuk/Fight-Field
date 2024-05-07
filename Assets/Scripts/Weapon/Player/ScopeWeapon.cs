@@ -55,9 +55,6 @@ public class ScopeWeapon : MonoBehaviour
 
         if (isScope)
             Scope();
-
-        _currentScope = _curentWeapon.ScopeCamera;
-        _currentWeaponCamera = _curentWeapon.WeaponCamera;
     }
 
     private void OnReload()

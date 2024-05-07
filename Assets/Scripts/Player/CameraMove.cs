@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CameraMove : MonoBehaviour
 {
@@ -24,10 +25,12 @@ public class CameraMove : MonoBehaviour
 
     [Header("Game Objects")]
     [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _head;
     [Space]
 
     [Header("Scripts")]
     [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private PhotonView _playerView;
 
     private ScopeWeapon _scopeWeapon;
 
@@ -60,12 +63,15 @@ public class CameraMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_scopeWeapon.isScope)
-            _currentSens = _scopeSens;
-        else
-            _currentSens = _sensitivity;
+        if (_playerView.IsMine)
+        {
+            if (_scopeWeapon.isScope)
+                _currentSens = _scopeSens;
+            else
+                _currentSens = _sensitivity;
 
-        Rotate();
+            Rotate();
+        }
     }
 
     private void CrouchAngle()
@@ -100,7 +106,7 @@ public class CameraMove : MonoBehaviour
         xRotCurrent = Mathf.SmoothDamp(xRot, xRotCurrent, ref curentVelosityX, _smoothTime);
         yRotCurrent = Mathf.SmoothDamp(yRot, yRotCurrent, ref curentVelosityY, _smoothTime);
 
-        transform.localRotation = Quaternion.Euler(-yRotCurrent, 0f, 0f);
+        _head.transform.localRotation = Quaternion.Euler(0f, 0f, yRotCurrent);
         _player.transform.rotation = Quaternion.Euler(0f, xRotCurrent, 0f);
     }
 

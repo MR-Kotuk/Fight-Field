@@ -81,9 +81,6 @@ public class AnimationWeapon : MonoBehaviour, ISubjectWeapon
 
     public void SwitchWeapon(Weapon weapon)
     {
-        if (_currentWeapon != null && !_currentWeapon.WeaponSettings.isNoScope && _currentWeapon.ScopeCamera != null)
-            _currentWeapon.ScopeCamera.enabled = false;
-
         _currentWeapon = _weaponsScr[weapon.WeaponSettings.Name];
 
         string name = weapon.WeaponSettings.Name;

@@ -8,10 +8,6 @@ public class Weapon : MonoBehaviour
     public WeaponSettings WeaponSettings;
     [Space]
 
-    [Header("Weapon Camers")]
-    public Camera ScopeCamera, WeaponCamera;
-    [Space]
-
     [Header("Scripts")]
     [SerializeField] protected AttackWeapon AttackWeapon;
     [SerializeField] protected AnimationWeapon AnimWeapon;

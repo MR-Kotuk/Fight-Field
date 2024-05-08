@@ -91,8 +91,6 @@ public class PlayerMove : MonoBehaviour
 
     public void OnJump()
     {
-        Debug.Log("Jump");
-
         if (!isCrouch && TryRay(_foot.position, -_foot.up, _distGround))
         {
             Jumped?.Invoke();

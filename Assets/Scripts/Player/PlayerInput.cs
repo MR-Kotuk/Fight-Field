@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -16,10 +17,17 @@ public class PlayerInput : MonoBehaviour
     [Space]
 
     [Header("Scripts")]
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private AttackWeapon _attackWeapon;
     [SerializeField] private PlayerMove _playerMove;
 
     private void Update()
+    {
+        if(_photonView.IsMine)
+            Inputer();
+    }
+
+    private void Inputer()
     {
         for (int i = 0; i < _keysWeapons.Count; i++)
         {
@@ -32,7 +40,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(_shoot))
             _attackWeapon.OnAttack(true);
-        else if(Input.GetKeyUp(_shoot))
+        else if (Input.GetKeyUp(_shoot))
             _attackWeapon.OnAttack(false);
 
         if (Input.GetKey(_reload))

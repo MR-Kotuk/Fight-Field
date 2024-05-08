@@ -26,6 +26,7 @@ public class CameraMove : MonoBehaviour
     [Header("Game Objects")]
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _head;
+    [SerializeField] private GameObject _myWeaponCamera;
     [Space]
 
     [Header("Scripts")]
@@ -75,7 +76,10 @@ public class CameraMove : MonoBehaviour
             Rotate();
         }
         else
+        {
+            _myWeaponCamera.GetComponent<Camera>().enabled = false;
             GetComponent<Camera>().enabled = false;
+        }
     }
 
     private void CrouchAngle()
@@ -100,7 +104,7 @@ public class CameraMove : MonoBehaviour
 
     private void Rotate()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
 
         xRot += Input.GetAxis("Mouse X") * _currentSens;
         yRot += Input.GetAxis("Mouse Y") * _currentSens;

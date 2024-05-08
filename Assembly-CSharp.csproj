@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Weapon\ISubjectWeapon.cs" />
     <Compile Include="Assets\Scripts\Effects\EffectWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Server\PlayerLayerView.cs" />
     <Compile Include="Assets\Scripts\Weapon\All\Weapon.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Weapon\Player\Granade.cs" />
